@@ -19,10 +19,11 @@ Things you may want to cover:
 |nickname|string|null: false|
 |email|string|null: false|
 |password|string|null: false|
+|image|string|
 
 ### Association
 - has_many :items
-- has_many :snses
+- has_many :sns_credential
 - has_many :comments
 - has_many :messages
 - has_many :likes
@@ -45,7 +46,6 @@ Things you may want to cover:
 |adress|string||null: false|
 |building_name|string|
 |tell|integer|
-|image|string|
 |profile_text|text|
 |birth_date|date|
 
@@ -76,7 +76,7 @@ Things you may want to cover:
 - has_one :user
 
 
-## snsesテーブル
+## sns_credentialテーブル
 |Column|Type|Options|
 |------|----|-------|
 |uid|string|null: false|
@@ -89,7 +89,7 @@ Things you may want to cover:
 - belongs_to :user
 
 
-## likesテーブル
+## itme_likesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |item_id|references| foreign_key: true|
@@ -103,7 +103,7 @@ Things you may want to cover:
 ## commentsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|comment|text|null: false|
+|text|text|null: false|
 |item_id|references|foreign_key: true|
 |user_id|references|foreign_key: true|
 
@@ -118,7 +118,7 @@ Things you may want to cover:
 |item_id|references| foreign_key: true|
 |buyer_id|reference| class_name: "User", foreign_key: true|
 |seller_id|reference| class_name: "User", foreign_key: true|
-|message|text|null: false|
+|text|text|null: false|
 
 ### Association
 - belongs_to :user
@@ -129,10 +129,10 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|explain|text|null: false|
+|explaination|text|null: false|
 |price|integer|null: false|
 |status|text|null: false|
-|shipping_fate|string|null: false|
+|shipping_fare|string|null: false|
 |shipping_region|integer|null: false|
 |shipping_schedule|string|null: false|
 |shipping_method|string||null: false|
@@ -152,7 +152,7 @@ Things you may want to cover:
 - has_many :comments
 
 
-## imagesテーブル
+## item_imagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |image|text||
