@@ -17,8 +17,8 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |nickname|string|null: false|
-|email|string|null: false, unique: true|
-|password|string|null: false, unique: true|
+|email|string|null: false|
+|password|string|null: false|
 
 ### Association
 - has_many :items
@@ -34,7 +34,7 @@ Things you may want to cover:
 ## profileテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|reference|null: false, foreign_key: true|
+|user_id|references|foreign_key: true|
 |first_name|string|null: false|
 |last_name|string|null: false|
 |first_name_kana|string|null: false|
@@ -56,8 +56,8 @@ Things you may want to cover:
 ## user_reviewテーブル
 |Column|Type|Options|
 |------|----|-------|
-|buyer_id|reference|null: false, class_name: "User"|
-|seller_id|reference|null: false, class_name: "User"|
+|buyer_id|references| class_name: "User"|
+|seller_id|references| class_name: "User"|
 |review|text|null: false|
 
 ### Association
@@ -70,18 +70,18 @@ Things you may want to cover:
 |number|integer|null: false, unique: true|
 |code|integer|null: false, unique: true|
 |year_month|string|null: false, unique: true|
-|user_id|reference|null: false, foreign_key: true|
+|user_id|references| foreign_key: true|
 
 ### Association
 - has_one :user
 
 
-## snsテーブル
+## snsesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |uid|string|null: false|
 |provider|string|null: false|
-|user_id|reference|null: false, foreign_key: true|
+|user_id|references| foreign_key: true|
 |access_token|string|
 |access_secret|string|
 
@@ -92,8 +92,8 @@ Things you may want to cover:
 ## likesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|item_id|reference|null: false, foreign_key: true|
-|user_id|reference|null: false, foreign_key: true|
+|item_id|references| foreign_key: true|
+|user_id|references| foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -104,8 +104,8 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |comment|text|null: false|
-|item_id|reference|null: false, foreign_key: true|
-|user_id|reference|null: false, foreign_key: true|
+|item_id|references|foreign_key: true|
+|user_id|references|foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -115,10 +115,10 @@ Things you may want to cover:
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|item_id|intger|null: false, foreign_key: true|
-|buyer_id|reference|null: false, class_name: "User"|
-|seller_id|reference|null: false, class_name: "User"|
-|message|text|null: false, unique: true|
+|item_id|references| foreign_key: true|
+|buyer_id|reference| class_name: "User", foreign_key: true|
+|seller_id|reference| class_name: "User", foreign_key: true|
+|message|text|null: false|
 
 ### Association
 - belongs_to :user
@@ -132,7 +132,7 @@ Things you may want to cover:
 |explain|text|null: false|
 |price|integer|null: false|
 |status|text|null: false|
-|shipping_fee|string|null: false|
+|shipping_fate|string|null: false|
 |shipping_region|integer|null: false|
 |shipping_schedule|string|null: false|
 |shipping_method|string||null: false|
@@ -141,8 +141,8 @@ Things you may want to cover:
 |bottom_category|string|null: false|
 |size|string|
 |brand|string|
-|seller_id|reference|class_name: "User"|
-|buyer_id|reference||class_name: "User"|
+|seller_id|references|class_name: "User", foreign_key: true|
+|buyer_id|references|class_name: "User", foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -155,8 +155,8 @@ Things you may want to cover:
 ## imagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|image|string|null: false|
-|item_id|reference|null: false, foreign_key: true|
+|image|text||
+|item_id|references|foreign_key: true|
 
 ### Association
 - belongs_to :item
