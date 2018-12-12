@@ -131,7 +131,7 @@ Things you may want to cover:
 |name|string|null: false|
 |explaination|text|null: false|
 |price|integer|null: false|
-|status|text|null: false|
+|status|integer|null: false|
 |shipping_fare|string|null: false|
 |shipping_region|integer|null: false|
 |shipping_schedule|string|null: false|
