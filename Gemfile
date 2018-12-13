@@ -49,6 +49,7 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
+  gem 'font-awesome-rails'
 end
 
 group :development do
