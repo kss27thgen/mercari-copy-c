@@ -1,0 +1,116 @@
+.footerImage{
+  background: url(https://www.mercari.com/jp/assets/img/common/jp/top/download_bg_pc.jpg?9939559);
+  background-position: center;
+  // background-repeat: no-repeat;
+  width:100vw;
+  .footerImageBox{
+    display:flex;
+    width:70vw;
+    margin:0 auto;
+    .footerImageBoxLeft{
+      color:white;
+      padding-top:40px;
+      .footerImageBoxLeftTitle{
+        font-size: 24px;
+        font-weight: bold;
+        text-shadow: 0 0 5px rgba(0,0,0,0.4);
+        cursor: auto;
+      }
+      .footerImageBoxLeftText{
+        font-size: 35px;
+        text-shadow: 0 0 5px rgba(0,0,0,0.4);
+        border-style: solid;
+        border-width: 0;
+        display: block;
+        margin-block-end: 1em;
+
+      }
+      .footerImageBoxLeftIcon{
+        .footerImageBoxLeftIconLeft{
+          width:68px;
+          height:68px;
+        }
+        .footerImageBoxLeftIconMiddle{
+          padding-bottom:12px;
+          padding-left: 24px;
+        }
+        .footerImageBoxLeftIconRight{
+          padding-bottom:12px;
+          padding-left: 24px;
+        }
+      }
+    }
+    .footerImageBoxRight{
+      .footerImageBoxRightImage{
+        height:255px;
+        width:300px;
+        padding-left: 30px;
+      }
+    }
+  }
+}
+.footer a{
+  color:white;
+  font-size: 15px;
+  display: block;
+  margin-top:10px;
+  text-decoration:none;
+}
+
+.footer{
+  width:100vw;
+  background-color: black;
+  color:white;
+  padding:60px 0;
+  .footerBox{
+  display:flex;
+  justify-content: space-around;
+  width:70vw;
+  margin:0 auto;
+  padding-bottom: 30px;
+    .footerFirst{
+      width : calc(100vw / 4) ;
+      text-align: center;
+      .footerFirstTitle{
+        padding-bottom:20px ;
+        font-weight: bold;
+      }
+    }
+    .footerSecond{
+      width : calc(100vw / 4) ;
+      text-align: center;
+      .footerSecondTitle{
+        padding-bottom:20px ;
+        font-weight: bold;
+      }
+    }
+    .footerThird{
+      width : calc(100vw / 4) ;
+      text-align: center;
+      .footerThirdTitle{
+        padding-bottom:20px ;
+        font-weight: bold;
+      }
+    }
+    .footerForth{
+      width : calc(100vw / 4) ;
+      text-align: center;
+      .footerThirdForth{
+        padding-bottom:20px ;
+        font-weight: bold;
+      }
+    }
+  }
+  .footerLastIcons{
+    text-align: center;
+  }
+    .footerLastIcon{
+      // position:relative;
+      // // right:45%;
+      // left:45%;;
+      display:inline;
+    }
+    .footerCopyRight{
+      font-size: 14px;
+    }
+}
