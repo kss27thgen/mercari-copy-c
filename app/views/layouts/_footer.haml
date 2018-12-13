@@ -37,7 +37,7 @@
 
     .footerThird
       %h2.footerThirdTitle ヘルプ＆ガイド
-      .footerSecondContent
+      .footerThirdContent
       = link_to "メルカリガイド"
       = link_to "メルカリロゴ利用ガイドライン"
       = link_to "お知らせ"
@@ -49,12 +49,19 @@
       = link_to "メルカリあんしん・あんぜん宣言！"
       = link_to "偽ブランド品撲滅への取り組み"
       = link_to "メルカリボックス"
+
     .footerForth
       %h2.footerForthTitle 国
-      .footerSecondContent
-      = link_to "United States"
-      = link_to "United Kingdom"
-      = link_to "日本"
+      .footerForthContentUs
+        %i.flag-icon.flag-icon-us.flag-icon-squared
+        = link_to "United States",class: "link"
+      .footerForthContentGb
+        %i.flag-icon.flag-icon-gb.flag-icon-squared
+        = link_to "United Kingdom",class: "link"
+      .footerForthContentJp
+        %i.flag-icon.flag-icon-jp.flag-icon-squared
+        = link_to "日本",class: "link"
+
   .footerLastIcons
     = embedded_svg("logo-white.svg", class: "footerLastIcon")
     .footerCopyRight © 2018 mercari
