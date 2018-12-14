@@ -1,0 +1,30 @@
+.signin-wrapper
+  .signin-main
+    .signin-panel
+      .signin-no-account
+        %p アカウトをお持ちでない方はこちら
+        =link_to "新規会員登録", "#", class: "signin-card_signup"
+      %hr{color: "#eeeeee",size: 0.3}
+      .signin-form
+        .signin-form_facebook
+          = link_to "#" do
+            =fa_icon 'fa-facebook-f', class: 'fa-facebook-square'
+            .signin-form_facebook-card
+              Facebookでログイン
+        .signin-form_google
+          = link_to "#" do
+            =fa_icon 'fa-google-plus-square', class: 'fa-google-plus'
+            .signin-form_google-card
+              Googleでログイン
+      .signin-form-wrapper
+        .signin-form
+          .signin-form_email
+            %input{placeholder: "メールアドレス"}
+          .signin-form_password
+            %input{placeholder: "パスワード"}
+          .signin-form_recapcha
+            %img{alt: "ロボットではありません", height: "75", src: "https://i.gyazo.com/558c420173f936369c4fd6afb54e149b.png", width: "300"}
+          .signin-form_button
+            =link_to "ログイン", "#"
+          .signin-form_forget-password
+            =link_to "パスワードをお忘れの方", "#"
