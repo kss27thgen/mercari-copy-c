@@ -1,5 +1,5 @@
 .signup{
-    background-color: #f5f5f5;
+    background-color: $liteGray;
   .headerSignup{
     height: 128px;
     text-align: center;
@@ -29,7 +29,7 @@
       }
       .signupInner{
         padding: 64px;
-        border-top: 1px solid #f5f5f5;
+        border-top: 1px solid $liteGray;
         .signupKeys{
           max-width: 320px;
           margin: 0 auto;
