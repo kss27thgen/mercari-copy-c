@@ -6,5 +6,8 @@ class RootController < ApplicationController
   def deliver_address
   end
 
+  def identification
+  end
+
 end
 
