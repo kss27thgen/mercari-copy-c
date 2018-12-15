@@ -3,7 +3,7 @@ class RootController < ApplicationController
   def index
   end
 
-  def task1
+  def deliver_address
   end
 
 end
