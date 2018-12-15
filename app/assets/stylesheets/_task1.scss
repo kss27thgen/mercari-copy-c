@@ -1,0 +1,97 @@
+main {
+  background: gray;
+  .ad-wrapper {
+    width: 700px;
+    background: white;
+    margin: 0 auto;
+    .ad-chapter-container {
+      background-color: $white;
+      h2 {
+        font-size: 22px;
+        text-align: center;
+        border-bottom: 0.5px solid #f5f5f5;
+        padding: 10px 0;
+        font-weight: bold;
+      }
+      .ad-single-inner {
+        margin: 0 auto;
+        width: 572px;
+        .form-groups {
+          margin: 0 auto;
+          width: 320px;
+          padding: 0 63px;
+          .form-group {
+            margin: 0 auto;
+            &_name {
+              padding-top: 30px;
+            }
+            &_kana {
+              padding-top: 30px;
+            }
+            &_postal_codes {
+              padding-top: 30px;
+            }
+            &_region {
+              padding-top: 30px;
+            }
+            &_city {
+              padding-top: 30px;
+            }
+            &_address {
+              padding-top: 30px;
+            }
+            &_building_name {
+              padding-top: 30px;
+            }
+            &_tell {
+              padding-top: 30px;
+            }
+          }
+        }
+      }
+      .ad-button {
+        width: 320px;
+        height: 30px;
+        line-height: 30px;
+        background: #ea352d;
+        font-size: 15px;
+        margin: 50px auto 70px;
+        color: $white;
+      }
+    }
+  }
+}
+
+
+input {
+  width: 286px;
+  height: 26px;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 3px;
+  border-style: ridge;
+}
+select {
+  width: 310px;
+  height: 48px;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.form-group_title {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.form-require {
+  background: $button-red;
+  color: white;
+  font-size: 10px;
+  padding: 3px;
+}
+.form-optional {
+  background: #ccc;
+  color: white;
+  font-size: 10px;
+  padding: 3px;
+}
