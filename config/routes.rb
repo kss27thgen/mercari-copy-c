@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
   root 'root#index'
-  get 'root/deliver_address' => 'root#deliver_address'
-  get 'root/identification' => 'root#identification'
-  get 'root/email_password' => 'root#email_password'
+  get 'mypages/deliver_address' => 'mypages#deliver_address'
+  get 'mypages/identification' => 'mypages#identification'
+  get 'mypages/email_password' => 'mypages#email_password'
 
 end
+
 
