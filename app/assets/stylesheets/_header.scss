@@ -1,0 +1,68 @@
+.header{
+  width:80vw;
+  margin:0 auto;
+  padding-top: 5px;
+  &Top{
+    display:flex;
+    &Left{
+      .headerLogo{
+        width: 134px;
+      }
+    }
+    &Right{
+      .searchVer{
+        background-color: #F5F5F5;
+        border-radius: 3px ;
+        width: 67vw;
+        height:36px;
+        border:1px solid #BDBDBD;
+        margin-left: 20px;
+        font-size: 16px;
+        padding-left:10px;
+      }
+    }
+  }
+
+  &Bottom{
+    display:flex;
+    padding-top: 15px;
+    vertical-align: middle;
+    height:30px;
+    line-height: 30px;
+    width:inherit;
+    &Left{
+      display:flex;
+      justify-content: flex-start;
+      font-size: 14px;
+      width:370px;
+      &Brand{
+        padding-left: 16px;
+      }
+    }
+    &Right{
+      display: flex;
+      justify-content: flex-end;
+      width:inherit;
+      font-size: 14px;
+      &Avatar{
+        height:30px;
+        width:30px;
+        border-radius: 50%;
+        background-color: black;
+      }
+      &Mypage{
+        padding-left: 16px;
+      }
+      &Info{
+        padding-left: 16px;
+      }
+      &Todo{
+        // padding-left: 16px;
+      }
+    }
+  }
+}
+#Info{
+  color:black;
+  padding-left: 16px;
+}
