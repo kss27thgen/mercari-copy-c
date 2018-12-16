@@ -1,5 +1,4 @@
 .identificaionWrapper {
-  background: gray;
   .mainWrapper {
     background: white;
     width: 700px;
@@ -7,13 +6,16 @@
     margin: 0 auto;
     .header {
       text-align: center;
+      margin: 0;
       &Title {
         padding: 5px 0;
+        width: 700px;
         font-size: 24px;
         font-weight: bold;
       }
       &Discription {
         font-size: 13px;
+        width: 700px;
         color: darken($line-gray, 60%);
         border: 1px solid $line-gray;
       }
@@ -67,13 +69,18 @@
   color: $white;
   font-size: 12px;
 }
-input {
+.identificaionWrapper {
+  input {
   width: 538px;
   height: 28px;
   padding: 10px 16px 8px;
   border: 1px solid darken($line-gray, 30%);
   border-radius: 5px;
 }
-select {
-  width: 140px;
 }
+.identificaionWrapper {
+  select {
+  width: 140px;
+  }
+}
+
