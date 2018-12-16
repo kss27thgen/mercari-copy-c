@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'root#index'
   get 'root/deliver_address' => 'root#deliver_address'
   get 'root/identification' => 'root#identification'
+  get 'root/email_password' => 'root#email_password'
 
 end
 
