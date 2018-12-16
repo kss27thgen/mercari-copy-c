@@ -1,0 +1,48 @@
+.salesWrapper {
+  .mainWrapper {
+    width: 700px;
+    height: 530px;
+    margin: 0 auto;
+    background: white;
+    .salesHeader {
+      .salesHeaderTitle {
+        font-size: 23px;
+        text-align: center;
+        padding: 5px;
+        font-weight: bold;
+        border: 1px solid $line-gray;
+      }
+    }
+  }
+}
+
+.salesLinks {
+  .salesLink {
+  width: 688px;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid $line-gray;
+  font-size: 14px;
+  padding: 5px;
+  display: block;
+  color: darken($line-gray, 70%);
+  text-decoration: none;
+  }
+  span {
+    float: right;
+    padding-right: 5px;
+    font-size: 20px;
+    color: darken($line-gray, 40%);
+  }
+  .yourCurrentSales {
+    float: right;
+    padding-right: 5px;
+    font-size: 12px;
+    color: darken($line-gray, 90%);
+  }
+  &Space {
+    width: 700px;
+    height: 40px;
+    background: $back-gray;
+  }
+}

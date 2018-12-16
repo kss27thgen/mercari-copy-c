@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'mypages/email_password' => 'mypages#email_password'
   get 'mypages/support' => 'mypages#support'
   get 'mypages/point' => 'mypages#point'
+  get 'mypages/sales' => 'mypages#sales'
 end
 
 

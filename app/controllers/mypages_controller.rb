@@ -15,4 +15,7 @@ class MypagesController < ApplicationController
   def point
   end
 
+  def sales
+  end
+
 end
