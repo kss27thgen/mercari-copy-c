@@ -44,7 +44,7 @@
       justify-content: flex-end;
       width:inherit;
       font-size: 14px;
-      &avatar{
+      &Avatar{
         height:30px;
         width:30px;
         border-radius: 50%;
@@ -57,12 +57,12 @@
         padding-left: 16px;
       }
       &Todo{
-        padding-left: 16px;
+        // padding-left: 16px;
       }
     }
   }
 }
 #Info{
   color:black;
-
+  padding-left: 16px;
 }
