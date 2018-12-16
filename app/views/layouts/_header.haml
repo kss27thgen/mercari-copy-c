@@ -1,0 +1,20 @@
+.header
+  .headerTop
+    .headerTopLeft
+      = embedded_svg("logo.svg", class: "headerLogo")
+    .headerTopRight
+      %input{placeholder:"キーワードから探す", :type => "text",class: "searchVer"}
+
+  .headerBottom
+    .headerBottomLeft
+      .headerBottomLeftCategory カテゴリーから探す
+      .headerBottomLeftBrand ブランドから探す
+    .headerBottomRight
+      .headerBottomRightAvatar
+      .bottomHeaderRightMypage マイページ
+      .bottomHeaderRightInfo
+        = fa_icon "bell-o",class: "fa-bell-o",id: "Info"
+        お知らせ
+      .headerBottomRightTodo
+        = fa_icon "fa-check",class: "fa-check",id: "Info"
+        やることリスト
