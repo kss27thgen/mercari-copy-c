@@ -9,5 +9,6 @@ class RootController < ApplicationController
   def identification
   end
 
+  def email_password
+  end
 end
-
