@@ -3,5 +3,12 @@ class RootController < ApplicationController
   def index
   end
 
-end
+  def deliver_address
+  end
 
+  def identification
+  end
+
+  def email_password
+  end
+end
