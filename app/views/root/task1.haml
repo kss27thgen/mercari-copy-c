@@ -1,0 +1,53 @@
+/プロフィール（住所変更）
+%main
+  .ad-wrapper
+    %section.ad-chapter-container
+      %h2.ad-chapter-head 住所変更
+      .ad-single-inner
+        .form-groups
+          .form-group
+            .form-group_name
+              %label.form-group_title お名前
+              %span.form-require 必須
+              %br
+              %input
+              %br
+              %input
+            .form-group_kana
+              %label.form-group_title お名前カナ
+              %span.form-require 必須
+              %br
+              %input
+              %br
+              %input
+            .form-group_postal_codes
+              %label.form-group_title 郵便番号
+              %span.form-require 必須
+              %br
+              %input
+            .form-group_region
+              %label.form-group_title 都道府県
+              %span.form-require 必須
+              %br
+              %select
+            .form-group_city
+              %label.form-group_title 市区町村
+              %span.form-require 必須
+              %br
+              %input
+            .form-group_address
+              %label.form-group_title 番地
+              %span.form-require 必須
+              %br
+              %input
+            .form-group_building_name
+              %label.form-group_title 建物
+              %span.form-optional 任意
+              %br
+              %input
+            .form-group_tell
+              %label.form-group_title 電話
+              %span.form-optional 任意
+              %br
+              %input
+      %h2.ad-button 変更する
