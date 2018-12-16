@@ -1,20 +1,20 @@
-.signin-wrapper {
+.signinWrapper {
   height: 850px;
-  .signin-main {
+  .signinMain {
     width: 456px;
     height: 770px;
     margin: 0 auto;
     text-align: center;
     background: white;
-    .signin-panel {
-      .signin-no-account {
+    .signinPanel {
+      .signinNoAccount {
         margin: 0 auto;
         width: 300px;
         p {
           font-size: 14px;
           padding-top: 30px;
         }
-        .signin-card_signup {
+        .signinCardSignup {
           width: 328px;
           height: 33px;
           padding-top: 12px;
@@ -32,10 +32,10 @@
         display: inline-block;
         width: 100%;
       }
-      .signin-form {
+      .signinForm {
         margin: 0 auto;
         width: 300px;
-        &_facebook {
+        &Facebook {
           position: relative;
           .fa-facebook-square {
             position: absolute;
@@ -44,7 +44,7 @@
             color: white;
             font-size: 20px;
           }
-          &-card {
+          &Card {
             width: 328px;
             height: 35px;
             color: white;
@@ -57,7 +57,7 @@
             text-decoration: none;
           }
         }
-        &_google {
+        &Google {
           position: relative;
           .fa-google-plus {
             position: absolute;
@@ -66,7 +66,7 @@
             color: white;
             font-size: 20px;
           }
-          &-card {
+          &Card {
             width: 328px;
             height: 35px;
             text-align: center;
@@ -81,11 +81,11 @@
           }
         }
       }
-      .signin-form-wrapper {
+      .signinFormWrapper {
         margin: 0 auto;
         width: 300px;
-        .signin-form {
-          &_email {
+        .signinForm {
+          &Email {
             input {
               display: block;
               width: 305px;
@@ -93,7 +93,7 @@
               margin-bottom: 20px;
             }
           }
-          &_password {
+          &Password {
             input {
               display: block;
               height: 32px;
@@ -101,10 +101,10 @@
               margin-bottom: 20px;
             }
           }
-          &_recapcha {
+          &Recapcha {
             margin-bottom: 20px;
           }
-          &_button {
+          &Button {
             width: 328px;
             height: 35px;
             background-color: $button-red;
@@ -116,7 +116,7 @@
               text-decoration: none;
             }
           }
-          &_forget-password {
+          &ForgetPassword {
             padding: 30px 0 0;
             float: left;
             font-size: 13px;

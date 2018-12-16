@@ -1,30 +1,30 @@
-.signin-wrapper
-  .signin-main
-    .signin-panel
-      .signin-no-account
+.signinWrapper
+  .signinMain
+    .signinPanel
+      .signinNoAccount
         %p アカウトをお持ちでない方はこちら
-        =link_to "新規会員登録", "#", class: "signin-card_signup"
+        =link_to "新規会員登録", "#", class: "signinCardSignup"
       %hr.horizon
-      .signin-form
-        .signin-form_facebook
+      .signinForm
+        .signinFormFacebook
           = link_to "#" do
             =fa_icon 'fa-facebook-f', class: 'fa-facebook-square'
-            .signin-form_facebook-card
+            .signinFormFacebookCard
               Facebookでログイン
-        .signin-form_google
+        .signinFormGoogle
           = link_to "#" do
             =fa_icon 'fa-google-plus-square', class: 'fa-google-plus'
-            .signin-form_google-card
+            .signinFormGoogleCard
               Googleでログイン
-      .signin-form-wrapper
-        .signin-form
-          .signin-form_email
+      .signinFormWrapper
+        .signinForm
+          .signinFormEmail
             %input{placeholder: "メールアドレス"}
-          .signin-form_password
+          .signinFormPassword
             %input{placeholder: "パスワード"}
-          .signin-form_recapcha
+          .signinFormRecapcha
             %img{alt: "ロボットではありません", height: "75", src: "https://i.gyazo.com/558c420173f936369c4fd6afb54e149b.png", width: "300"}
-          .signin-form_button
+          .signinFormButton
             =link_to "ログイン", "#"
-          .signin-form_forget-password
+          .signinFormForgetPassword
             =link_to "パスワードをお忘れの方", "#"

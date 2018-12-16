@@ -1,10 +1,10 @@
-main {
+.deliverAddressWrapper {
   background: gray;
-  .ad-wrapper {
+  .mainWrapper {
     width: 700px;
     background: white;
     margin: 0 auto;
-    .ad-chapter-container {
+    .adChapterContainer {
       background-color: $white;
       h2 {
         font-size: 22px;
@@ -13,43 +13,43 @@ main {
         padding: 10px 0;
         font-weight: bold;
       }
-      .ad-single-inner {
+      .adSingleInner {
         margin: 0 auto;
         width: 572px;
-        .form-groups {
+        .formGroups {
           margin: 0 auto;
           width: 320px;
           padding: 0 63px;
-          .form-group {
+          .formGroup {
             margin: 0 auto;
-            &_name {
+            &Name {
               padding-top: 30px;
             }
-            &_kana {
+            &Kana {
               padding-top: 30px;
             }
-            &_postal_codes {
+            &PostalCodes {
               padding-top: 30px;
             }
-            &_region {
+            &Region {
               padding-top: 30px;
             }
-            &_city {
+            &City {
               padding-top: 30px;
             }
-            &_address {
+            &Address {
               padding-top: 30px;
             }
-            &_building_name {
+            &BuildingName {
               padding-top: 30px;
             }
-            &_tell {
+            &Tell {
               padding-top: 30px;
             }
           }
         }
       }
-      .ad-button {
+      .adButton {
         width: 320px;
         height: 30px;
         line-height: 30px;
@@ -62,34 +62,33 @@ main {
   }
 }
 
-
-input {
+.deliverAddressWrapper {
+  input {
   width: 286px;
   height: 26px;
   padding: 10px;
   margin-top: 5px;
   border-radius: 3px;
   border-style: ridge;
+  }
+  select {
+    width: 310px;
+    height: 48px;
+    padding: 10px;
+    margin-top: 5px;
+  }
 }
-select {
-  width: 310px;
-  height: 48px;
-  padding: 10px;
-  margin-top: 5px;
-}
-
-.form-group_title {
+.formGroupTitle {
   font-size: 14px;
   font-weight: bold;
 }
-
-.form-require {
+.formRequire {
   background: $button-red;
   color: white;
   font-size: 10px;
   padding: 3px;
 }
-.form-optional {
+.formOptional {
   background: #ccc;
   color: white;
   font-size: 10px;
