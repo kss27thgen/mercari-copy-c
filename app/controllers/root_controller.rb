@@ -3,8 +3,12 @@ class RootController < ApplicationController
   def index
   end
 
-  def task1
+  def deliver_address
   end
 
-end
+  def identification
+  end
 
+  def email_password
+  end
+end
