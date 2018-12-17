@@ -9,4 +9,7 @@ class MypagesController < ApplicationController
   def email_password
   end
 
+  def notification
+  end
+
 end
