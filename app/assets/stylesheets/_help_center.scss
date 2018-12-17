@@ -1,0 +1,31 @@
+.wrapper{
+  margin-top:40px;
+  // background-color:;
+  .guide{
+    width:74vw;
+    margin:0 auto;
+    .guideImage{
+      height:220px;
+      margin-bottom: 40px;
+    }
+    .guideLeft{
+      width:280px;
+      .guideLeftInitializer{
+        .guideLeftInitializerTitle{
+          background-color: #eee;
+          height:30px;
+          font-weight:bold;
+          vertical-align: middle;
+          line-height: 30px;
+          padding-left: 15px;
+        .guideLeftInitializerContent{
+          padding-left: 15px;
+          display:flex;
+          justify-content:space-between;
+        }
+        }
+      }
+    }
+  }
+}
+
