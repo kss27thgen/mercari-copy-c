@@ -5,7 +5,10 @@ Rails.application.routes.draw do
   get 'mypages/identification' => 'mypages#identification'
   get 'mypages/email_password' => 'mypages#email_password'
   get 'mypages/notification' => 'mypages#notification'
-
+  get 'mypages/support' => 'mypages#support'
+  get 'mypages/point' => 'mypages#point'
+  get 'mypages/sales' => 'mypages#sales'
+  get 'help_center/index' => 'help_center＃index'
 end
 
 
