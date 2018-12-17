@@ -1,43 +1,80 @@
 .wrapper{
-  .bodyIcatchImage{
-    background: url(https://www.mercari.com/jp/assets/img/common/jp/top/main_bg_pc.jpg);
-    background-position: center;
-    background-size: cover;
-    &Box{
-      height:390px;
-      margin:0 auto;
-      display:flex;
-      justify-content: center;
-      &Left{
-        padding-top: 40px;
-        &Title{
-          font-size: 60px;
-          font-weight: bold;
-          letter-spacing: 3px;
-        }
-        &Text{
-          font-size: 18px;
-          letter-spacing: 1px;
-        }
-        &Icons{
-          display: flex;
-          padding-top: 20px;
-          &App{
-            width:170px;
-            height:50px;
+  .slider{
+    .bodyIcatchImage{
+      background: url(https://www.mercari.com/jp/assets/img/common/jp/top/main_bg_pc.jpg);
+      background-position: center;
+      background-size: cover;
+      &Box{
+        height:390px;
+        margin:0 auto;
+        display:flex;
+        justify-content: center;
+        &Left{
+          padding-top: 40px;
+          &Title{
+            font-size: 60px;
+            font-weight: bold;
+            letter-spacing: 3px;
           }
-          &Google{
-            width:170px;
-            height:50px;
-            padding-left: 10px;
+          &Text{
+            font-size: 18px;
+            letter-spacing: 1px;
+          }
+          &Icons{
+            display: flex;
+            padding-top: 20px;
+            &App{
+              width:170px;
+              height:50px;
+            }
+            &Google{
+              width:170px;
+              height:50px;
+              padding-left: 10px;
+            }
           }
         }
-      }
-      &RightImage{
-        height:100%;
+        &RightImage{
+          height:100%;
+        }
       }
     }
+    .bodyIcatchImage2{
+      background: url(https://www.mercari.com/jp/assets/img/common/jp/top/top-banner-new-register.png);
+      background-position: center;
+      background-size: cover;
+      height:390px;
+    }
+    .bodyIcatchImage3{
+      background: url(https://www.mercari.com/jp/assets/img/common/jp/top/top-banner-kusanagi-xmas.jpg);
+      background-position: center;
+      background-size: cover;
+      height:390px;
+    }
+    .bodyIcatchImage4{
+      background: url(https://www.mercari.com/jp/assets/img/common/jp/top/top-banner-welcome.png);
+      background-position: center;
+      background-size: cover;
+      height:390px;
+    }
   }
+.bx-wrapper {
+  background-color: gray;
+  margin-bottom: 0px;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+  background-color:#fff;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 5px;
+  -webkit-transition: 0.7s;
+  -moz-transition: 0.7s;
+  -o-transition: 0.7s;
+  transition: 0.7s;
+  position: top;
+}
 
 
   .bodyPickup{
@@ -128,7 +165,18 @@
         color:#3300F8;
         text-decoration:none;
       }
+      .SeeAll:hover {
+        text-decoration: underline;
+        color:#81D4FA;
+      }
     }
     }
   }
 }
+
+.bodyPickupLinks:hover {
+  text-decoration: underline;
+  color:#81D4FA;
+}
+
+
