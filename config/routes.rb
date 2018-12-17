@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get 'mypages/point' => 'mypages#point'
   get 'mypages/sales' => 'mypages#sales'
   get 'help_center/index' => 'help_center＃index'
+  get 'items/new'
+
 end
 
 
