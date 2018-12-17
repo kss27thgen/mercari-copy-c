@@ -1,0 +1,36 @@
+.supportWrapper {
+  .supportMainWrapper {
+    width: 700px;
+    height: 530px;
+    margin: 0 auto;
+    background: white;
+    .supportHeader {
+      &Title {
+        font-size: 23px;
+        text-align: center;
+        padding: 5px;
+        font-weight: bold;
+        border: 1px solid $line-gray;
+      }
+    }
+  }
+}
+.supportLinks {
+  &Link {
+  width: 688px;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid $line-gray;
+  font-size: 14px;
+  padding: 5px;
+  display: block;
+  color: darken($line-gray, 70%);
+  text-decoration: none;
+  }
+  span {
+    float: right;
+    padding-right: 5px;
+    font-size: 20px;
+    color: darken($line-gray, 40%);
+  }
+}

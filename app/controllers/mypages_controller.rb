@@ -9,4 +9,13 @@ class MypagesController < ApplicationController
   def email_password
   end
 
+  def support
+  end
+
+  def point
+  end
+
+  def sales
+  end
+
 end
