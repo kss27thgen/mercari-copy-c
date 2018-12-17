@@ -1,17 +1,21 @@
 .wrapper
-  .bodyIcatchImage
-    .bodyIcatchImageBox
-      .bodyIcatchImageBoxLeft
-        %h2.bodyIcatchImageBoxLeftTitle スマホでかんたん
-        %h2.bodyIcatchImageBoxLeftTitle フリマアプリ
-        %p.bodyIcatchImageBoxLeftText メルカリはスマホカメラからすぐに出品できる
-        %p.bodyIcatchImageBoxLeftText 購入時も安心な独自システムのアプリです
-        .bodyIcatchImageBoxLeftIcons
-          .bodyIcatchImageBoxLeftIconApp
-            = embedded_svg("app-store.svg", class: "bodyIcatchImageBoxLeftIconsApp")
-          .bodyIcatchImageBoxLeftIconGoogle
-            = embedded_svg("google-play.svg", class: "bodyIcatchImageBoxLeftIconsGoogle")
-      = image_tag("icatch.png",class: "bodyIcatchImageBoxRightImage")
+  .slider
+    .bodyIcatchImage
+      .bodyIcatchImageBox
+        .bodyIcatchImageBoxLeft
+          %h2.bodyIcatchImageBoxLeftTitle スマホでかんたん
+          %h2.bodyIcatchImageBoxLeftTitle フリマアプリ
+          %p.bodyIcatchImageBoxLeftText メルカリはスマホカメラからすぐに出品できる
+          %p.bodyIcatchImageBoxLeftText 購入時も安心な独自システムのアプリです
+          .bodyIcatchImageBoxLeftIcons
+            .bodyIcatchImageBoxLeftIconApp
+              = embedded_svg("app-store.svg", class: "bodyIcatchImageBoxLeftIconsApp")
+            .bodyIcatchImageBoxLeftIconGoogle
+              = embedded_svg("google-play.svg", class: "bodyIcatchImageBoxLeftIconsGoogle")
+        = image_tag("icatch.png",class: "bodyIcatchImageBoxRightImage")
+    .bodyIcatchImage2
+    .bodyIcatchImage3
+    .bodyIcatchImage4
 
   .bodyPickup
     %h2.bodyPickupTitle
