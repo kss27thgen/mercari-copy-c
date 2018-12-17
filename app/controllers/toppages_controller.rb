@@ -1,10 +1,7 @@
-class RootController < ApplicationController
+class ToppagesController < ApplicationController
 
   def index
   end
 
 
-  def mypage
-  end
 end
-
