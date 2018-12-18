@@ -1,0 +1,18 @@
+.logoutCcontent{
+    min-height: 180px;
+    box-sizing: border-box;
+    width: 700px;
+    float: right;
+    background-color: $white;
+    padding: 64px;
+    .buttonLogout{
+      text-align: center;
+      .btn-default{
+        height: 50px;
+        background-color: $red;
+        width: 320px;
+        color: $white;
+        font-size: 15px;
+      }
+    }
+}

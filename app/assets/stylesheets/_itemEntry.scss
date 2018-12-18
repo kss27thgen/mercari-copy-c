@@ -1,0 +1,265 @@
+.itemEntryWrapper {
+  background: $gray;
+  .itemEntryBodyWrapper {
+    width: 700px;
+    margin: 0 auto;
+    background: white;
+    .itemEntryHeader {
+      height: 100px;
+      line-height: 100px;
+      font-size: 21px;
+      text-align: center;
+      border-bottom: 1px solid darken($back-gray, 10%);
+      &Title {
+        font-weight: bold;
+      }
+    }
+  }
+}
+.itemEntryWrapper {
+  .itemEntryMain {
+    height: 1660px;
+    &Upper {
+      &Image {
+        height: 280px;
+        border-bottom: 1px solid darken($back-gray, 10%);
+        padding: 40px;
+        &Title {
+          font-weight: bold;
+          &Require {
+            background-color: red;
+            color: white;
+            font-size: 12px;
+            padding: 2px;
+          }
+        }
+        &Text {
+          font-size: 13px;
+          margin-top: 8px;
+        }
+        &Form {
+          &File {
+            display: none;
+          }
+          &Area {
+            width: 600px;
+            height: 200px;
+            border: 1px dashed $gray;
+            margin-top: 20px;
+            background: $back-gray;
+            text-align: center;
+            font-size: 13px;
+            cursor: pointer;
+            &Text {
+              margin-top: 80px;
+            }
+          }
+        }
+      }
+      &Item {
+        height: 335px;
+        border-bottom: 1px solid darken($back-gray, 10%);
+        padding: 0 40px 40px 40px;
+        &Title {
+          font-weight: bold;
+          padding-top: 30px;
+          font-size: 14px;
+          &Require {
+            background-color: red;
+            color: white;
+            font-size: 12px;
+            padding: 2px;
+          }
+        }
+        input {
+          width: 600px;
+          height: 50px;
+          border: 1px solid $gray;
+        }
+        textarea {
+          width: 600px;
+          height: 150px;
+          border: 1px solid $gray;
+        }
+      }
+      &Description {
+        height: 250px;
+        border-bottom: 1px solid darken($back-gray, 10%);
+        &Left {
+          float: left;
+          width: 250px;
+          &Title {
+            padding: 30px;
+            color: darken($gray, 40%);
+            font-size: 13px;
+            font-weight: bold;
+          }
+        }
+        &Right {
+          float: right;
+          width: 390px;
+          padding: 0 30px 30px;
+          &Title {
+            padding-top: 30px;
+            font-size: 13px;
+            font-weight: bold;
+            &Require {
+            background-color: red;
+            color: white;
+            font-size: 12px;
+            padding: 2px;
+            }
+          }
+          Select {
+            width:370px;
+            height: 50px;
+            cursor: pointer;
+          }
+        }
+      }
+      &Delivery {
+        height: 350px;
+        border-bottom: 1px solid darken($back-gray, 10%);
+        &Left {
+          float: left;
+          width: 250px;
+          &Title {
+            padding: 30px;
+            font-size: 12px;
+            font-weight: bold;
+            color: darken($gray, 40%);
+            .fa-question-circle {
+              color: $button-blue;
+              font-size: 15px;
+            }
+          }
+        }
+        &Right {
+          float: right;
+          width: 390px;
+          padding: 0 30px 30px;
+          &Title {
+            padding-top: 30px;
+            font-size: 13px;
+            font-weight: bold;
+            &Require {
+            background-color: red;
+            color: white;
+            font-size: 12px;
+            padding: 2px;
+            }
+          }
+          Select {
+            width:370px;
+            height: 50px;
+            cursor: pointer;
+          }
+        }
+      }
+      &Price {
+        height: 300px;
+        border-bottom: 1px solid darken($back-gray, 10%);
+        font-size: 14px;
+        &Left {
+          float: left;
+          width: 250px;
+          &Title {
+            padding: 30px;
+            font-size: 12px;
+            font-weight: bold;
+            color: darken($gray, 40%);
+            .fa-question-circle {
+              color: $button-blue;
+              font-size: 15px;
+            }
+          }
+        }
+        &Right {
+          float: right;
+          width: 390px;
+          padding: 0 30px;
+          &Top {
+            padding: 20px 0;
+            &Left {
+              float: left;
+              padding-top: 30px;
+              font-weight: bold;
+              &Require {
+                background-color: red;
+                color: white;
+                padding: 2px;
+                font-size: 12px;
+              }
+            }
+            &Right {
+              float: right;
+              &Yen {
+                padding: 10px 0;
+                &Input {
+                  width: 160px;
+                  height: 50px;
+                }
+              }
+            }
+          }
+          &Middle {
+            height: 70px;
+            line-height: 70px;
+            border-top: 1px solid darken($back-gray, 30%);
+            border-bottom: 1px solid darken($back-gray, 30%);
+            &Left {
+              float: left;
+            }
+            &Right {
+              float: right;
+            }
+          }
+          &Bottom {
+            height: 70px;
+            line-height: 70px;
+            font-weight: bold;
+            &Left {
+              float: left;
+            }
+            &Right {
+              float: right;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.itemEntryWrapper {
+  .itemEntryFooter {
+    height: 250px;
+    padding: 40px;
+    font-size: 14px;
+    &Note {
+      &Link {
+        text-decoration-line: none;
+        color: $button-blue;
+      }
+    }
+    &Btn {
+      margin-top: 50px;
+      color: $white;
+      text-align: center;
+      &Entry {
+        background: $button-red;
+        height: 50px;
+        line-height: 50px;
+        width: 620px;
+        margin: 0 auto;
+      }
+      &Back {
+        background: darken($gray, 10%);
+        height: 50px;
+        width: 250px;
+        line-height: 50px;
+        margin: 0 auto;
+        margin-top: 30px;
+      }
+    }
+  }
+}
