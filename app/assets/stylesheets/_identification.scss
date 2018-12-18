@@ -1,4 +1,9 @@
 .identificaionWrapper {
+  background: $back-gray;
+  padding: 40px 220px;
+  display: flex;
+  .identificaionNav {
+  }
   .mainWrapper {
     background: white;
     width: 700px;
@@ -57,17 +62,17 @@
 }
 .formGroupRequiare {
   margin-left: 5px;
-  padding: 2px;
+  padding: 4px;
   background: $button-red;
   color: $white;
-  font-size: 12px;
+  font-size: 10px;
 }
 .formGroupOptional {
   margin-left: 5px;
-  padding: 2px;
+  padding: 4px;
   background: darken($line-gray, 20%);
   color: $white;
-  font-size: 12px;
+  font-size: 10px;
 }
 .identificaionWrapper {
   input {
@@ -76,6 +81,7 @@
   padding: 10px 16px 8px;
   border: 1px solid darken($line-gray, 30%);
   border-radius: 5px;
+  margin-top: 5px;
 }
 }
 .identificaionWrapper {
