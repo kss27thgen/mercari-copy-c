@@ -1,4 +1,6 @@
 .notificationWrapper
+  .notificationNav
+    = render 'mypages/mainNav'
   .notificationMain
     %ul.notificationHeader
       %li.notificationHeaderList.notificationHeaderLeft お知らせ
@@ -10,10 +12,7 @@
             .notificationLinksLinkBodyText
               ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
             .notificationLinksLinkBodyTime
-              =fa_icon 'fa-google-plus-square', class: 'fa-google-plus'
               =fa_icon 'fa-clock', class: 'fa-clock'
-              %i.fa.fa-google-plus
-              %i.fa.fa-clock
               %span ３日前
           %img.notificationLinksLinkImage{:src => "https://static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png", width: 48, height: 48, :alt => "ロゴ"}/
           .notificationLinksLinkTail
