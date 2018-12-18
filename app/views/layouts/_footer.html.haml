@@ -5,8 +5,8 @@
       %p.footerImageBoxLeftText 今すぐ無料ダウンロード！
       .footerImageBoxLeftIcon
         = image_tag("mercari_icon.png", class: "footerImageBoxLeftIconLeft")
-        = embedded_svg("app-store.svg", class: "footerImageBoxLeftIconMiddle")
-        = embedded_svg("google-play.svg", class: "footerImageBoxLeftIconRight")
+        = image_tag("app-store.svg", class: "footerImageBoxLeftIconMiddle")
+        = image_tag("google-play.svg", class: "footerImageBoxLeftIconRight")
     .footerImageBoxRight
       = image_tag("footer_content.png",class: "footerImageBoxRightImage")
 .footer
@@ -63,5 +63,5 @@
         = link_to "日本",class: "link"
 
   .footerLastIcons
-    = embedded_svg("logo-white.svg", class: "footerLastIcon")
+    = image_tag("logo-white.svg", class: "footerLastIcon")
     .footerLastIconsCopyRight © 2018 mercari
