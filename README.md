@@ -1,18 +1,3 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -43,14 +28,14 @@ Things you may want to cover:
 |postal_codes|integer|null: false|
 |region|string|null: false|
 |city|string|null: false|
-|adress|string||null: false|
+|address|string||null: false|
 |building_name|string|
-|tell|integer|
+|phone_number|integer|
 |profile_text|text|
 |birth_date|date|
 
 ### Association
-- has_one :user
+- beloings_to :user
 
 
 ## user_reviewテーブル
@@ -146,7 +131,7 @@ Things you may want to cover:
 
 ### Association
 - belongs_to :user
-- has_many :images
+- has_many :item_images
 - has_many :messages
 - has_many :likes
 - has_many :comments
@@ -161,13 +146,3 @@ Things you may want to cover:
 ### Association
 - belongs_to :item
 
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
