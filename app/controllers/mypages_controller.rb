@@ -12,7 +12,7 @@ class MypagesController < ApplicationController
 
   def notification
   end
-  
+
   def support
   end
 
@@ -20,6 +20,9 @@ class MypagesController < ApplicationController
   end
 
   def sales
+  end
+
+  def main
   end
 
 end

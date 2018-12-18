@@ -1,11 +1,12 @@
 .mypageWhole{
   background-color: $liteGray;
+  overflow:hidden;
   .lContainer {
     margin: 40px auto 0;
     width: 1020px;
-    background-color: $liteGray;
     display: block;
     padding-bottom: 40px;
+
     .lCcontent{
       width: 700px;
       float: right;
