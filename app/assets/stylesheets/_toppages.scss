@@ -187,10 +187,275 @@
 // show画面のscssは下記
 .wrapperShow{
   background-color: #f5f5f5;
-  padding-bottom:40px;
+  padding-top:40px;
   .wrapperShowItem{
+    width:43vw;
+    background-color:white;
+    padding:24px 40px 40px 40px;
+    margin:0 auto;
+    .wrapperShowItemName{
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      line-height: 1.4;
+      padding-bottom: 10px
+    }
+    .wrapperShowItemDetail{
+      display:flex;
+      justify-content:space-around;
+      .wrapperShowItemDetailLeft{
+        background-color: #fafafa;
+        .wrapperShowItemDetailLeftThumbnail{
+          height:300px;
+          width:300px;
+          border:solid 1px white;
+        }
+        .wrapperShowItemDetailLeftimages{
+          display:flex;
+          .wrapperShowItemDetailLeftimagesImage{
+            height:60px;
+            width:60px;
+            border:solid 1px white;
+          }
+        }
+      }
+      .wrapperShowItemDetailRight{
+        .wrapperShowItemDetailRightTable{
+        }
+      }
+    }
+    .wrapperShowItemPriceBox{
+      display:flex;
+      width:25vw;
+      margin:0 auto;
+      padding-top:30px;
+      .wrapperShowItemPrice{
+        font-size: 50px;
+        padding-right: 20px;
+        font-weight: bold;
+      }
+      .wrapperShowItemTax{
+        font-size: 10px;
+        vertical-align: bottom;
+        line-height: 100px;
+        margin-right: 5px;
+      }
+      .wrapperShowItemFare{
+        font-size: 16px;
+        vertical-align: bottom;
+        line-height: 100px;
+      }
+    }
+    .wrapperShowItemPoint {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%,-50%);
+      -moz-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+      -o-transform: translate(-50%,-50%);
+      transform: translate(-50%,-50%);
+      display: inline-block;
+      margin: 1.5em 0  0 0;
+      padding: 10px 13px;
+      min-width: 120px;
+      max-width: 100%;
+      color: #fff;
+      font-size: 16px;
+      background: #00B3B7;
+      border-radius: 5px;
+    }
 
+    .wrapperShowItemPoint:before{
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -15px;
+      border: 15px solid transparent;
+      border-top: 15px solid #00B3B7;
+    }
+    .wrapperShowItemBuy{
+      width:42.5vw;
+      background-color: red;
+      .wrapperShowItemBuyText{
+        text-align: center;
+        color: white;
+        font-weight: 600;
+        font-size: 30px;
+        padding:10px 0;
+      }
+    }
+    .wrapperShowItemDescription{
+      margin-top:50px;
+      font-size: 20px;
+      color:424242;
+    }
+    .wrapperShowItemLinks{
+      display:flex;
+      justify-content:space-between;
+      margin-top: 20px;
+      .wrapperShowItemLinksLeft{
+        display:flex;
+        .wrapperShowItemLinksLikes{
+          background-color: #f5f5f5;
+          border-radius: 30px;
+          padding:5px 10px 2px 5px;
+          .wrapperShowItemLinksLikesText{
+            font-size: 13px;
+            vertical-align: middle;
+            line-height: 34px;
+          }
+        }
+        .wrapperShowItemLinksReport{
+          background-color: #f5f5f5;
+          border-radius: 30px;
+          padding:5px 10px;
+          padding:5px 10px 2px 5px;
+          margin-left:20px;
+          .wrapperShowItemLinksReportText{
+            vertical-align: middle;
+            line-height: 34px;
+            font-size: 13px;
+          }
+        }
+      }
+    }
   }
 }
 
 
+.fa-heart-o{
+  color:#BDBDBD;
+  padding:0 5px;
+  font-size: 16px;
+}
+
+.fa-flag-o{
+  padding:0 5px;
+}
+
+.security{
+  color:#00ACF5;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 41px;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.fa-lock{
+  color:#00ACF5;
+  padding:0 5px;
+}
+
+
+.tableLeft{
+  width: 43%;
+  background-color: #fafafa;
+  border: 1px solid #f5f5f5;
+  font-size: 14px;
+}
+
+.tableRight{
+  width: 57%;
+  border: 1px solid #f5f5f5;
+  font-size: 13px;
+}
+
+td {
+  padding:8px;
+  line-height: 1.2;
+}
+
+th{
+  padding:8px;
+  line-height: 1.4;
+}
+
+.fa-smile-o{
+  font-size: 20px;
+  color:red;
+}
+
+.fa-meh-o{
+  font-size: 20px;
+  color:yellow;
+}
+
+.fa-frown-o{
+  font-size: 20px;
+  color:blue;
+}
+
+.tableLinks{
+  color:#00ACF5;
+  text-decoration: none;
+}
+
+
+// 商品コメント機能との隙間
+.wrapperShowNich{
+  background-color: #f5f5f5;
+  height:8px;
+}
+
+// 商品コメント機能のフロント
+.wrapperShowComments{
+  width:43vw;
+  background-color:white;
+  margin:0 auto;
+  padding:34px 40px 40px 40px;
+  .wrapperShowCommentsShow{
+    display:flex;
+    .wrapperShowCommentsShowLeft{
+      .wrapperShowCommentsShowLeftIcon{
+        background-color: black;
+        height:40px;
+        width:40px;
+        border-radius: 50%;
+      }
+    }
+    .wrapperShowCommentsShowRight{
+      .wrapperShowCommentsShowRightName{
+        font-size: 14px;
+        font-weight: bold;
+        padding-left: 10px;
+      }
+      .wrapperShowCommentsShowRightContent{
+        padding:16px;
+        background-color: #eef0f4;
+        width:39vw;
+        border-radius:10px;
+        .wrapperShowCommentsShowRightContentTop{
+          font-size: 13px;
+        }
+        .wrapperShowCommentsShowRightContentBottom{
+          display:flex;
+          justify-content:space-between;
+          .wrapperShowCommentsShowRightContentBottomLeft{
+            font-size: 14px;
+            color:#BDBDBD;
+            padding-top: 15px;
+          }
+          .wrapperShowCommentsShowRightContentBottomRight{
+
+          }
+        }
+      }
+    }
+  }
+}
+
+.fa-clock-o{
+  color:#BDBDBD;
+  font-size: 22px;
+  vertical-align: middle;
+  line-height: 15px;
+}
+
+.fa-flag-o{
+  font-size: 14px;
+  color:#BDBDBD;
+  padding-top: 20px
+}

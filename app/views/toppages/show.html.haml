@@ -1,27 +1,41 @@
 .wrapperShow
   .wrapperShowItem
-    .wrapperShowItemName
+    %h1.wrapperShowItemName champion チャンピオン パーカー
     .wrapperShowItemDetail
       .wrapperShowItemDetailLeft
         .wrapperShowItemDetailLeftThumbnail
         .wrapperShowItemDetailLeftimages
+          .wrapperShowItemDetailLeftimagesImage
+          .wrapperShowItemDetailLeftimagesImage
+          .wrapperShowItemDetailLeftimagesImage
+          .wrapperShowItemDetailLeftimagesImage
+          .wrapperShowItemDetailLeftimagesImage
       .wrapperShowItemDetailRight
         .wrapperShowItemDetailRightTable
           %table{:border => "1"}
             %tr
               %th.tableLeft 出品者
-              %th.tableRight ぽくぽく坊や
+              %th.tableRight
+                = link_to "ぽくぽく坊や","#",class: "tableLinks"
+                %br
+                = fa_icon "fa-smile-o ",class: "fa-smile-o"
+                675
+                = fa_icon "fa-meh-o ",class: "fa-meh-o"
+                4
+                = fa_icon "fa-frown-o ",class: "fa-frown-o"
+                1
             %tr
               %td.tableLeft カテゴリー
               %td.tableRight
-                メンズ
+                = link_to "メンズ","#",class: "tableLinks"
                 %br
-                >トップス
+                = link_to ">トップス","#",class: "tableLinks"
                 %br
-                >パーカー
+                = link_to ">パーカー","#",class: "tableLinks"
             %tr
               %td.tableLeft ブランド
-              %td.tableRight チャンピオン
+              %td.tableRight
+                = link_to "チャンピオン","#",class: "tableLinks"
             %tr
               %td.tableLeft 商品のサイズ
               %td.tableRight S
@@ -36,20 +50,58 @@
               %td.tableRight らくらくメルカリ便
             %tr
               %td.tableLeft 配送元地域
-              %td.tableRight アメリカ
+              %td.tableRight
+                = link_to "アメリカ","#",class: "tableLinks"
             %tr
               %td.tableLeft 発送日の目安
               %td.tableRight 2~3日で発送
-    .wrapperShowItemPrice
-    .wrapperShowItemPoint
+    .wrapperShowItemPriceBox
+      .wrapperShowItemPrice ¥12,000
+      .wrapperShowItemTax (税込)
+      .wrapperShowItemFare 送料込み
+    .wrapperShowItemPoint 売上金4,300円をお持ちです
     .wrapperShowItemBuy
+      .wrapperShowItemBuyText 購入画面に進む
     .wrapperShowItemDescription
+      チャンピオンリバースウィーブ仕様のパーカーです。
+      %br
+      インディゴ染めです。
+      %br
+      5回ほど着用して、洗濯済みです。
+      %br
+      サイズはリバースウィーブで検索お願いします。
     .wrapperShowItemLinks
-      .wrapperShowItemLinksLikes
-      .wrapperShowItemLinksReport
-      .wrapperShowItemLinksSecurity
-  .wrapperShowCommentsShow
-  .wrapperShowCommentNew
+      .wrapperShowItemLinksLeft
+        .wrapperShowItemLinksLikes
+          .wrapperShowItemLinksLikesLeft
+          .wrapperShowItemLinksLikesText
+            = fa_icon "fa-heart-o", class: "fa-heart-o"
+            いいね！
+            38
+        .wrapperShowItemLinksReport
+          .wrapperShowItemLinksReportText
+            = fa_icon "fa-flag-o", class: "fa-flag-o"
+            不適切な商品の報告
+      .wrapperShowItemLinksRight
+        .wrapperShowItemLinksSecurity
+          = fa_icon "fa-lock", class: "fa-lock"
+          = link_to "あんしん・あんぜんへの取り組み" ,"#",class: "security"
+  .wrapperShowNich
+  .wrapperShowComments
+    .wrapperShowCommentsShow
+      .wrapperShowCommentsShowLeft
+        .wrapperShowCommentsShowLeftIcon
+      .wrapperShowCommentsShowRight
+        .wrapperShowCommentsShowRightName ぽくぽく坊や
+        .wrapperShowCommentsShowRightContent
+          .wrapperShowCommentsShowRightContentTop 商品の到着を楽しみにしております。
+          .wrapperShowCommentsShowRightContentBottom
+            .wrapperShowCommentsShowRightContentBottomLeft
+              = fa_icon "fa-clock-o", class: "fa-clock-o"
+              5時間前
+            .wrapperShowCommentsShowRightContentBottomRight
+              = fa_icon "fa-flag-o", class: "fa-flag-o"
+    .wrapperShowCommentNew
   .wrapperShowPage
   .wrapperShowSns
   .wrapperShowOthers
