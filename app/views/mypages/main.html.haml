@@ -1,0 +1,43 @@
+.mypageWhole.clearfix
+  .lContainer
+    .lCcontent
+      .mypageUserIcon
+        .mypageContainer
+          %image.profileIcon{:src => "https://static-mercari-jp-imgtr2.akamaized.net/images/member_photo_noimage_thumb.png"}
+          %h2.userName USER
+          .userStatus
+            .userReview
+              %p.noun 評価
+              %span.rank 0
+            .products
+              %p.noun 出品数
+              %span.rank 0
+      .mypageTabcontain
+        %ul
+          %li.activeTop.clicked
+            %h3.mypage
+              %a.newsTab{:herf => ""} お知らせ
+          %li.activeTop
+            %h3.mypage
+              %a.todoTab{:herf => ""} やることリスト
+      .mypageContent
+        .listBox
+          %image.empty{:src => "https://www.mercari.com/jp/assets/img/common/common/logo-gray-icon.svg?27899896"}
+            %p.notification 現在、お知らせはありません
+            %p.hide 現在、やることリストはありません
+      .tradingHistory
+        %h3.mypageItems 購入中の商品
+        %ul
+          %li.activeBottom.selected
+            %h3.mypage
+              %a.dealing{:herf => ""} 取引中
+          %li.activeBottom
+            %h3.mypage
+              %a.dealt{:herf => ""} 過去の取引
+        .mypageContent
+          .listBoxBottom
+            %image.empty{:src => "https://www.mercari.com/jp/assets/img/common/common/logo-gray-icon.svg?27899896"}
+              %p.notification 取引中の商品がありません
+              %p.hide 過去の取引がありません
+    .lSide
+      = render "mypageNav"
