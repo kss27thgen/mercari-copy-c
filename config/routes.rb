@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   get 'items/itemEntry'
   get 'items/new'
   get 'mypages/main' => 'mypages#main'
+  get 'mypages/logout' => 'mypages#logout'
 end
