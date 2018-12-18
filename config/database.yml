@@ -49,7 +49,7 @@ test:
 #
 
 
-  production:
+production:
   <<: *default
   database: mercari-copy-c_production
   username: root
