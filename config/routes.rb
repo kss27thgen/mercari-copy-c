@@ -12,4 +12,6 @@ Rails.application.routes.draw do
   get 'items/itemEntry'
   get 'items/new'
   get 'mypages/main' => 'mypages#main'
+  get 'mypage/card/' => 'muypage#mypage_card'
+
 end
