@@ -24,5 +24,4 @@ class MypagesController < ApplicationController
 
   def main
   end
-
 end
