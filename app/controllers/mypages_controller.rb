@@ -24,4 +24,7 @@ class MypagesController < ApplicationController
 
   def main
   end
+
+  def logout
+  end
 end
