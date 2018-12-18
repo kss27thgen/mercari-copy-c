@@ -1,0 +1,124 @@
+.mypageWhole{
+  background-color: $liteGray;
+  .lContainer {
+    margin: 40px auto 0;
+    width: 1020px;
+    background-color: $liteGray;
+    display: block;
+    padding-bottom: 40px;
+    .lCcontent{
+      width: 700px;
+      float: right;
+      .mypageUserIcon{
+        background-image: url(https://www.mercari.com/jp/assets/img/mypage/user-bg.jpg?27899896);
+        background-size: cover;
+        height: 200px;
+        text-align: center;
+        padding: 20px;
+        position: relative;
+        width: 700px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        .mypageContainer{
+          .profileIcon{
+            height: 60px;
+            width: 60px;
+            border-radius: 30px;
+          }
+          .userName{
+            font-size: 14px;
+          }
+          .userReview{
+            display: inline-block;
+            height: 16px;
+          }
+          .products{
+            display: inline-block;
+            height: 16px;
+            margin-left: 16px;
+          }
+          .noun{
+            font-size: 14px;
+            display: inline;
+          }
+          .rank{
+            display: inline-block;
+            margin-left: 8px;
+          }
+        }
+      }
+        ul{
+          background-color: $liteGray;
+          text-align: center;
+          padding: 0;
+          margin: 0;
+          .activeTop,.activeBottom{
+            list-style: none;
+            height: 72px;
+            width: 350px;
+            display: table-cell;
+            box-sizing: border-box;
+            .mypage{
+              .newsTab,.todoTab,.dealing,.dealt{
+                font-size: 16px;
+                font-weight: bolder;
+
+              }
+            }
+          }
+        }
+
+      .mypageContent{
+        text-align: center;
+        min-height: 250px;
+        justify-content: center;
+        align-items: center;
+        background-color: $white;
+        .empty{
+          width: 100px;
+          margin-top: 60px;
+          .notification{
+            display: inline;
+          }
+        }
+      }
+      .tradingHistory{
+        margin-top: 40px;
+        .mypageItems{
+          padding: 0 16px;
+          margin: 0;
+          height: 80px;
+          box-sizing: border-box;
+          line-height: 80px;
+          background: #fafafa;
+        }
+      }
+    }
+    .lSide{
+      width: 280px;
+      background-color: $white;
+      margin-right:40px;
+
+    }
+  }
+  .clearfix::after {
+      content : " ";
+      display : block;
+      clear : both;
+  }
+}
+
+.clicked,.selected{
+  border-top: solid red 1px;
+  list-style: none;
+  height: 72px;
+  width: 350px;
+  display: table-cell;
+  box-sizing: border-box;
+  background-color: white;
+}
+.hide{
+  display: none;
+}
