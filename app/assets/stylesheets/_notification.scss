@@ -1,5 +1,9 @@
 .notificationWrapper {
-  background: gray;
+  background: $back-gray;
+  padding: 40px 220px;
+  display: flex;
+  .notificationNav {
+  }
   .notificationMain {
     width: 700px;
     min-height: 100vh;
