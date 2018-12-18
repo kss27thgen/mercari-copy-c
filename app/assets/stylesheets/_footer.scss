@@ -1,0 +1,135 @@
+.footerImage{
+  background: url(https://www.mercari.com/jp/assets/img/common/jp/top/download_bg_pc.jpg?9939559);
+  background-position: center;
+  // background-repeat: no-repeat;
+  width:100vw;
+  &Box{
+    display:flex;
+    width:55vw;
+    margin:0 auto;
+    &Left{
+      color:white;
+      padding-top:40px;
+      &Title{
+        font-size: 24px;
+        font-weight: bold;
+        text-shadow: 0 0 5px rgba(0,0,0,0.4);
+        cursor: auto;
+      }
+      &Text{
+        font-size: 35px;
+        text-shadow: 0 0 5px rgba(0,0,0,0.4);
+        border-style: solid;
+        border-width: 0;
+        display: block;
+        margin-block-end: 1em;
+
+      }
+      &Icon{
+        &Left{
+          width:68px;
+          height:68px;
+        }
+        &Middle{
+          padding-bottom:12px;
+          padding-left: 24px;
+        }
+        &Right{
+          padding-bottom:12px;
+          padding-left: 24px;
+        }
+      }
+    }
+    &Right{
+      &Image{
+        height:255px;
+        width:300px;
+        padding-left: 30px;
+      }
+    }
+  }
+}
+
+.footer a{
+  color:white;
+  font-size: 15px;
+  display: block;
+  margin-top:10px;
+  text-decoration:none;
+}
+
+.footer{
+  width:100vw;
+  background-color: black;
+  color:white;
+  padding:60px 0;
+  &Box{
+  display:flex;
+  justify-content: space-around;
+  width:70vw;
+  margin:0 auto;
+  padding-bottom: 30px;
+    &First{
+      width : calc(100vw / 4) ;
+      text-align: center;
+      &Title{
+        padding-bottom:20px ;
+        font-weight: bold;
+      }
+    }
+    &Second{
+      width : calc(100vw / 4) ;
+      text-align: center;
+      &Title{
+        padding-bottom:20px ;
+        font-weight: bold;
+      }
+    }
+    &Third{
+      width : calc(100vw / 4) ;
+      text-align: center;
+      &Title{
+        padding-bottom:20px ;
+        font-weight: bold;
+      }
+    }
+    &Forth{
+      width : calc(100vw / 4) ;
+      text-align: center;
+      &Title{
+        padding-bottom:20px ;
+        font-weight: bold;
+      }
+      &ContentUs{
+        display:flex;
+        justify-content: center;
+      }
+      &ContentGb{
+        display:flex;
+        justify-content: center;
+      }
+      &ContentJp{
+        display:flex;
+        justify-content: center;
+      }
+    }
+    .flag-icon{
+      height:25px;
+      width:25px;
+      border-radius:50%;
+      margin-top: 10px;
+      margin-right:10px;
+    }
+  }
+
+
+  .footerLastIcons{
+    text-align: center;
+  }
+    .footerLastIcon{
+      display:inline;
+    }
+    &CopyRight{
+      font-size: 14px;
+    }
+}
