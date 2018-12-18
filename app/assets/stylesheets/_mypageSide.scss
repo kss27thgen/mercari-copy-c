@@ -1,0 +1,28 @@
+.mypageNav{
+  background-color: $liteGray;
+  .mypageNavLists{
+    padding: 0;
+    margin: 0;
+    li{
+      list-style: none;
+      box-sizing: border-box;
+      height: 48px;
+      padding: 16px;
+      background-color: $white;
+    }
+    li + li{
+      border-top: solid 1px $liteGray;
+    }
+    .mypageNavList{
+      color: $black;
+      text-decoration-line: none;
+    }
+    .fa-chevron-right{
+      float: right;
+      color: $silver;
+    }
+  }
+  .point,.setting{
+    margin: 40px 0 0;
+  }
+}

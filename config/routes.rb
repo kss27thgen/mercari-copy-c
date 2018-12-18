@@ -11,5 +11,3 @@ Rails.application.routes.draw do
   get 'help_center/index' => 'help_center＃index'
   get 'items/new'
 end
-
-
