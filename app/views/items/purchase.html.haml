@@ -1,0 +1,47 @@
+.itemPurchaseWrapper
+  .itemPurchaseBodyWrapper
+    .itemPurchaseHeader
+      %h3.itemPurchaseHeaderTitle
+        購入を確定しますか？
+    .itemPurchaseMain
+      .itemPurchaseMainItem
+        %img.itemPurchaseMainItemImage{src: "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m26573123145_1.jpg?1545040812", alt: "商品画像"}
+        .itemPurchaseMainItemName
+          テテ bts スローガン
+        .itemPurchaseMainItemPrice
+          ¥ 3,777
+          %span.itemPurchaseMainItemPriceTaxin 送料込み
+      .itemPurchaseMainPurchase
+        .itemPurchaseMainPurchasePoint
+          ポイントはありません
+        .itemPurchaseMainPurchaseTotal.clearfix
+          .itemPurchaseMainPurchaseTotalLeft
+            支払い金額
+          .itemPurchaseMainPurchaseTotalRight
+            ¥ 3,777
+        .itemPurchaseMainPurchaseAlert
+          配送先と支払い方法の入力を完了してください。
+        .itemPurchaseMainPurchaseBtn
+          = link_to "#", class: "itemPurchaseMainPurchaseBtn" do
+            購入する
+    .itemPurchaseFooter
+      .itemPurchaseFooterWrapper
+        .itemPurchaseFooterWrapperTitle
+          配送先
+        .itemPurchaseFooterWrapperText
+          %p 〒123-4567
+          %p 東京都渋谷区道玄坂２丁目２３−１２ フォンティスビル7F
+          %p 土居麗菜
+        .itemPurchaseFooterWrapperLink
+          = link_to "#", class: "itemPurchaseFooterWrapperLink" do
+            変更する
+            %span >
+      .itemPurchaseFooterWrapper
+        .itemPurchaseFooterWrapperTitle
+          支払い方法
+        .itemPurchaseFooterWrapperText
+          ／
+        .itemPurchaseFooterWrapperLink
+          = link_to "#", class: "itemPurchaseFooterWrapperLink" do
+            変更する
+            %span >
