@@ -24,4 +24,8 @@ class MypagesController < ApplicationController
 
   def main
   end
+
+  def mypage_card
+  end
+
 end
