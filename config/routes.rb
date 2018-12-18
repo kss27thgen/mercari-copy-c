@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root 'roots#index'
+  root 'toppages#index'
   get 'mypages/deliver_address' => 'mypages#deliver_address'
   get 'mypages/identification' => 'mypages#identification'
   get 'mypages/email_password' => 'mypages#email_password'
@@ -10,7 +10,6 @@ Rails.application.routes.draw do
   get 'mypages/sales' => 'mypages#sales'
   get 'help_center/index' => 'help_center＃index'
   get 'items/itemEntry'
-
+  get 'items/new'
+  get 'mypages/main' => 'mypages#main'
 end
-
-
