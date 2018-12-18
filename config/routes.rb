@@ -11,5 +11,5 @@ Rails.application.routes.draw do
   get 'help_center/index' => 'help_center＃index'
   get 'items/new'
   get 'mypages/main' => 'mypages#main'
-  get '/root/mypage/card/' => 'root#mypage_card'
+  get 'mypage/card/' => 'muypage#mypage_card'
 end
