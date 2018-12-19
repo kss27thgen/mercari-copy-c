@@ -1,0 +1,23 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title MercariCopyC
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    .signup
+      %header.headerSignup
+        %image.logoSignup{:src => "https://www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?3371656568"}
+    = yield
+    .signup
+      %footer.footerSignup
+        .footerSignupInner.clearfix
+          %nav.clearfix
+            %li= link_to "プライバシーポリシー", "https://www.mercari.com/jp/privacy/"
+            %li= link_to "メルカリ利用規約", "https://www.mercari.com/jp/tos/"
+            %li= link_to "特定商取引に関する表記", "https://www.mercari.com/jp/tokutei/"
+          %image.footerlogo{:src => "https://www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?562024368"}
+            %p
+              %small ©︎2018 Merecari
