@@ -12,16 +12,16 @@
             .signinFormFacebookCard
               Facebookでログイン
         .signinFormGoogle
-          = link_to "#" do
+          = link_to "https://www.google.co.jp/" do
             =fa_icon 'fa-google-plus-square', class: 'fa-google-plus'
             .signinFormGoogleCard
               Googleでログイン
       .signinFormWrapper
         .signinForm
           .signinFormEmail
-            %input{placeholder: "メールアドレス"}
+            %input{placeholder: "  メールアドレス"}
           .signinFormPassword
-            %input{placeholder: "パスワード"}
+            %input{placeholder: "  パスワード"}
           .signinFormRecapcha
             %img{alt: "ロボットではありません", height: "75", src: "https://i.gyazo.com/558c420173f936369c4fd6afb54e149b.png", width: "300"}
           .signinFormButton
