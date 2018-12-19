@@ -10,8 +10,6 @@ class CreateItems < ActiveRecord::Migration[5.1]
       t.string :shipping_shcedule, null: false
       t.string :shipping_method, null: false
       t.string :size
-      t.references :seller_id, foreign_key: true
-      t.references :buyer_id, foreign_key: true
       t.timestamps
     end
   end
