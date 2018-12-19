@@ -1,0 +1,105 @@
+.itemPurchaseWrapper {
+  background: $back-gray;
+  .itemPurchaseBodyWrapper {
+    width: 700px;
+    background: white;
+    margin: 0 auto;
+    .itemPurchaseHeader {
+      height: 100px;
+      border-bottom: 1px solid $line-gray;
+      text-align: center;
+      line-height: 100px;
+      .itemPurchaseHeaderTitle {
+        font-size: 21px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+.itemPurchaseWrapper {
+  .itemPurchaseMain {
+    &Item {
+      text-align: center;
+      &Image {
+        padding-top: 20px;
+        max-width: 500px;
+        max-height: 300px;
+      }
+      &Name {
+        font-size: 16px;
+        font-weight: bold;
+      }
+      &Price {
+        font-size: 23px;
+        font-weight: bold;
+        margin: 10px 0;
+        &Taxin {
+          font-size: 15px;
+          font-weight: normal;
+        }
+      }
+    }
+    &Purchase {
+      border-bottom: 1px solid $line-gray;
+      padding: 0 150px;
+      text-align: center;
+      font-size: 13px;
+      &Point {
+        width: 300px;
+        height: 50px;
+        line-height: 50px;
+        background: darken($gray, 10%);
+        margin: 10px auto;
+      }
+      &Total {
+        font-size: 25px;
+        font-weight: bold;
+        padding: 0 50px;
+        &Left {
+          float: left;
+        }
+        &Right {
+          float: right;
+          font-size: 20px;
+          line-height: 40px;
+        }
+      }
+      &Alert {
+        color: red;
+        margin-top: 20px;
+        font-size: 13px;
+      }
+      &Btn {
+        width: 300px;
+        height: 50px;
+        line-height: 50px;
+        font-weight: bold;
+        background: darken($gray, 40%);
+        margin: 10px auto 50px;
+        color: $white;
+        text-decoration: none;
+        display: block;
+      }
+    }
+  }
+}
+.itemPurchaseWrapper {
+  .itemPurchaseFooterWrapper {
+    font-size: 14px;
+    height: 120px;
+    padding: 30px 150px;
+    border-bottom: 1px solid $line-gray;
+    &Title {
+      font-weight: bold;
+    }
+    &Text {
+      margin-top: 5px;
+      font-size: 13px;
+    }
+    &Link {
+      float: right;
+      text-decoration: none;
+      color: $button-blue;
+    }
+  }
+}

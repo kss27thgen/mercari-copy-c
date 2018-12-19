@@ -11,7 +11,10 @@ Rails.application.routes.draw do
   get 'help_center/index' => 'help_center＃index'
   get 'items/itemEntry'
   get 'items/new'
+  get 'items/purchase'
+  resources :toppages , only: [:index, :show]
   get 'mypages/main' => 'mypages#main'
   get 'mypages/logout' => 'mypages#logout'
-  get 'mypage/card/' => 'muypage#mypage_card'
+  get 'mypages/card' => 'mypages#card'
+  get 'mypages/info' => 'mypages#info'
 end
