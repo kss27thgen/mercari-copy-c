@@ -1,0 +1,83 @@
+.creditCardPaymentWrapperMain {
+  width: 700px;
+  height: 358px;
+  margin: 0 auto;
+  background: white;
+  .creditCardPaymentMethodHeader {
+    width: 652px;
+    height: 33px;
+    padding: 8px 24px;
+    border-bottom: 1px solid #f5f5f5;
+    .creditCardPaymentMethodHeaderTitle {
+      text-align: center;
+      font-size: 25px;
+      font-weight: bold;
+      line-height: 1.4;
+    }
+  }
+  .creditCardPaymentMethodInner {
+    width: 572px;
+    height: 180px;
+    border-top: 1px solid $line-gray;
+    margin: 0 auto;
+    .creditCardPaymentMethodInnerSectionList {
+      width: 572px;
+      height: 16px;
+      margin-top: 50px;
+      margin-bottom: 20px;
+      .creditCardPaymentMethodInnerSectionListText {
+        width: 320px;
+        height: 16px;
+        font-size: 16px;
+        font-weight: bold;
+        margin: 0 126px;
+        text-align: left;
+      }
+    }
+    .creditCardPaymentMethodInnerSectionAddCard {
+      width: 572px;
+      height: 107px;
+      padding: 50 0px;
+      text-align: center;
+      border-bottom: 1px solid $line-gray;
+      .creditCardPaymentMethodInnerSectionAddCardBtn {
+        width: 320px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 15px;
+        color: $white;
+        background: $button-red;
+        border: 1px;
+        display: block;
+        border: 1px solid transparent;
+        cursor: pointer;
+        margin: 0 auto;
+      }
+    }
+    .creditCardPaymentMethodInnerSectionExplain {
+      width: 572px;
+      height: 16px;
+      float: right;
+      margin-top: 40px;
+      .creditCardPaymentMethodInnerSectionExplainText {
+        width: 128px;
+        height: 18px;
+        font-size: 15px;
+        color: #0099e8;
+        margin-left: 400px;
+      }
+    }
+  }
+}
+
+.creditCardPaymentMethodInnerSectionAddCardBtn {
+  display: inline-block;
+  font-family: 'icon-font';
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+}
+

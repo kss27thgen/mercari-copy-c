@@ -28,7 +28,10 @@ class MypagesController < ApplicationController
   def logout
   end
 
-  def mypage_card
+  def card
+  end
+
+  def info
   end
 
 end

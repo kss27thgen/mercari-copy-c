@@ -1,0 +1,17 @@
+.creditCardPaymentWrapper
+  .creditCardPaymentWrapperMain
+    .creditCardPaymentMethodHeader
+      %h2.creditCardPaymentMethodHeaderTitle
+        支払い方法
+    .creditCardPaymentMethodInner
+      .creditCardPaymentMethodInnerSectionList
+        %h3.creditCardPaymentMethodInnerSectionListText
+          クレジットカード一覧
+      .creditCardPaymentMethodInnerSectionAddCard
+        %button.creditCardPaymentMethodInnerSectionAddCardBtn{type: "button"}
+          = fa_icon 'fa-cc-mastercard', class: 'fa-cc-mastercard'
+          クレジットカードを追加する
+      .creditCardPaymentMethodInnerSectionExplain
+        %a{href: "/jp/help_center/category/6/", target: "_blank"}
+          %span.creditCardPaymentMethodInnerSectionExplainText 支払い方法について
+          = fa_icon 'fa-chevron-right', class: 'fa-chevron-right'

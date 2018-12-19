@@ -1,0 +1,222 @@
+.creditCardInfoWrapper {
+  .creditCardInfoMainWrapper {
+    background: white;
+    width: 700px;
+    height: 666px;
+    .creditCardInfoHeader {
+      width: 652px;
+      height: 33px;
+      padding: 8px 24px;
+      text-align: center;
+      &Title {
+        padding-bottom: 15px;
+        font-size: 24px;
+        font-weight: bold;
+        border-bottom: 1px solid $line-gray;
+      }
+    }
+    .creditCardInfoFormSection {
+      width: 572px;
+      height: 500px;
+      padding: 64px;
+      border-top: 1px;
+      .creditCardInfoFormSectionMiddle {
+        width: 320px;
+        margin: 0 126px;
+        .creditCardInfoFormGroupsOne {
+          height: 98px;
+          .creditCardInfoFormGroupsOneCardText {
+            width: 200px;
+            height: 30px;
+            font-weight: 600px;
+            font-size: 14px;
+          }
+            .creditCardInfoFormGroupsOneRequire {
+              width: 32px;
+              height: 19px;
+              padding: 2 4px;
+              margin-left: 8px;
+              background: $button-red;
+              color: $white;
+              font-size: 12px;
+            }
+          .creditCardInfoFormGroupsOneCardNumber {
+            width: 320px;
+            height: 40px;
+            margin-top: 8px;
+            padding:10 16 8 16px;
+            border: 1px auto;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background: #fff;
+            line-height: 1.5;
+            font-size: 16px;
+          }
+          .creditCardInfoFormGroupsOneCardList {
+            display: flex;
+            flex-direction: row;
+            space-between: 4px;
+            margin: 8px 0 0 0;
+            &Visa {
+              margin-right: 4px;
+            }
+            &Master {
+              margin-right: 4px;
+            }
+            &Saison {
+              margin-right: 4px;
+            }
+            &Jcb {
+              margin-right: 4px;
+            }
+            &Am {
+              margin-right: 4px;
+            }
+            &Dc {
+              margin-right: 4px;
+            }
+            &Dis {
+              margin-right: 4px;
+            }
+          }
+        }
+        .creditCardInfoFormGroupTwo {
+          width: 320px;
+          height: 180px;
+          margin-top: 40px;
+          .creditCardInfoFormGroupTwoExpire {
+            width: 200px;
+            height: 30px;
+            font-weight: 600px;
+            font-size: 14px;
+          }
+          .creditCardInfoFormGroupTwoPayCardExpireM {
+            width: 112px;
+            height: 48px;
+            border: 1px;
+            border-style: solid;
+            border-color: rgb(166, 166, 166);
+          }
+          .creditCardInfoFormGroupTwoExpireY {
+            width: 112px;
+            height: 48px;
+            border: 1px;
+            border-style: solid;
+            border-color: rgb(166, 166, 166);
+            margin-top: 10px;
+          }
+        }
+        .creditCardInfoFormGroupThree {
+          width: 320px;
+          height: 100px;
+          .creditCardInfoFormGroupThreeScretCode {
+            width: 200px;
+            height: 30px;
+            font-weight: 600px;
+            font-size: 14px;
+          }
+          .creditCardInfoFormGroupsThreeCardNumber {
+            width: 320px;
+            height: 40px;
+            margin-top: 8px;
+            padding:10 16 8 16px;
+            border: 1px auto;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background: #fff;
+            line-height: 1.5;
+            font-size: 16px;
+              .creditCardInfoFormGroupThreeScretCodeText {
+              }
+
+          }
+        .creditCardInfoFormGroupFour {
+          height: 150px;
+
+
+        }
+        }
+      }
+    }
+  }
+}
+
+.creditCardInfoFormGroupsOneRequire {
+  margin-left: 5px;
+  padding: 2px;
+  background: $button-red;
+  color: $white;
+  font-size: 12px;
+}
+
+.creditCardInfoFormGroupTwoRequire {
+  margin-left: 5px;
+  padding: 2px;
+  background: $button-red;
+  color: $white;
+  font-size: 12px;
+}
+
+.creditCardInfoFormGroupThreeRequire {
+  margin-left: 5px;
+  padding: 2px;
+  background: $button-red;
+  color: $white;
+  font-size: 12px;
+}
+
+.fa-question-circle {
+  background: #0099e8;
+  color: #fff;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  line-height: 14px;
+  font-size: 12px;
+  text-align: center;
+  margin-left: 170px;
+}
+
+
+.creditCardInfoFormGroupThreeScretCodeTextCommet {
+  font-size: 12px;
+  color: #0099e8;
+  font-family: "Font Awesome 5 Free";
+  margin-top: 5px;
+  float: right;
+}
+
+.creditCardInfoFormGroupFourSectionAddBtn {
+line-height: 50px;
+font-size: 15px;
+text-align: center;
+color: $white;
+background: $button-red;
+width: 318px;
+height: 48px;
+margin-top: 40px;
+border: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
