@@ -1,4 +1,9 @@
 .deliverAddressWrapper {
+  background: $back-gray;
+  padding: 40px 220px;
+  display: flex;
+  .deliverAddressNav {
+  }
   .mainWrapper {
     width: 700px;
     background: white;
@@ -53,9 +58,11 @@
         height: 30px;
         line-height: 30px;
         background: #ea352d;
-        font-size: 15px;
+        font-size: 14px;
+        font-weight: normal;
         margin: 50px auto 70px;
         color: $white;
+        text-decoration: none;
       }
     }
   }

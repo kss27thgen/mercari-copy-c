@@ -1,7 +1,12 @@
 .pointWrapper {
+  background: $back-gray;
+  padding: 40px 220px;
+  display: flex;
+  .pointNav {
+  }
   .pointMainWrapper {
     width: 700px;
-    height: 530px;
+    height: 250px;
     margin: 0 auto;
     background: white;
     .pointHeader {

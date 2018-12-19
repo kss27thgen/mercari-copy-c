@@ -1,7 +1,12 @@
 .salesWrapper {
+  background: $back-gray;
+  padding: 40px 220px;
+  display: flex;
+  .salesNav {
+  }
   .salesMainWrapper {
     width: 700px;
-    height: 530px;
+    height: 400px;
     margin: 0 auto;
     background: white;
     .salesHeader {
