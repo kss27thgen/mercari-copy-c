@@ -409,11 +409,16 @@ th{
   .wrapperShowCommentsShow{
     display:flex;
     .wrapperShowCommentsShowLeft{
+      margin-right:20px;
       .wrapperShowCommentsShowLeftIcon{
         background-color: black;
         height:40px;
         width:40px;
         border-radius: 50%;
+      }
+      .wrapperShowCommentsShowLeftSeller{
+        font-size: 12px;
+        background-color: #eef0f4;
       }
     }
     .wrapperShowCommentsShowRight{
@@ -439,14 +444,157 @@ th{
             padding-top: 15px;
           }
           .wrapperShowCommentsShowRightContentBottomRight{
-
           }
         }
       }
     }
   }
+  .wrapperShowCommentNew{
+    padding:24px;
+    .wrapperShowCommentNewAdvice{
+      padding:8px;
+      background-color:#fff6de;
+      font-size:12px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    textarea{
+      min-height: 104px;
+      max-width: 100%;
+      margin-top: 8px;
+      padding: 10px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .wrapperShowCommentNewSumit{
+      box-sizing: border-box;
+      width: 100%;
+      background-color:#888;
+      color: $white;
+      text-align: center;
+      height: 50px;
+      vertical-align: middle;
+      padding: 11px 0;
+      box-sizing: border-box;
+    }
+  }
 }
+.wrapperShowPage{
+  width: 700px;
+  margin: 24px auto 0;
+  &Back{
+    vertical-align: middle;
+    display: inline-block;
+    float: left;
+  }
+  &Next{
+    vertical-align: middle;
+    display: inline-block;
+    float: right;
+  }
+    .title{
+      font-size: 15px;
+      padding: 0 14px 0;
+      max-width: 21vw;
+      box-sizing: border-box;
+      color: #0099e8;
+    }
+    .fa-chevron-left,.fa-chevron-right{
+      display: inline;
+      position: flex;
+      font-size: 15px;
+      color: #0099e8;
+    }
+}
+.wrapperShowSns{
+  width:700px;
+  margin: 24px auto;
+  .wrapperShowSnsCenter{
+    text-align: center;
+    background-color: $white;
+    padding: 32px 0 24px;
+    .wrapperShowSnsBox{
+      margin-top: 16px;
+      height: 50px;
+      box-sizing: border-box;
+      img{
+        height: 44px;
+        width: 44px;
+      }
+    }
+  }
+}
+.wrapperShowUsersItems{
+  width: 700px;
+  margin: 0 auto;
+  font-size: 0;
+  &Head{
+    font-size:25px;
+    color:#0099e8;
+  }
+  &container{
+    width:700px;
+    max-height: 700px;
+  }
+  .wrapperShowUsersItem{
+    width:220px;
+    height: 330px;
+    background-color: $white;
+    display: inline-block;
+    box-sizing:border-box;
+    margin-bottom: 20px;
+    &Image{
+      height: 220px;
+      background-color: yellow;
+    }
+    &Body{
+      height: 110px;
+      padding:16px;
+      box-sizing: border-box;
+      &Title{
+        font-size: 16px;
+        height:48px;
+        overflow: hidden;
+      }
+      &Details{
+        margin-top:8px;
+        height: 30px;
+        &Price{
+          font-size:20px;
+          display: inline-block;
+        }
+        &Likes{
+          float:right;
+        }
+        &Tax{
+            font-size: 10px;
+            color: #C0C0C0;
+          }
+      }
+    }
+  }
+}
+.wrapperShowUsersItemLikesIcon.far.fa-heart{
+  display: inline-block;
+  color:gray;
+}
+.wrapperShowUsersItemLikesCount{
+  display: inline-block;
+}
+.clearfix::after {
+      content : " ";
+      display : block;
+      clear : both;
+  }
 
+.wrapperShowUsersItem + .wrapperShowUsersItem{
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.wrapperShowUsersItem:nth-of-type(3n+1){
+  margin-bottom: 20px;
+  margin-left: 0;
+}
 .fa-clock-o{
   color:#BDBDBD;
   font-size: 22px;
