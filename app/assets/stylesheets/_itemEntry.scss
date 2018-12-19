@@ -1,5 +1,5 @@
 .itemEntryWrapper {
-  background: $gray;
+  background: $back-gray;
   .itemEntryBodyWrapper {
     width: 700px;
     margin: 0 auto;
@@ -48,8 +48,9 @@
             margin-top: 20px;
             background: $back-gray;
             text-align: center;
-            font-size: 13px;
+            font-size: 12px;
             cursor: pointer;
+            font-weight: bold;
             &Text {
               margin-top: 80px;
             }
@@ -205,6 +206,7 @@
           &Middle {
             height: 70px;
             line-height: 70px;
+            font-size: 14px;
             border-top: 1px solid darken($back-gray, 30%);
             border-bottom: 1px solid darken($back-gray, 30%);
             &Left {
@@ -220,6 +222,7 @@
             font-weight: bold;
             &Left {
               float: left;
+              font-size: 16px;
             }
             &Right {
               float: right;

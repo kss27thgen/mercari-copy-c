@@ -1,5 +1,6 @@
 .signinWrapper {
   height: 850px;
+  background: $back-gray;
   .signinMain {
     width: 456px;
     height: 770px;
@@ -28,7 +29,7 @@
       .horizon {
         margin-top: 45px;
         margin-bottom: 45px;
-        border-color: #f5f5f5;
+        border-color: $white;
         display: inline-block;
         width: 100%;
       }
@@ -88,16 +89,16 @@
           &Email {
             input {
               display: block;
-              width: 305px;
-              height: 32px;
+              width: 330px;
+              height: 42px;
               margin-bottom: 20px;
             }
           }
           &Password {
             input {
               display: block;
-              height: 32px;
-              width: 305px;
+              height: 42px;
+              width: 330px;
               margin-bottom: 20px;
             }
           }
@@ -122,6 +123,7 @@
             font-size: 13px;
             a {
               text-decoration: none;
+              color: $button-blue;
             }
           }
         }
