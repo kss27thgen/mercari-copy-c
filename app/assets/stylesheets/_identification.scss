@@ -7,7 +7,7 @@
   .mainWrapper {
     background: white;
     width: 700px;
-    height: 1325px;
+    height: 1300px;
     margin: 0 auto;
     .header {
       text-align: center;
@@ -48,9 +48,11 @@
     }
     .footerLink {
       float: right;
-      padding-right: 70px;
+      padding-right: 40px;
       padding-top: 10px;
       font-size: 14px;
+      text-decoration: none;
+      color: $button-blue;
     }
   }
 }
@@ -87,6 +89,7 @@
 .identificaionWrapper {
   select {
   width: 140px;
+  height: 50px;
   }
 }
 
