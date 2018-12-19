@@ -33,7 +33,7 @@ gem 'jquery-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+gem 'haml-rails'
 group :production do
   gem 'unicorn'
 end
@@ -68,4 +68,3 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'font-awesome-rails'
-gem 'haml-rails'
