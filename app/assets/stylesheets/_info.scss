@@ -1,8 +1,12 @@
 .creditCardInfoWrapper {
+  padding: 40px 100px;
+  background: $gray;
+  display: flex;
   .creditCardInfoMainWrapper {
     background: white;
     width: 700px;
     height: 666px;
+    margin-left: 80px;
     .creditCardInfoHeader {
       width: 652px;
       height: 33px;
@@ -128,19 +132,15 @@
             font-size: 16px;
               .creditCardInfoFormGroupThreeScretCodeText {
               }
-
           }
         .creditCardInfoFormGroupFour {
           height: 150px;
-
-
         }
         }
       }
     }
   }
 }
-
 .creditCardInfoFormGroupsOneRequire {
   margin-left: 5px;
   padding: 2px;
