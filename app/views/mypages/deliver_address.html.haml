@@ -1,4 +1,6 @@
 .deliverAddressWrapper
+  .deliverAddressNav
+    = render 'mypages/mainNav'
   .mainWrapper
     .adChapterContainer
       %h2.ad-chapter-head 住所変更
@@ -49,4 +51,6 @@
               %span.formOptional 任意
               %br
               %input
-      %h2.adButton 変更する
+      %h2.adButton
+        =link_to "#", class: "adButton" do
+          変更する
