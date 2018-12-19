@@ -13,5 +13,6 @@ Rails.application.routes.draw do
   get 'items/new'
   get 'mypages/main' => 'mypages#main'
   get 'mypages/logout' => 'mypages#logout'
-  get 'mypage/card/' => 'muypage#mypage_card'
+  get 'mypages/card' => 'mypages#card'
+  get 'mypages/info' => 'mypages#info'
 end
