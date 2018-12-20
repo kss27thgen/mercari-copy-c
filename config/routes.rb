@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   get 'mypages/point' => 'mypages#point'
   get 'mypages/sales' => 'mypages#sales'
   get 'help_center/index' => 'help_center＃index'
-  get 'items/itemEntry'
   get 'items/new'
   get 'items/purchase'
   resources :toppages , only: [:index, :show]
@@ -18,3 +17,4 @@ Rails.application.routes.draw do
   get 'mypages/card' => 'mypages#card'
   get 'mypages/info' => 'mypages#info'
 end
+
