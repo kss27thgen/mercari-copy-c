@@ -24,7 +24,7 @@
             .signinFormPassword
               = f.password_field :password, placeholder: "  パスワード", autocomplete: "off"
             .signinFormRecapcha
-              %img{alt: "ロボットではありません", height: "75", src: "https://i.gyazo.com/558c420173f936369c4fd6afb54e149b.png", width: "300"}
+              = image_tag "https://i.gyazo.com/558c420173f936369c4fd6afb54e149b.png", class: "signinFormRecapcha"
             .signinFormButton
               = f.submit "ログイン", class: "signinFormButton"
             .signinFormForgetPassword
