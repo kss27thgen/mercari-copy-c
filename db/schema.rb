@@ -10,7 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181213032257) do
+ActiveRecord::Schema.define(version: 20181219113218) do
+
+  create_table "item_images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.text "item_images"
+    t.bigint "item_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["item_id"], name: "index_item_images_on_item_id"
+  end
+
+  create_table "items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name", null: false
+    t.text "explaination", null: false
+    t.integer "price", null: false
+    t.integer "status", null: false
+    t.string "shipping_fare", null: false
+    t.integer "shipping_region", null: false
+    t.string "shipping_shcedule", null: false
+    t.string "shipping_method", null: false
+    t.string "size"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "nickname", null: false
@@ -26,4 +48,5 @@ ActiveRecord::Schema.define(version: 20181213032257) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "item_images", "items"
 end
