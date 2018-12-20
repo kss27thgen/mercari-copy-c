@@ -34,4 +34,5 @@ class User < ApplicationRecord
       user
     end
   end
+  has_many :items
 end
