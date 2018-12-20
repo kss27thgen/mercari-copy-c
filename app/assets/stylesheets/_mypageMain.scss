@@ -60,11 +60,10 @@
             width: 350px;
             display: table-cell;
             box-sizing: border-box;
+            vertical-align: middle;
             }
           .mypage{
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            display: inline-block;
             .newsTab,.todoTab,.dealing,.dealt{
               font-size: 16px;
               font-weight: bolder;
