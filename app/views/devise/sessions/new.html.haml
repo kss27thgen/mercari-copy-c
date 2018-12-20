@@ -18,13 +18,14 @@
               Googleでログイン
       .signinFormWrapper
         .signinForm
-          .signinFormEmail
-            %input{placeholder: "  メールアドレス"}
-          .signinFormPassword
-            %input{placeholder: "  パスワード"}
-          .signinFormRecapcha
-            %img{alt: "ロボットではありません", height: "75", src: "https://i.gyazo.com/558c420173f936369c4fd6afb54e149b.png", width: "300"}
-          .signinFormButton
-            =link_to "ログイン", "#"
-          .signinFormForgetPassword
-            =link_to "パスワードをお忘れの方", "#"
+          = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+            .signinFormEmail
+              = f.email_field :email, placeholder: "  メールアドレス", autofocus: true
+            .signinFormPassword
+              = f.password_field :password, placeholder: "  パスワード", autocomplete: "off"
+            .signinFormRecapcha
+              %img{alt: "ロボットではありません", height: "75", src: "https://i.gyazo.com/558c420173f936369c4fd6afb54e149b.png", width: "300"}
+            .signinFormButton
+              = f.submit "ログイン", class: "signinFormButton"
+            .signinFormForgetPassword
+              =link_to "パスワードをお忘れの方", "#"
