@@ -1,4 +1,5 @@
 .exhibition
-  .exhibitionText 出品
-  .exhibitionIcon
-    = fa_icon "fa-camera",class: "fa-camera"
+  =link_to items_itemEntry_path, class: "exhibitionText" do
+    .exhibitionText 出品
+    .exhibitionIcon
+      = fa_icon "fa-camera",class: "fa-camera"

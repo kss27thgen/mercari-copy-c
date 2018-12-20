@@ -2,6 +2,8 @@
   .lContainer.clearfix
     .logoutCcontent
       .buttonLogout
-        %button.btn-default{:type => "submit"} ログアウト
+        =link_to destroy_user_session_path, method: :delete, class: "btn-default" do
+          ログアウト
     .lSide
       = render "mainNav"
+
