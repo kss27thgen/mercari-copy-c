@@ -9,7 +9,8 @@
         .signupInner
           .signupKeys
             .signkeysEmail
-              =image_tag("https://i.gyazo.com/7c3ec5cb6e39f847506d1e6c02818b25.png",class: "keys")
+              = link_to new_user_registration_path, class: "signkeysEmail" do
+                =image_tag("https://i.gyazo.com/7c3ec5cb6e39f847506d1e6c02818b25.png",class: "keys")
               =link_to user_facebook_omniauth_authorize_path do
                 =image_tag("https://i.gyazo.com/087d3455476edcf600c9a0c9b61c12fd.png",class: "keys")
               =link_to user_google_oauth2_omniauth_authorize_path do
