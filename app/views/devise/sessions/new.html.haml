@@ -11,12 +11,13 @@
           = link_to "#" do
             =fa_icon 'fa-facebook-f', class: 'fa-facebook-square'
             .signinFormFacebookCard
-              Facebookでログイン
+              =link_to "Facebookでログイン",  user_facebook_omniauth_authorize_path
+
         .signinFormGoogle
           = link_to "https://www.google.co.jp/" do
             =fa_icon 'fa-google-plus-square', class: 'fa-google-plus'
             .signinFormGoogleCard
-              Googleでログイン
+              =link_to "Googleでログイン" ,user_google_oauth2_omniauth_authorize_path
       .signinFormWrapper
         .signinForm
           = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
