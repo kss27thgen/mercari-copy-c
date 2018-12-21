@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+
   def new
     render :layout => 'simpleLayout'
   end
