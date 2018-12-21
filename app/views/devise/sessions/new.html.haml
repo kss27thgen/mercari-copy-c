@@ -11,12 +11,12 @@
           = link_to "#" do
             =fa_icon 'fa-facebook-f', class: 'fa-facebook-square'
             .signinFormFacebookCard
-              =link_to "Facebookでログイン",  user_facebook_omniauth_authorize_path
+              =link_to "Facebookでログイン",  user_facebook_omniauth_authorize_path, class: "signinFormFacebookCard"
         .signinFormGoogle
           = link_to "https://www.google.co.jp/" do
             =fa_icon 'fa-google-plus-square', class: 'fa-google-plus'
             .signinFormGoogleCard
-              =link_to "Googleでログイン" ,user_google_oauth2_omniauth_authorize_path
+              =link_to "Googleでログイン" ,user_google_oauth2_omniauth_authorize_path, class: "signinFormGoogleCard"
       .signinFormWrapper
         .signinForm
           = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
@@ -25,7 +25,7 @@
             .signinFormPassword
               = f.password_field :password, placeholder: "  パスワード", autocomplete: "off"
             .signinFormRecapcha
-              = image_tag "https://i.gyazo.com/558c420173f936369c4fd6afb54e149b.png", class: "signinFormRecapcha"
+              = image_tag "https://i.gyazo.com/350793c219cd5a2cc3bc30d342e09c43.png", class: "signinFormRecapcha"
             .signinFormButton
               = f.submit "ログイン", class: "signinFormButton"
             .signinFormForgetPassword
