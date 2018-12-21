@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   root 'toppages#index'
-  get 'items/new'
+  resources :items , only: [:new , :create]
   get 'items/purchase'
   resources :toppages , only: [:index, :show]
   get 'mypages/main' => 'mypages#main'
@@ -16,5 +16,4 @@ Rails.application.routes.draw do
   get 'mypages/point'
   get 'mypages/sales'
   get 'help_center/index' => 'help_center＃index'
-  root 'toppages#index'
 end
