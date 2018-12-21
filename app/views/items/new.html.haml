@@ -1,2 +1,119 @@
-%h1 Items#new
-%p Find me in app/views/items/new.html.haml
+.itemEntryWrapper
+  .itemEntryBodyWrapper
+    .itemEntryHeader
+      %h3.itemEntryHeaderTitle
+        商品の情報を入力
+    .itemEntryMain
+      .itemEntryMainUpper
+        .itemEntryMainUpperImage
+          .itemEntryMainUpperImageTitle
+            出品画像
+            %span.itemEntryMainUpperImageTitleRequire 必須
+          .itemEntryMainUpperImageText
+            最大4枚までアップロードできます
+          %label.itemEntryMainUpperImageForm
+            %input.itemEntryMainUpperImageFormFile{type: "file"}
+            .itemEntryMainUpperImageFormArea
+              %p.itemEntryMainUpperImageFormAreaText
+                ドラッグアンドドロップ
+              %p
+                またはクリックしてファイルをアップロード
+        .itemEntryMainUpperItem
+          .itemEntryMainUpperItemTitle
+            商品名
+            %span.itemEntryMainUpperItemTitleRequire 必須
+          %input{placeholder: "商品名（必須40字まで）"}
+          .itemEntryMainUpperItemTitle
+            商品名
+            %span.itemEntryMainUpperItemTitleRequire 必須
+          %textarea{placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"}
+        .itemEntryMainUpperDescription
+          .itemEntryMainUpperDescriptionLeft
+            .itemEntryMainUpperDescriptionLeftTitle
+              商品の詳細
+          .itemEntryMainUpperDescriptionRight
+            .itemEntryMainUpperDescriptionRightTitle
+              カテゴリー
+              %span.itemEntryMainUpperDescriptionRightTitleRequire 必須
+            .itemEntryMainUpperDescriptionRightSelect
+              %select
+            .itemEntryMainUpperDescriptionRightTitle
+              商品の状態
+              %span.itemEntryMainUpperDescriptionRightTitleRequire 必須
+            .itemEntryMainUpperDescriptionRightSelect
+              %select
+        .itemEntryMainUpperDelivery
+          .itemEntryMainUpperDeliveryLeft
+            .itemEntryMainUpperDeliveryLeftTitle
+              配送について
+              %span
+                = link_to "#" do
+                  =fa_icon 'fa-question-circle', class: 'fa-question-circle'
+          .itemEntryMainUpperDeliveryRight
+            .itemEntryMainUpperDeliveryRightTitle
+              配送料の負担
+              %span.itemEntryMainUpperDeliveryRightTitleRequire 必須
+            .itemEntryMainUpperDeliveryRightSelect
+              %select
+            .itemEntryMainUpperDeliveryRightTitle
+              配送元の地域
+              %span.itemEntryMainUpperDeliveryRightTitleRequire 必須
+            .itemEntryMainUpperDeliveryRightSelect
+              %select
+            .itemEntryMainUpperDeliveryRightTitle
+              配送までの日数
+              %span.itemEntryMainUpperDeliveryRightTitleRequire 必須
+            .itemEntryMainUpperDeliveryRightSelect
+              %select
+        .itemEntryMainUpperPrice
+          .itemEntryMainUpperPriceLeft
+            .itemEntryMainUpperPriceLeftTitle
+              販売価格(300〜9,999,999)
+              %span
+                = link_to "#" do
+                  =fa_icon 'fa-question-circle', class: 'fa-question-circle'
+          .itemEntryMainUpperPriceRight
+            .itemEntryMainUpperPriceRightTop.clearfix
+              .itemEntryMainUpperPriceRightTopLeft
+                価格
+                %span.itemEntryMainUpperPriceRightTopLeftRequire 必須
+              .itemEntryMainUpperPriceRightTopRight
+                .itemEntryMainUpperPriceRightTopRightYen
+                  ¥
+                  %span
+                    %input.itemEntryMainUpperPriceRightTopRightYenInput{placeholder: "                    例) 300"}
+            .itemEntryMainUpperPriceRightMiddle
+              .itemEntryMainUpperPriceRightMiddleLeft
+                販売手数料(10%)
+              .itemEntryMainUpperPriceRightMiddleRight
+                ｰ
+            .itemEntryMainUpperPriceRightBottom
+              .itemEntryMainUpperPriceRightBottomLeft
+                販売利益
+              .itemEntryMainUpperPriceRightBottomRight
+                ー
+    .itemEntryFooter
+      .itemEntryFooterNote
+        %p
+          %span
+            = link_to "#", class: "itemEntryFooterNoteLink" do
+              禁止されている出品、行為
+          を必ずご確認ください。
+        %p
+          またブランド品でシリアルナンバー等がある場合はご記載ください。
+          %span
+            = link_to "#", class: "itemEntryFooterNoteLink" do
+              偽ブランドの販売
+          は犯罪であり処罰される可能性があります。
+        %p
+          また、出品をもちまして
+          %span
+            = link_to "#", class: "itemEntryFooterNoteLink" do
+              加盟店規約
+          に同意したことになります。
+      .itemEntryFooterBtn
+        .itemEntryFooterBtnEntry
+          出品する
+        .itemEntryFooterBtnBack
+          = link_to :back, class: "itemEntryFooterBtnBack" do
+            もどる
