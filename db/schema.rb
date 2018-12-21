@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 20181220023526) do
 
   create_table "item_images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -19,6 +20,7 @@ ActiveRecord::Schema.define(version: 20181220023526) do
     t.datetime "updated_at", null: false
     t.index ["item_id"], name: "index_item_images_on_item_id"
   end
+
 
   create_table "items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name", null: false
@@ -32,8 +34,19 @@ ActiveRecord::Schema.define(version: 20181220023526) do
     t.string "size"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "seller_id"
-    t.integer "buyer_id"
+
+  end
+
+  create_table "sns_credentials", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "uid"
+    t.string "provider"
+    t.bigint "user_id"
+    t.string "access_token"
+    t.string "access_secret"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_sns_credentials_on_user_id"
+
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -50,5 +63,8 @@ ActiveRecord::Schema.define(version: 20181220023526) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+
+  add_foreign_key "sns_credentials", "users"
   add_foreign_key "item_images", "items"
+
 end
