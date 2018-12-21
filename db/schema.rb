@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 20181220102238) do
     t.string "access_secret"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["provider", "uid"], name: "index_sns_credentials_on_provider_and_uid", unique: true
     t.index ["user_id"], name: "index_sns_credentials_on_user_id"
   end
 
