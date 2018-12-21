@@ -9,9 +9,11 @@
         .signupInner
           .signupKeys
             .signkeysEmail
-              %image.keys{:src => "https://i.gyazo.com/7c3ec5cb6e39f847506d1e6c02818b25.png"}
-            %image.keys{:src => "https://i.gyazo.com/087d3455476edcf600c9a0c9b61c12fd.png"}
-              %image.keys{:src => "https://i.gyazo.com/d48b36410249dacee322f2094d5f0a7a.png"}
+              =image_tag("https://i.gyazo.com/7c3ec5cb6e39f847506d1e6c02818b25.png",class: "keys")
+              =link_to user_facebook_omniauth_authorize_path do
+                =image_tag("https://i.gyazo.com/087d3455476edcf600c9a0c9b61c12fd.png",class: "keys")
+              =link_to user_google_oauth2_omniauth_authorize_path do
+                =image_tag("https://i.gyazo.com/d48b36410249dacee322f2094d5f0a7a.png",class: "keys")
     %footer.footerSignup
       .footerSignupInner.clearfix
         %nav.clearfix
