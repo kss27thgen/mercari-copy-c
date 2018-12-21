@@ -51,13 +51,41 @@
         background-color: black;
       }
       &Mypage{
-        padding-left: 16px;
+        padding-left: 5px;
+        text-decoration: none;
+        color: black;
       }
       &Info{
         padding-left: 16px;
       }
       &Todo{
         // padding-left: 16px;
+      }
+    }
+    &Right2 {
+      display: flex;
+      justify-content: flex-end;
+      width:inherit;
+      text-align: center;
+      line-height: 15px;
+      &SignIn {
+        border-radius: 7%;
+        background-color: $button-red;
+        font-size: 13px;
+        height: 15px;
+        padding: 8px 13px;
+        color: white;
+        text-decoration: none;
+      }
+      &SignUp {
+        margin-left: 10px;
+        font-size: 14px;
+        height: 15px;
+        padding: 8px 12px;
+        border-radius: 5%;
+        color: $button-blue;
+        border: 1px $button-blue solid;
+        text-decoration: none;
       }
     }
   }

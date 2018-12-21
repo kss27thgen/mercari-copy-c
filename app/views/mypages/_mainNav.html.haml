@@ -1,11 +1,10 @@
 %nav.mypageNav
   %ul.mypageNavLists
     %li
-      = link_to "マイページ","#", class: "mypageNavList"
-
+      = link_to "マイページ", mypages_main_path, class: "mypageNavList"
       = fa_icon"fa-chevron-right",class: "fa-chevron-right"
     %li
-      = link_to "お知らせ","#", class: "mypageNavList"
+      = link_to "お知らせ", mypages_notification_path, class: "mypageNavList"
       = fa_icon"fa-chevron-right",class: "fa-chevron-right"
     %li
       = link_to "やることリスト","#", class: "mypageNavList"
@@ -14,10 +13,7 @@
       = link_to "いいね！一覧","#", class: "mypageNavList"
       = fa_icon"fa-chevron-right",class: "fa-chevron-right"
     %li
-      = link_to "出品する","#", class: "mypageNavList"
-      = fa_icon"fa-chevron-right",class: "fa-chevron-right"
-    %li
-      = link_to "マイページ","#", class: "mypageNavList"
+      = link_to "出品する", items_new_path, class: "mypageNavList"
       = fa_icon"fa-chevron-right",class: "fa-chevron-right"
     %li
       = link_to "出品した商品-出品中","#", class: "mypageNavList"
@@ -38,47 +34,45 @@
       = link_to "ニュース一覧","#", class: "mypageNavList"
       = fa_icon"fa-chevron-right",class: "fa-chevron-right"
     %li
-      = link_to "評価一覧","#", class: "mypageNavList"
+      = link_to "評価一覧", "#", class: "mypageNavList"
       = fa_icon"fa-chevron-right",class: "fa-chevron-right"
     %li
-      = link_to "ガイド","#", class: "mypageNavList"
+      = link_to "ガイド", help_center_index_path, class: "mypageNavList"
       = fa_icon"fa-chevron-right",class: "fa-chevron-right"
     %li
-      = link_to "お問い合わせ","#", class: "mypageNavList"
+      = link_to "お問い合わせ", mypages_support_path, class: "mypageNavList"
       = fa_icon"fa-chevron-right",class: "fa-chevron-right"
 
   %h4.point 売り上げ・ポイント
   %ul.mypageNavLists
     %li
-      = link_to "売り上げ・振込申請","#", class: "mypageNavList"
-
+      = link_to "売り上げ・振込申請", mypages_sales_path, class: "mypageNavList"
       = fa_icon"fa-chevron-right",class: "fa-chevron-right"
     %li
-      = link_to "ポイント","#", class: "mypageNavList"
+      = link_to "ポイント", mypages_point_path, class: "mypageNavList"
       = fa_icon"fa-chevron-right",class: "fa-chevron-right"
 
   %h4.setting 設定
   %ul.mypageNavLists
     %li
-      = link_to "プロフィール","#", class: "mypageNavList"
-
+      = link_to "プロフィール", "#", class: "mypageNavList"
       = fa_icon"fa-chevron-right",class: "fa-chevron-right"
     %li
-      = link_to "住所変更","#", class: "mypageNavList"
+      = link_to "住所変更", mypages_deliver_address_path, class: "mypageNavList"
       = fa_icon"fa-chevron-right",class: "fa-chevron-right"
     %li
-      = link_to "支払い方法","#", class: "mypageNavList"
+      = link_to "支払い方法", mypages_card_path, class: "mypageNavList"
       = fa_icon"fa-chevron-right",class: "fa-chevron-right"
     %li
-      = link_to "メール/パスワード","#", class: "mypageNavList"
+      = link_to "メール/パスワード", mypages_email_password_path, class: "mypageNavList"
       = fa_icon"fa-chevron-right",class: "fa-chevron-right"
     %li
-      = link_to "本人情報","#", class: "mypageNavList"
+      = link_to "本人情報", mypages_identification_path, class: "mypageNavList"
       = fa_icon"fa-chevron-right",class: "fa-chevron-right"
     %li
       = link_to "電話番号の確認","#", class: "mypageNavList"
       = fa_icon"fa-chevron-right",class: "fa-chevron-right"
     %li
-      = link_to "ログアウト","#", class: "mypageNavList"
+      = link_to "ログアウト",mypages_logout_path, class: "mypageNavList"
       = fa_icon"fa-chevron-right",class: "fa-chevron-right"
 

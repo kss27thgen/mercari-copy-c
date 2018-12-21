@@ -9,9 +9,10 @@
         %h3.creditCardPaymentMethodInnerSectionListText
           クレジットカード一覧
       .creditCardPaymentMethodInnerSectionAddCard
-        %button.creditCardPaymentMethodInnerSectionAddCardBtn{type: "button"}
-          = fa_icon 'fa-cc-mastercard', class: 'fa-cc-mastercard'
-          クレジットカードを追加する
+        .creditCardPaymentMethodInnerSectionAddCardBtn
+          =link_to mypages_info_path, class: "creditCardPaymentMethodInnerSectionAddCardBtn" do
+            = fa_icon 'fa-cc-mastercard', class: 'fa-cc-mastercard'
+            クレジットカードを追加する
       .creditCardPaymentMethodInnerSectionExplain
         %a{href: "/jp/help_center/category/6/", target: "_blank"}
           %span.creditCardPaymentMethodInnerSectionExplainText 支払い方法について
