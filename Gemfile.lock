@@ -165,7 +165,6 @@ GEM
     nio4r (2.3.1)
     nokogiri (1.9.0)
       mini_portile2 (~> 2.4.0)
-
     oauth (0.5.4)
     oauth2 (1.4.1)
       faraday (>= 0.8, < 0.16.0)
