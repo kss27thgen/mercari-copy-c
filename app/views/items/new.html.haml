@@ -14,7 +14,7 @@
               最大4枚までアップロードできます
             %label.itemEntryMainUpperImageForm
               = f.fields_for :item_images do|i|
-                = i.file_field :image, class: "itemEntryMainUpperImageFormFile"
+                = i.file_field :item_images, class: "itemEntryMainUpperImageFormFile"
               .itemEntryMainUpperImageFormArea
                 %p.itemEntryMainUpperImageFormAreaText
                   ドラッグアンドドロップ
