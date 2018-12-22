@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20181221115550) do
   end
 
   create_table "item_images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.text "image"
+    t.text "item_images"
     t.bigint "item_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -29,19 +29,21 @@ ActiveRecord::Schema.define(version: 20181221115550) do
   end
 
   create_table "items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "name", default: ""
+    t.string "name"
     t.text "explaination"
     t.integer "price"
     t.integer "status"
-    t.string "shipping_fare", default: ""
+    t.string "shipping_fare"
     t.integer "shipping_region"
-    t.string "shipping_shcedule", default: ""
-    t.string "shipping_method", default: ""
-    t.string "size", default: ""
+    t.string "shipping_shcedule"
+    t.string "shipping_method"
+    t.string "size"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "seller_id"
-    t.integer "buyer_id"
+    t.bigint "seller_id"
+    t.bigint "buyer_id"
+    t.index ["buyer_id"], name: "index_items_on_buyer_id"
+    t.index ["seller_id"], name: "index_items_on_seller_id"
   end
 
   create_table "sns_credentials", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -52,7 +54,6 @@ ActiveRecord::Schema.define(version: 20181221115550) do
     t.string "access_secret"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["provider", "uid"], name: "index_sns_credentials_on_provider_and_uid", unique: true
     t.index ["user_id"], name: "index_sns_credentials_on_user_id"
   end
 
