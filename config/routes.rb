@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   get 'mypages/support'
   get 'mypages/point'
   get 'mypages/sales'
-  get 'mypages/selling_item' => 'mypages#selling_item'
+  get 'mypages/sellingItem' => 'mypages#sellingItem'
   get 'mypages/sign_up'
   get 'help_center/index' => 'help_center＃index'
 end

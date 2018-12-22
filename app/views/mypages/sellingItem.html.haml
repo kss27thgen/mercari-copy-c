@@ -2,9 +2,6 @@
   .wrapperSellingItemSection
     .wrapperSellingItemInfo
       = render partial: "itemForm", locals: { item: @items }
-      -#= render partial: 'itemForm', collection: @items
-      / - @items.each do |item|
-      /   = render partial: "itemForm", locals: { item: item }
 
     .wrapperSellingItemSetting
       .wrapperSellingItemSettingEdit
