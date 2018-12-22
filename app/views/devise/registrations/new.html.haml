@@ -1,19 +1,40 @@
-%body
+.registrationWrapper
   .signup
     %header.headerSignup
       %image.logoSignup{:src => "https://www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?3371656568"}
-    .signupMain
-      .signupContents
-        .signupContentsTop
-          %h1.signupH1 新規会員登録
-        .signupInner
-          .signupKeys
-            .signkeysEmail
-              =image_tag("https://i.gyazo.com/7c3ec5cb6e39f847506d1e6c02818b25.png",class: "keys")
-              =link_to user_facebook_omniauth_authorize_path do
-                =image_tag("https://i.gyazo.com/087d3455476edcf600c9a0c9b61c12fd.png",class: "keys")
-              =link_to user_google_oauth2_omniauth_authorize_path do
-                =image_tag("https://i.gyazo.com/d48b36410249dacee322f2094d5f0a7a.png",class: "keys")
+  .registrationMain
+    .registrationMainTop
+      %h2.registrationMainTopTitle 会員情報入力
+    .registrationMainInner
+      .registrationMainInnerForm
+      = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+        = devise_error_messages!
+        .formGroup
+          .formGroupNickname
+            .formGroupTitle
+              ニックネーム
+              %span.formRequire 必須
+            = f.text_field :nickname,class: "formGroupForm", placeholder: "  例) メルカリ太郎", autofocus: true
+          .formGroupEmail
+            .formGroupTitle
+              メールアドレス
+              %span.formRequire 必須
+            = f.email_field :email,class: "formGroupForm", placeholder: "  PC・携帯どちらでも可"
+          .formGroupPassword
+            .formGroupTitle
+              パスワード
+              %span.formRequire 必須
+            = f.password_field :password,class: "formGroupForm", autocomplete: "off", placeholder: "  6文字以上"
+          .formGroupPassword
+            .formGroupTitle
+              パスワード（確認）
+              %span.formRequire 必須
+            = f.password_field :password_confirmation,class: "formGroupForm", autocomplete: "off", placeholder: "  6文字以上"
+          .formGroupRecapcha
+            = image_tag "https://i.gyazo.com/350793c219cd5a2cc3bc30d342e09c43.png", class: "formGroupRecapcha"
+          .formGroupButton
+            = f.submit "登録する", class: "formGroupButton"
+  .signup
     %footer.footerSignup
       .footerSignupInner.clearfix
         %nav.clearfix
@@ -23,3 +44,5 @@
         %image.footerlogo{:src => "https://www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?562024368"}
           %p
             %small ©︎2018 Merecari
+
+
