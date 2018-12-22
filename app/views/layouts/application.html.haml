@@ -17,9 +17,9 @@
         });
       });
   %body
-    = render "layouts/exhibition"
-    = render "layouts/header"
     %p.notice= notice
     %p.alert= alert
+    = render "layouts/exhibition"
+    = render "layouts/header"
     = yield
     = render "layouts/footer"
