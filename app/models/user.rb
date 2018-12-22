@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: %i[facebook google_oauth2]
   validates :nickname, presence: true, length: { maximum: 20 }
   has_many :sns_credential
+  has_many :items
 
   def self.find_for_oauth(auth)
     snscredential = SnsCredential.where(uid: auth.uid, provider: auth.provider).first
@@ -34,5 +35,4 @@ class User < ApplicationRecord
       user
     end
   end
-  has_many :items
 end
