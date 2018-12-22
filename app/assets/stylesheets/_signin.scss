@@ -47,13 +47,13 @@
           }
           &Card {
             width: 328px;
-            height: 35px;
-            color: white;
+            height: 50px;
+            color: $white;
             text-align: center;
             font-size: 13px;
+            line-height: 50px;
             background-color: $facebook;
             margin-bottom: 20px;
-            padding-top: 12px;
             display: inline-block;
             text-decoration: none;
           }
@@ -63,19 +63,18 @@
           .fa-google-plus {
             position: absolute;
             left: 10px;
-            top: 25px;
-            color: white;
+            top: 15px;
+            color: $white;
             font-size: 20px;
           }
           &Card {
             width: 328px;
-            height: 35px;
+            height: 50px;
             text-align: center;
-            padding-top: 12px;
             font-size: 13px;
-            color: white;
+            line-height: 50px;
+            color: $white;
             background-color: $google;
-            margin-top: 12px;
             display: inline-block;
             margin-bottom: 60px;
             text-decoration: none;
@@ -104,18 +103,17 @@
           }
           &Recapcha {
             margin-bottom: 20px;
+            width: 300px;
+            height: 75px;
           }
           &Button {
             width: 328px;
-            height: 35px;
+            height: 50px;
             background-color: $button-red;
             text-decoration: none;
             font-size: 13px;
-            padding-top: 12px;
-            a {
-              color: white;
-              text-decoration: none;
-            }
+            color: $white;
+            cursor: pointer;
           }
           &ForgetPassword {
             padding: 30px 0 0;

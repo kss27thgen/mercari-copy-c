@@ -10,20 +10,55 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20181219095416) do
+=======
+ActiveRecord::Schema.define(version: 20181221115550) do
 
-  create_table "items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "name", null: false
-    t.text "explaination", null: false
-    t.integer "price", null: false
-    t.integer "status", null: false
-    t.string "shipping_fare", null: false
-    t.integer "shipping_region", null: false
-    t.string "shipping_shcedule", null: false
-    t.string "shipping_method", null: false
-    t.string "size"
+  create_table "item_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "top_category", null: false
+    t.string "mid_category", null: false
+    t.string "bottom_category", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "item_images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.text "image"
+    t.bigint "item_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["item_id"], name: "index_item_images_on_item_id"
+  end
+>>>>>>> hironori-tsukishima/master
+
+  create_table "items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name", default: ""
+    t.text "explaination"
+    t.integer "price"
+    t.integer "status"
+    t.string "shipping_fare", default: ""
+    t.integer "shipping_region"
+    t.string "shipping_shcedule", default: ""
+    t.string "shipping_method", default: ""
+    t.string "size", default: ""
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "seller_id"
+    t.bigint "buyer_id"
+    t.index ["buyer_id"], name: "index_items_on_buyer_id"
+    t.index ["seller_id"], name: "index_items_on_seller_id"
+  end
+
+  create_table "sns_credentials", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "uid"
+    t.string "provider"
+    t.bigint "user_id"
+    t.string "access_token"
+    t.string "access_secret"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_sns_credentials_on_user_id"
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -40,4 +75,9 @@ ActiveRecord::Schema.define(version: 20181219095416) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+<<<<<<< HEAD
+=======
+  add_foreign_key "item_images", "items"
+  add_foreign_key "sns_credentials", "users"
+>>>>>>> hironori-tsukishima/master
 end

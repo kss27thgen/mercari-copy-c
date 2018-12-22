@@ -1,20 +1,29 @@
 .header
   .headerTop
     .headerTopLeft
-      = image_tag("logo.svg", class: "headerLogo")
+      =link_to root_path do
+        = image_tag("logo.svg", class: "headerLogo")
     .headerTopRight
       %input{placeholder:"キーワードから探す", :type => "text",class: "searchVer"}
-
   .headerBottom
     .headerBottomLeft
       .headerBottomLeftCategory カテゴリーから探す
       .headerBottomLeftBrand ブランドから探す
-    .headerBottomRight
-      .headerBottomRightAvatar
-      .bottomHeaderRightMypage マイページ
-      .bottomHeaderRightInfo
-        = fa_icon "bell-o",class: "fa-bell-o",id: "Info"
-        お知らせ
-      .headerBottomRightTodo
-        = fa_icon "fa-check",class: "fa-check",id: "Info"
-        やることリスト
+    -if user_signed_in?
+      .headerBottomRight
+        .headerBottomRightAvatar
+        .headerBottomRightMypage
+          = link_to mypages_main_path, class: "headerBottomRightMypage" do
+            マイページ
+        .bottomHeaderRightInfo
+          = fa_icon "bell-o",class: "fa-bell-o",id: "Info"
+          お知らせ
+        .headerBottomRightTodo
+          = fa_icon "fa-check",class: "fa-check",id: "Info"
+          やることリスト
+    -else
+      .headerBottomRight2
+        = link_to new_user_session_path, class: "headerBottomRight2SignIn" do
+          ログイン
+        = link_to mypages_sign_up_path, class: "headerBottomRight2SignUp" do
+          新規会員登録
