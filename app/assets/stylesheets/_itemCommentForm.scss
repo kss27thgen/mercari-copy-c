@@ -1,0 +1,76 @@
+.wrapperShowSellingItemsComments{
+  background-color:white;
+  margin:0 auto;
+  padding:34px 40px 40px 40px;
+  .wrapperShowSellingItemsCommentsShow{
+    display:flex;
+    .wrapperShowSellingItemsCommentsShowLeft{
+      margin-right:20px;
+      .wrapperShowSellingItemsCommentsShowLeftIcon{
+        background-image: url("https://static-mercari-jp-imgtr2.akamaized.net/images/member_photo_noimage_thumb.png");
+        background-size: contain;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+    }
+    .wrapperShowSellingItemsCommentsShowRight{
+      .wrapperShowSellingItemsCommentsShowRightName{
+        font-size: 14px;
+        font-weight: bold;
+        padding-left: 10px;
+      }
+      .wrapperShowSellingItemsCommentsShowRightContent{
+        padding:16px;
+        background-color: #eef0f4;
+        width:35vw;
+        border-radius:10px;
+        .wrapperShowSellingItemsCommentsShowRightContentTop{
+          font-size: 13px;
+        }
+        .wrapperShowSellingItemsCommentsShowRightContentBottom{
+          display:flex;
+          justify-content:space-between;
+          .wrapperShowSellingItemsCommentsShowRightContentBottomLeft{
+            font-size: 14px;
+            color:#BDBDBD;
+            padding-top: 15px;
+          }
+          .wrapperShowSellingItemsCommentsShowRightContentBottomRight{
+          }
+        }
+      }
+    }
+  }
+  .wrapperShowSellingItemsCommentNew{
+    padding:24px;
+    .wrapperShowSellingItemsCommentNewAdvice{
+      padding:8px;
+      background-color:#fff6de;
+      font-size:12px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    textarea{
+      min-height: 104px;
+      max-width: 100%;
+      margin-top: 8px;
+      padding: 10px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .wrapperShowSellingItemsCommentNewSumit{
+      line-height: 50px;
+      font-size: 14px;
+      color: $white;
+      background: #aaa;
+      border: 1px;
+      display: block;
+      border: 1px solid transparent;
+      cursor: pointer;
+      margin: 0 auto;
+      text-decoration: none;
+      text-align: center;
+    }
+  }
+}
