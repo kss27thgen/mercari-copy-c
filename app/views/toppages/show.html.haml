@@ -7,11 +7,11 @@
         .wrapperShowItemDetailLeft
           - @image.each do |photo|
             .wrapperShowItemDetailLeftThumbnail
-              = image_tag(photo.item_images)
+              = image_tag(photo.image)
         .wrapperShowItemDetailLeftimages
           - @image.each do |photo|
             .wrapperShowItemDetailLeftimagesImage
-              = image_tag(photo.item_images)
+              = image_tag(photo.image)
       .wrapperShowItemDetailRight
         .wrapperShowItemDetailRightTable
           %table{:border => "1"}
