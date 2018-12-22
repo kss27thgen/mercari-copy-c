@@ -40,13 +40,13 @@
       }
     }
     .bodyIcatchImage2{
-      background: url(https://www.mercari.com/jp/assets/img/common/jp/top/top-banner-new-register.png);
+      background: url(https://www.mercari.com/jp/assets/img/common/jp/top/banner-bokurano-heisei.jpg);
       background-position: center;
       background-size: cover;
       height:390px;
     }
     .bodyIcatchImage3{
-      background: url(https://www.mercari.com/jp/assets/img/common/jp/top/top-banner-kusanagi-xmas.jpg);
+      background: url(https://www.mercari.com/jp/assets/img/common/jp/top/top-banner-kusanagi.jpg);
       background-position: center;
       background-size: cover;
       height:390px;
@@ -203,22 +203,54 @@
     .wrapperShowItemDetail{
       display:flex;
       justify-content:space-around;
-      .wrapperShowItemDetailLeft{
-        background-color: #fafafa;
-        .wrapperShowItemDetailLeftThumbnail{
-          height:300px;
-          width:300px;
-          border:solid 1px white;
-        }
-        .wrapperShowItemDetailLeftimages{
-          display:flex;
-          .wrapperShowItemDetailLeftimagesImage{
-            height:60px;
-            width:60px;
-            border:solid 1px white;
+      .wrapperShowItemDetailHidden{
+        position: relative;
+        width:300px;
+        overflow: hidden;
+        .wrapperShowItemDetailLeft{
+          background-color: #fafafa;
+          height: 300px;
+          position:absolute;;
+          width:1212px;
+          .wrapperShowItemDetailLeftThumbnail{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            width: 300px;
+            height: 300px;
+            border: 0px;
+            display: inline-block;
+            img{
+              height:300px;
+              width:300px;
+              border:solid 1px white;
+              border: 0px;
+            }
           }
         }
-      }
+          .wrapperShowItemDetailLeftimages{
+            display:flex;
+            width:300px;
+            margin: 0 auto;
+            box-sizing: border-box;
+            position: absolute;
+            top:300px;
+            .wrapperShowItemDetailLeftimagesImage:first-child{
+              img{
+                height:75px;
+                width:75px;
+                border:none;
+                opacity: 1;
+                }
+              }
+            img{
+              height:75px;
+              width:75px;
+              border:none;
+              opacity: 0.5;
+              }
+          }
+        }
       .wrapperShowItemDetailRight{
         .wrapperShowItemDetailRightTable{
         }
