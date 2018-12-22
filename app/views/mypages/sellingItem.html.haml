@@ -1,0 +1,24 @@
+.wrapperSellingItem
+  .wrapperSellingItemSection
+    .wrapperSellingItemInfo
+      = render partial: "itemForm", locals: { item: @items }
+
+    .wrapperSellingItemSetting
+      .wrapperSellingItemSettingEdit
+        .wrapperSellingItemSettingEditBtn
+          =link_to mypages_info_path, class: "wrapperSellingItemSettingEditBtn" do
+            商品の編集
+      .wrapperSellingItemSettingOr
+        %p.wrapperSellingItemSettingOrText or
+      %br
+      .wrapperSellingItemSettingStop
+        .wrapperSellingItemSettingStopBtn
+          =link_to mypages_info_path, class: "wrapperSellingItemSettingStopBtn" do
+            出品を一旦定時する
+      .wrapperSellingItemSettingDelete
+        .wrapperSellingItemSettingDeleteBtn
+          =link_to mypages_info_path, class: "wrapperSellingItemSettingDeleteBtn" do
+            この商品を削除する
+
+    .wrapperSellingItemCommet
+      = render partial: "itemCommentForm", locals: { item: @items }
