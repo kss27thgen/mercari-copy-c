@@ -33,15 +33,16 @@ ActiveRecord::Schema.define(version: 20181221115550) do
 >>>>>>> hironori-tsukishima/master
 
   create_table "items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "name", default: ""
+
+    t.string "name"
     t.text "explaination"
     t.integer "price"
     t.integer "status"
-    t.string "shipping_fare", default: ""
+    t.string "shipping_fare"
     t.integer "shipping_region"
-    t.string "shipping_shcedule", default: ""
-    t.string "shipping_method", default: ""
-    t.string "size", default: ""
+    t.string "shipping_shcedule"
+    t.string "shipping_method"
+    t.string "size"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "seller_id"
