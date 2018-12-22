@@ -217,6 +217,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            overflow: hidden;
             width: 300px;
             height: 300px;
             border: 0px;
@@ -608,7 +609,7 @@ th{
         &Tax{
             font-size: 10px;
             color: #C0C0C0;
-          }
+        }
       }
     }
   }
@@ -624,7 +625,7 @@ th{
       content : " ";
       display : block;
       clear : both;
-  }
+}
 
 .wrapperShowUsersItem + .wrapperShowUsersItem{
   margin-left: 20px;

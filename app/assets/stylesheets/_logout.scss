@@ -9,10 +9,14 @@
       text-align: center;
       .btn-default{
         height: 50px;
-        background-color: $red;
+        background-color: darken($red, 3%);
         width: 320px;
         color: $white;
-        font-size: 15px;
+        font-size: 13px;
+        display: block;
+        margin: 0 auto;
+        line-height: 50px;
+        text-decoration: none;
       }
     }
 }

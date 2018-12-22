@@ -34,4 +34,8 @@ class MypagesController < ApplicationController
   def info
   end
 
+  def sellingItem
+    @items = Item.all
+  end
+
 end
