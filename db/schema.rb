@@ -29,7 +29,6 @@ ActiveRecord::Schema.define(version: 20181221115550) do
   end
 
   create_table "items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-
     t.string "name"
     t.text "explaination"
     t.integer "price"
@@ -45,6 +44,17 @@ ActiveRecord::Schema.define(version: 20181221115550) do
     t.bigint "buyer_id"
     t.index ["buyer_id"], name: "index_items_on_buyer_id"
     t.index ["seller_id"], name: "index_items_on_seller_id"
+  end
+
+  create_table "sns_credentials", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "uid"
+    t.string "provider"
+    t.bigint "user_id"
+    t.string "access_token"
+    t.string "access_secret"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_sns_credentials_on_user_id"
   end
 
   create_table "sns_credentials", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
