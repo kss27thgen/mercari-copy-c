@@ -2,10 +2,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   prepend_before_action :check_captcha, only: [:create]
   prepend_before_action :configure_permitted_parameters, only: [:create]
 
-  def new
-    # render :layout => 'simpleLayout'
-    @user = User.new
-  end
 private
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname])
