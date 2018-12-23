@@ -38,4 +38,13 @@ class MypagesController < ApplicationController
     @items = Item.all
   end
 
+  def exhibitionItemSelling
+  end
+
+  def exhibitionItemTransaction
+  end
+
+  def exhibitionItemSold
+  end
+
 end
