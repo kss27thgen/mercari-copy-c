@@ -1,21 +1,24 @@
 .wrapperShow
   .wrapperShowItem
-    %h1.wrapperShowItemName champion チャンピオン パーカー
+    %h1.wrapperShowItemName
+      = @item.name
     .wrapperShowItemDetail
-      .wrapperShowItemDetailLeft
-        .wrapperShowItemDetailLeftThumbnail
+      .wrapperShowItemDetailHidden
+        .wrapperShowItemDetailLeft
+          - @image.each do |photo|
+            .wrapperShowItemDetailLeftThumbnail
+             = image_tag(photo.image)
         .wrapperShowItemDetailLeftimages
-          .wrapperShowItemDetailLeftimagesImage
-          .wrapperShowItemDetailLeftimagesImage
-          .wrapperShowItemDetailLeftimagesImage
-          .wrapperShowItemDetailLeftimagesImage
-          .wrapperShowItemDetailLeftimagesImage
+          - @image.each do |photo|
+            .wrapperShowItemDetailLeftimagesImage
+              = image_tag(photo.image)
       .wrapperShowItemDetailRight
         .wrapperShowItemDetailRightTable
           %table{:border => "1"}
             %tr
               %th.tableLeft 出品者
               %th.tableRight
+                / =current_user.nickname
                 = link_to "ぽくぽく坊や","#",class: "tableLinks"
                 %br
                 = fa_icon "fa-smile-o ",class: "fa-smile-o"
@@ -38,38 +41,38 @@
                 = link_to "チャンピオン","#",class: "tableLinks"
             %tr
               %td.tableLeft 商品のサイズ
-              %td.tableRight S
+              %td.tableRight
+                = @item.size
             %tr
               %td.tableLeft 商品の状態
-              %td.tableRight 未使用
+              %td.tableRight
+                = @item.status
             %tr
               %td.tableLeft 配送料の負担
-              %td.tableRight 送料込み(出品者負担)
+              %td.tableRight
+                = @item.shipping_fare
             %tr
               %td.tableLeft 配送の方法
-              %td.tableRight らくらくメルカリ便
+              %td.tableRight
+                = @item.shipping_method
             %tr
               %td.tableLeft 配送元地域
               %td.tableRight
-                = link_to "アメリカ","#",class: "tableLinks"
+                = @item.shipping_region
             %tr
               %td.tableLeft 発送日の目安
-              %td.tableRight 2~3日で発送
+              %td.tableRight
+                = "#{@item.shipping_shcedule}で発送"
     .wrapperShowItemPriceBox
-      .wrapperShowItemPrice ¥12,000
+      .wrapperShowItemPrice
+        = "¥ #{@item.price}"
       .wrapperShowItemTax (税込)
       .wrapperShowItemFare 送料込み
     .wrapperShowItemPoint 売上金4,300円をお持ちです
     .wrapperShowItemBuy
       .wrapperShowItemBuyText 購入画面に進む
     .wrapperShowItemDescription
-      チャンピオンリバースウィーブ仕様のパーカーです。
-      %br
-      インディゴ染めです。
-      %br
-      5回ほど着用して、洗濯済みです。
-      %br
-      サイズはリバースウィーブで検索お願いします。
+      =@item.explaination
     .wrapperShowItemLinks
       .wrapperShowItemLinksLeft
         .wrapperShowItemLinksLikes
@@ -111,11 +114,11 @@
         売り切れのためコメントできません
   .wrapperShowPage.clearfix
     .wrapperShowPageBack
-      %i.fas.fa-chevron-left
+      = fa_icon"fa-chevron-right",class: "fa-chevron-left"
       %a.title 米花町ホテルにて和葉と平次が！！
     .wrapperShowPageNext
       %a.title 隣のトトロは、舎人のとろろが好きすぎると吐露
-      %i.fas.fa-chevron-right
+      = fa_icon"fa-chevron-right",class: "fa-chevron-right"
   .wrapperShowSns
     .wrapperShowSnsCenter
       .wrapperShowSnsBox
@@ -185,66 +188,4 @@
               .wrapperShowUsersItemLikesIcon.far.fa-heart
               .wrapperShowUsersItemLikesCount 100
             .wrapperShowUsersItemBodyDetailsTax (税込)
-  .wrapperShowUsersItems
-    .wrapperShowUsersItemsHead チャンピオンのパーカー　その他の商品
-    .wrapperShowUsersItemscontainer
-      .wrapperShowUsersItem
-        .wrapperShowUsersItemImage
-        .wrapperShowUsersItemBody
-          .wrapperShowUsersItemBodyTitle 放送が終わってから10分以内にお問い合わせいただいた方、先着５名様に限り舎人のとろろがこのお値段です！
-          .wrapperShowUsersItemBodyDetails
-            .wrapperShowUsersItemBodyDetailsPrice ¥40,000
-            .wrapperShowUsersItemBodyDetailsLikes
-              .wrapperShowUsersItemLikesIcon.far.fa-heart
-              .wrapperShowUsersItemLikesCount 100
-            .wrapperShowUsersItemBodyDetailsTax (税込)
-      .wrapperShowUsersItem
-        .wrapperShowUsersItemImage
-        .wrapperShowUsersItemBody
-          .wrapperShowUsersItemBodyTitle 放送が終わってから10分以内にお問い合わせいただいた方、先着５名様に限り舎人のとろろがこのお値段です！
-          .wrapperShowUsersItemBodyDetails
-            .wrapperShowUsersItemBodyDetailsPrice ¥40,000
-            .wrapperShowUsersItemBodyDetailsLikes
-              .wrapperShowUsersItemLikesIcon.far.fa-heart
-              .wrapperShowUsersItemLikesCount 100
-            .wrapperShowUsersItemBodyDetailsTax (税込)
-      .wrapperShowUsersItem
-        .wrapperShowUsersItemImage
-        .wrapperShowUsersItemBody
-          .wrapperShowUsersItemBodyTitle 放送が終わってから10分以内にお問い合わせいただいた方、先着５名様に限り舎人のとろろがこのお値段です！
-          .wrapperShowUsersItemBodyDetails
-            .wrapperShowUsersItemBodyDetailsPrice ¥40,000
-            .wrapperShowUsersItemBodyDetailsLikes
-              .wrapperShowUsersItemLikesIcon.far.fa-heart
-              .wrapperShowUsersItemLikesCount 100
-            .wrapperShowUsersItemBodyDetailsTax (税込)
-      .wrapperShowUsersItem
-        .wrapperShowUsersItemImage
-        .wrapperShowUsersItemBody
-          .wrapperShowUsersItemBodyTitle 放送が終わってから10分以内にお問い合わせいただいた方、先着５名様に限り舎人のとろろがこのお値段です！
-          .wrapperShowUsersItemBodyDetails
-            .wrapperShowUsersItemBodyDetailsPrice ¥40,000
-            .wrapperShowUsersItemBodyDetailsLikes
-              .wrapperShowUsersItemLikesIcon.far.fa-heart
-              .wrapperShowUsersItemLikesCount 100
-            .wrapperShowUsersItemBodyDetailsTax (税込)
-      .wrapperShowUsersItem
-        .wrapperShowUsersItemImage
-        .wrapperShowUsersItemBody
-          .wrapperShowUsersItemBodyTitle 放送が終わってから10分以内にお問い合わせいただいた方、先着５名様に限り舎人のとろろがこのお値段です！
-          .wrapperShowUsersItemBodyDetails
-            .wrapperShowUsersItemBodyDetailsPrice ¥40,000
-            .wrapperShowUsersItemBodyDetailsLikes
-              .wrapperShowUsersItemLikesIcon.far.fa-heart
-              .wrapperShowUsersItemLikesCount 100
-            .wrapperShowUsersItemBodyDetailsTax (税込)
-      .wrapperShowUsersItem
-        .wrapperShowUsersItemImage
-        .wrapperShowUsersItemBody
-          .wrapperShowUsersItemBodyTitle 放送が終わってから10分以内にお問い合わせいただいた方、先着５名様に限り舎人のとろろがこのお値段です！
-          .wrapperShowUsersItemBodyDetails
-            .wrapperShowUsersItemBodyDetailsPrice ¥40,000
-            .wrapperShowUsersItemBodyDetailsLikes
-              .wrapperShowUsersItemLikesIcon.far.fa-heart
-              .wrapperShowUsersItemLikesCount 100
-            .wrapperShowUsersItemBodyDetailsTax (税込)
+  
