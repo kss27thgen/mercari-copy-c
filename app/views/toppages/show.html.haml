@@ -7,7 +7,7 @@
         .wrapperShowItemDetailLeft
           - @image.each do |photo|
             .wrapperShowItemDetailLeftThumbnail
-             = image_tag(photo.image)
+              = image_tag(photo.image)
         .wrapperShowItemDetailLeftimages
           - @image.each do |photo|
             .wrapperShowItemDetailLeftimagesImage
@@ -18,7 +18,6 @@
             %tr
               %th.tableLeft 出品者
               %th.tableRight
-                / =current_user.nickname
                 = link_to "ぽくぽく坊や","#",class: "tableLinks"
                 %br
                 = fa_icon "fa-smile-o ",class: "fa-smile-o"
@@ -188,4 +187,4 @@
               .wrapperShowUsersItemLikesIcon.far.fa-heart
               .wrapperShowUsersItemLikesCount 100
             .wrapperShowUsersItemBodyDetailsTax (税込)
-  
+
