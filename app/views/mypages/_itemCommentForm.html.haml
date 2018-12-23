@@ -1,0 +1,23 @@
+.wrapperShowSellingItemsComments
+  .wrapperShowSellingItemsCommentsShow
+    .wrapperShowSellingItemsCommentsShowLeft
+      .wrapperShowSellingItemsCommentsShowLeftIcon
+    .wrapperShowSellingItemsCommentsShowRight
+      .wrapperShowSellingItemsCommentsShowRightName nickname
+      .wrapperShowSellingItemsCommentsShowRightContent
+        .wrapperShowSellingItemsCommentsShowRightContentTop commit comment
+        .wrapperShowSellingItemsCommentsShowRightContentBottom
+          .wrapperShowSellingItemsCommentsShowRightContentBottomLeft
+            = fa_icon "fa-clock-o", class: "fa-clock-o"
+            5時間前
+          .wrapperShowSellingItemsCommentsShowRightContentBottomRight
+            = fa_icon "fa-flag-o", class: "fa-flag-o"
+  .wrapperShowSellingItemsCommentNew
+    .wrapperShowSellingItemsCommentNewAdvice 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+    %form.message-form{action: "https://www.mercari.com/jp/comment/add/", method: "POST"}
+      %input{name: "item_id", type: "hidden", value: "m97671450071"}/
+      %input{name: "redirect_url_key", type: "hidden", value: "items_show"}/
+      %textarea.textarea-default{name: "body", type: "text", value: ""}
+    .wrapperShowSellingItemsCommentNewSumit
+      =link_to mypages_info_path, class: "wrapperShowSellingItemsCommentNewSumit" do
+        コミットする
