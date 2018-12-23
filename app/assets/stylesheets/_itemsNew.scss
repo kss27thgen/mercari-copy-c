@@ -105,13 +105,13 @@
             font-size: 13px;
             font-weight: bold;
             &Require {
-            background-color: red;
-            color: white;
-            font-size: 12px;
-            padding: 2px;
+              background-color: red;
+              color: white;
+              font-size: 12px;
+              padding: 2px;
             }
           }
-          Select {
+          select {
             width:370px;
             height: 50px;
             cursor: pointer;
@@ -150,7 +150,7 @@
             padding: 2px;
             }
           }
-          Select {
+          select {
             width:370px;
             height: 50px;
             cursor: pointer;
@@ -266,6 +266,7 @@
         text-decoration: none;
         display: block;
       }
+
     }
   }
 }
