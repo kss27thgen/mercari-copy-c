@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get 'mypages/sales'
   get 'mypages/sellingItem' => 'mypages#sellingItem'
   get 'mypages/sign_up'
+  get 'mypages/profile'
   get 'mypages/exhibitionItemSelling' => 'mypages#exhibitionItemSelling'
   get 'mypages/exhibitionItemTransaction' => 'mypages#exhibitionItemTransaction'
   get 'mypages/exhibitionItemSold' => 'mypages#exhibitionItemSold'
