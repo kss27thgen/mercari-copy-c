@@ -36,6 +36,7 @@ class MypagesController < ApplicationController
 
   def sellingItem
     @item = Item.find(params[:id])
+    @images = @item.item_images
   end
 
   def exhibitionItemSelling

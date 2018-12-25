@@ -10,7 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 20181221115550) do
 
   create_table "item_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -29,7 +28,6 @@ ActiveRecord::Schema.define(version: 20181221115550) do
     t.index ["item_id"], name: "index_item_images_on_item_id"
   end
 
-
   create_table "items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
     t.text "explaination"
@@ -42,21 +40,8 @@ ActiveRecord::Schema.define(version: 20181221115550) do
     t.string "size"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "seller_id"
-    t.bigint "buyer_id"
-    t.index ["buyer_id"], name: "index_items_on_buyer_id"
-    t.index ["seller_id"], name: "index_items_on_seller_id"
-  end
-
-  create_table "sns_credentials", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "uid"
-    t.string "provider"
-    t.bigint "user_id"
-    t.string "access_token"
-    t.string "access_secret"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_sns_credentials_on_user_id"
+    t.integer "seller_id"
+    t.integer "buyer_id"
   end
 
   create_table "sns_credentials", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -83,7 +68,6 @@ ActiveRecord::Schema.define(version: 20181221115550) do
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
-
 
   add_foreign_key "item_images", "items"
   add_foreign_key "sns_credentials", "users"
