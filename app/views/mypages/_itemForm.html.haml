@@ -3,17 +3,13 @@
     = @item.name
   .wrapperSellingItemInfolLeftRight
     .wrapperSellingItemInfolLeft
-      .wrapperSellingItemInfoLeftMainimage
-        = image_tag '1.jpeg', size: '300x300', class: 'dog1'
-      .wrapperSellingItemInfoLeftSubimage
-        .wrapperSellingItemInfoLeftSubimages
-          = image_tag '2.jpeg', size: '75x75', class: 'dog2'
-        .wrapperSellingItemInfoLeftSubimages
-          = image_tag '3.jpeg', size: '75x75', class: 'dog3'
-        .wrapperSellingItemInfoLeftSubimages
-          = image_tag '4.jpeg', size: '75x75', class: 'dog4'
-        .wrapperSellingItemInfoLeftSubimages
-          = image_tag '5.jpeg', size: '75x75', class: 'dog5'
+      .wrapperSellingItemInfolLeftHidden
+        .wrapperSellingItemInfoLeftMainimage
+          - @images.each do |image|
+            = image_tag image.image
+        .wrapperSellingItemInfoLeftSubimage
+          - @images.each do |image|
+            = image_tag image.image,class: "wrapperSellingItemInfoLeftSubimages"
     .wrapperSellingItemInfoRight
       .wrapperSellingItemInfoRightTable
         %table{:border => "1"}
