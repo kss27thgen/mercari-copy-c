@@ -18,7 +18,7 @@
       %ul.exhibitionItemBody
         - if @items.exists?
           - @items.each do |item|
-            =link_to "/mypages/sellingItem/#{item.id}", class: "exhibitionItemBodyLink" do
+            =link_to "/mypages/sellingItem/#{item.id}", data: {"turbolinks" => false}, class: "exhibitionItemBodyLink" do
               %li.exhibitionItemBodyContainerItem
                 .exhibitionItemBodyContainerItemImage
                   = image_tag item.item_images.first.image
