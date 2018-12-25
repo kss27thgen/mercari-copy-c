@@ -40,8 +40,7 @@ class MypagesController < ApplicationController
   end
 
   def exhibitionItemSelling
-    user = User.find(current_user.id)
-    @items = Item.where(seller_id: user.id)
+    @items = Item.where(seller_id: current_user.id)
   end
 
   def exhibitionItemTransaction
