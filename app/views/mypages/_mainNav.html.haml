@@ -53,7 +53,7 @@
   %h4.setting 設定
   %ul.mypageNavLists
     %li
-      = link_to "プロフィール", "#", class: "mypageNavList"
+      = link_to "プロフィール", mypages_profile_path, class: "mypageNavList"
       = fa_icon"fa-chevron-right",class: "fa-chevron-right"
     %li
       = link_to "住所変更", mypages_deliver_address_path, class: "mypageNavList"
