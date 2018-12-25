@@ -17,9 +17,8 @@
             返却済み
       %ul.exhibitionItemBody
         - if @items.exists?
-
           - @items.each do |item|
-            =link_to root_path do
+            =link_to "/mypages/sellingItem/#{item.id}", class: "exhibitionItemBodyLink" do
               %li.exhibitionItemBodyContainerItem
                 .exhibitionItemBodyContainerItemImage
                   = image_tag item.item_images.first.image
@@ -35,12 +34,9 @@
                         出品中
                     %span.exhibitionItemBodyContainerItemNameBottomTail
                       ＞
-
-
         - else
           %li.exhibitionItemBodyNothing
             出品中の商品はありません
-
     .exhibitionItemPage
       %ul.exhibitionItemPageFooter
         %li.exhibitionItemPageFooterList.exhibitionItemPageFooterLeft

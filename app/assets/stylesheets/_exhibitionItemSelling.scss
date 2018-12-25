@@ -47,6 +47,10 @@
       .exhibitionItemBody {
         background-position: center 40px;
         background-size: cover;
+        &Link {
+          text-decoration: none;
+          color: darken($gray, 70%);
+        }
         &Container {
           &Item {
             display: flex;
