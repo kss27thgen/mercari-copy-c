@@ -1,21 +1,6 @@
 .bodyPickupContainers
       .bodyPickupContainersContainer
+        = render partial: 'layouts/toppage_index_render', collection: @items, as: "item"
         - @items.each do |item|
-          .bodyPickupContainersContainerBox
-            .bodyPickupContainersContainerBoxTop
-              = image_tag item.item_images.first.item_images, size: '213x213'
-            .bodyPickupContainersContainerBoxBottom
-              %h3.bodyPickupContainersContainerBoxBottomTop
-                = item.name
-              .bodyPickupContainersContainerBoxBottomBottom
-                .bodyPickupContainersContainerBoxBottomBottomLike
-                  .bodyPickupContainersContainerBoxBottomBottomLikeNum
-                    16
-                  .bodyPickupContainersContainerBoxBottomBottomLikeIcon
-                    = fa_icon "fa-heart-o",class: "fa-heart-o"
-                .bodyPickupContainersContainerBoxBottomBottomPrice
-                  = "¥ #{item.price}"
-
-                .bodyPickupContainersContainerBoxBottomBottomTax (税込)
       .bodyPickupContainerSeeAll
         =link_to "すべての商品を見る", "#",class: "SeeAll"
