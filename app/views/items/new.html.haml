@@ -39,7 +39,7 @@
                 %span.itemEntryMainUpperDescriptionRightTitleRequire 必須
               .itemEntryMainUpperDescriptionRightSelect
                 %select.itemEntryMainUpperDescriptionRightSelect#lc
-                  = render "layouts/category"
+                  = render partial: 'layouts/category', collection: @category
               .itemEntryMainUpperDescriptionRightTitle
                 商品の状態
                 %span.itemEntryMainUpperDescriptionRightTitleRequire 必須
