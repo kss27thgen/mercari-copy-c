@@ -25,10 +25,3 @@ $(function(){
       mask.click();
     })
 });
-
-
-
-
-
-
-
