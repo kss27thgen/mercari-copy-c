@@ -39,10 +39,7 @@
                 %span.itemEntryMainUpperDescriptionRightTitleRequire 必須
               .itemEntryMainUpperDescriptionRightSelect
                 %select.itemEntryMainUpperDescriptionRightSelect#lc
-                  - @lc.each do |lc|
-                    %option
-                      = lc.name
-                / = f.select :s @lc.name,class: ".itemEntryMainUpperDescriptionRightSelect",id:"lc"
+                  = render "layouts/category"
               .itemEntryMainUpperDescriptionRightTitle
                 商品の状態
                 %span.itemEntryMainUpperDescriptionRightTitleRequire 必須

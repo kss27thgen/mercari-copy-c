@@ -8,13 +8,11 @@
 
       $.each(gon.l_cate, function(i,l_cate) {
         if(lc_val == l_cate.name){
-          // console.log(l_cate.id)
 
             $.each(gon.m_cate, function(i,m_cate) {
               if(l_cate.id == m_cate.large_category_id){
                 var m_cate_name = m_cate.name
                 string += `<option>${m_cate.name}</option>`
-                // console.log(m_cate.name)
               }
             })
 
@@ -38,7 +36,6 @@
 
     $.each(gon.m_cate, function(i,m_cate) {
       if(mc_val == m_cate.name){
-        // console.log(m_cate.id)
 
           $.each(gon.s_cate, function(i,s_cate) {
             if(m_cate.id == s_cate.middle_category_id){
