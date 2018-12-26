@@ -83,18 +83,17 @@
                 .itemEntryMainUpperPriceRightTopRight
                   .itemEntryMainUpperPriceRightTopRightYen
                     ¥
-                    %span
-                      %input.itemEntryMainUpperPriceRightTopRightYenInput{placeholder: "                    例) 300"}
+                    = f.text_field :price, placeholder: "                    例) 300", class: "itemEntryMainUpperPriceRightTopRightYenInput",id: "item_price"
               .itemEntryMainUpperPriceRightMiddle
                 .itemEntryMainUpperPriceRightMiddleLeft
                   販売手数料(10%)
                 .itemEntryMainUpperPriceRightMiddleRight
-                  ｰ
+                  %p ｰ
               .itemEntryMainUpperPriceRightBottom
                 .itemEntryMainUpperPriceRightBottomLeft
                   販売利益
                 .itemEntryMainUpperPriceRightBottomRight
-                  ー
+                  %p ー
       .itemEntryFooter
         .itemEntryFooterNote
           %p
