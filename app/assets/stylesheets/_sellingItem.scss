@@ -84,4 +84,63 @@
       }
 }
 
-
+// Modal
+#mask {
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+#modal {
+  background: #fff;
+  width: 700px;
+  height: 400px;
+  border-radius: 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 450px auto;
+  transition: .1s;
+  z-index: 2;
+}
+#mask.hidden {
+  display: none;
+}
+#modal.hidden {
+  transform: translate(0 , -1500px);
+}
+.deleteModal {
+  text-align: center;
+  &Top {
+    height: 160px;
+    margin: 80px;
+    &Title {
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+    &Confirm {
+      margin-top: 50px;
+    }
+  }
+  &Bottom {
+    display: flex;
+    height: 80px;
+    line-height: 80px;
+    border-top: 1px solid black;
+    &Cancel {
+      border-right: 1px solid black;
+      width: 50%;
+    }
+    &Delete {
+      width: 50%;
+      display: block;
+      text-decoration: none;
+      color: $button-blue;
+    }
+  }
+}
