@@ -35,7 +35,18 @@ class MypagesController < ApplicationController
   end
 
   def sellingItem
-    @items = Item.all
+    @item = Item.find(params[:id])
+    @images = @item.item_images
+  end
+
+  def exhibitionItemSelling
+    @items = Item.where(seller_id: current_user.id)
+  end
+
+  def exhibitionItemTransaction
+  end
+
+  def exhibitionItemSold
   end
 
 end

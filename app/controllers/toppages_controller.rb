@@ -5,13 +5,8 @@ class ToppagesController < ApplicationController
   end
 
   def show
-    @item = Item.find(1)
-    @image = ItemImage.all
-    # @user = Item.find(:id)
+    @item = Item.find(params[:id])
+    @images = @item.item_images
+    @anotheritems = Item.where(seller: @item.seller).where.not(id: @item)
   end
 end
-
-
-
-
-

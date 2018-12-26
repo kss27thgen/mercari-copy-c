@@ -32,6 +32,12 @@ class ItemsController < ApplicationController
     render :layout => 'simpleLayout'
   end
 
+  def destroy
+    @item = Item.find(params[:id])
+    @item.destroy
+    redirect_to root_path
+  end
+
 
   private
   def create_params
