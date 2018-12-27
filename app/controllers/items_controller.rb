@@ -34,12 +34,14 @@ class ItemsController < ApplicationController
 
   def destroy
     @item = Item.find(params[:id])
-    if @item.destroy
-      redirect_to root_path
+    if @item.seller_id != current_user.id
+      flash[:notice] = "権限がありません"
+    elsif @item.destroy
       flash[:notice] = "商品を削除しました"
     else
-      flash[:notie] = "削除できませんでした"
+      flash[:notice] = "削除できませんでした"
     end
+    redirect_to root_path
   end
 
 
