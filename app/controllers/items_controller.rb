@@ -20,6 +20,14 @@ class ItemsController < ApplicationController
     render :layout => 'simpleLayout'
   end
 
+  def search
+    @items = Item.where('name LIKE(?) OR price LIKE(?) OR explaination LIKE(?)', "%#{params[:keyword]}%", "%#{params[:keyword]}%", "%#{params[:keyword]}%").limit(20)
+
+    # @items = Item.page(params[:page]).per(5).order("created_at DESC")
+    # @keyword = params[:keyword]
+    # @search = Item.ransack(params[:q])  #追加
+    # @result = @search.result
+  end
 
   private
   def create_params
