@@ -6,7 +6,7 @@
     .wrapperSellingItemSetting
       .wrapperSellingItemSettingEdit
         .wrapperSellingItemSettingEditBtn
-          =link_to mypages_info_path, class: "wrapperSellingItemSettingEditBtn" do
+          =link_to "/mypages/sellingItem/#{@item.id}/edit", class: "wrapperSellingItemSettingEditBtn" do
             商品の編集
       .wrapperSellingItemSettingOr
         %p.wrapperSellingItemSettingOrText or
