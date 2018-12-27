@@ -28,14 +28,22 @@ class ItemsController < ApplicationController
     end
   end
 
+  # def update
+  #   @item = Item.find(params[:id])
+  #   if  @item.update(create_params)
+  #   else
+  #     alert:"商品が編集できませんでした。"
+  #   end
+  #   redirect_to root_path
+  # end
   def update
     @item = Item.find(params[:id])
-    if @item.seller_id != current_user.id
-      notice:"権限がありません"
-    elsif  @item.update(create_params)
-      notice:"商品を編集しました"
+    if  @item.seller_id != current_user.id
+      flash[:notice] = "権限がありません"
+    elsif @item.update(create_params)
+      flash[:notice] = "商品を編集しました"
     else
-      notice:"商品が編集できませんでした。"
+      alert:"商品が編集できませんでした。"
     end
     redirect_to root_path
   end
