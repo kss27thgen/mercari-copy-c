@@ -10,11 +10,6 @@
 // })
 
 
-
-
-
-
-
 // $(document).ready(function () {
 //   function buildHTML(keyword){
 //     var html = `<p> ${item.keyword} </p>`
