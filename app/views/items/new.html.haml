@@ -29,7 +29,7 @@
               商品の説明
               %span.itemEntryMainUpperItemTitleRequire 必須
             = f.text_area :explaination, placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
-          .itemEntryMainUpperDescription
+          .itemEntryMainUpperDescription.clearfix
             .itemEntryMainUpperDescriptionLeft
               .itemEntryMainUpperDescriptionLeftTitle
                 商品の詳細
@@ -45,7 +45,7 @@
               .itemEntryMainUpperDescriptionRightTitle
                 商品の状態
                 %span.itemEntryMainUpperDescriptionRightTitleRequire 必須
-              .itemEntryMainUpperDescriptionRightSelect
+              .itemEntryMainUpperDescriptionRightSelectStatus
                 = f.select :status,[["---", "---"],["新品・未使用", "新品・未使用"], ["未使用に近い", "未使用に近い"], ["目立った傷や汚れなし", "目立った傷や汚れなし"],["やや傷や汚れあり", "やや傷や汚れあり"],["傷や汚れあり", "傷や汚れあり"],["全体的に状態が悪い", "全体的に状態が悪い"]]
           .itemEntryMainUpperDelivery
             .itemEntryMainUpperDeliveryLeft
@@ -115,6 +115,6 @@
               = link_to "#", class: "itemEntryFooterNoteLink" do
                 加盟店規約
             に同意したことになります。
-        / .itemEntryFooterBtn
-        = f.submit "出品する", class: "itemEntryFooterBtn"
-        = link_to "もどる", :back, class: "itemEntryFooterBack"
+        .itemEntryFooterBtn
+        = f.submit "出品する", class: "itemEntryFooterBtnEntry"
+        = link_to "もどる", :back, class: "itemEntryFooterBtnBack"
