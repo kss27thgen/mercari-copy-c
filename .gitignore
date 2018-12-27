@@ -18,5 +18,5 @@
 
 .byebug_history
 /.env
-/uploads/*
+public/uploads/*
 
