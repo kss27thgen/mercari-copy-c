@@ -30,11 +30,14 @@ class ItemsController < ApplicationController
 
   def update
     @item = Item.find(params[:id])
-    if @item.update(create_params)
-      redirect_to root_path, notice:"商品を編集しました"
+    if @item.seller_id != current_user.id
+      notice:"権限がありません"
+    elsif  @item.update(create_params)
+      notice:"商品を編集しました"
     else
-      render :purchase, alert:"商品が編集できませんでした。"
+      notice:"商品が編集できませんでした。"
     end
+    redirect_to root_path
   end
 
   def purchase
