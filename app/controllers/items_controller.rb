@@ -28,6 +28,15 @@ class ItemsController < ApplicationController
     end
   end
 
+  def update
+    @item = Item.find(params[:id])
+    if @item.update(create_params)
+      redirect_to root_path, notice:"商品を編集しました"
+    else
+      render :purchase, alert:"商品が編集できませんでした。"
+    end
+  end
+
   def purchase
     render :layout => 'simpleLayout'
   end
