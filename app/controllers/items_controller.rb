@@ -37,7 +37,7 @@ class ItemsController < ApplicationController
     else
       alert:"商品が編集できませんでした。"
     end
-    redirect_to root_path
+    redirect_to mypages_exhibitionItemSelling_path
   end
 
   def purchase
