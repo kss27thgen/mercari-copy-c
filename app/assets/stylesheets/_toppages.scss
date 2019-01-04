@@ -179,7 +179,10 @@
 }
 
 
-
+.indexItems {
+  text-decoration: none;
+  color:black;
+}
 
 
 
@@ -357,6 +360,7 @@
     }
   }
 }
+
 
 
 .fa-heart-o{
@@ -571,6 +575,9 @@ th{
   &Head{
     font-size:25px;
     color:#0099e8;
+    a{
+      text-decoration: none;
+    }
   }
   &container{
     width:700px;
@@ -585,12 +592,16 @@ th{
     margin-bottom: 20px;
     &Image{
       height: 220px;
-      background-color: yellow;
+      img{
+        width:220px;
+        height:220px;
+      }
     }
     &Body{
       height: 110px;
       padding:16px;
       box-sizing: border-box;
+      background-color: $white;
       &Title{
         font-size: 16px;
         height:48px;
@@ -646,4 +657,29 @@ th{
   font-size: 14px;
   color:#BDBDBD;
   padding-top: 20px
+}
+
+// パンくずの記述
+.breadCrumbShowBorder{
+  border-top:solid 1px #e5e5e5;
+  margin-top: 10px;
+}
+.breadCrumbShow{
+  display:flex;
+  list-style: none;
+  width:80vw;
+  margin:0 auto;
+  font-size: 14px;
+  padding:15px 0;
+  a{
+    text-decoration: none;
+    color:#333333;
+  }
+  .list1{
+    padding-right: 10px;
+  }
+  .list2{
+    font-weight: bold;
+    padding-left: 10px;
+  }
 }
