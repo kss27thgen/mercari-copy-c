@@ -1,6 +1,6 @@
 %nav.searchItem
   %ul.searchItemList
-    %li.searchItemListToppageLink
+    %li.searchItemListToppageLink 
       = link_to "メルカリ", toppages_path, class: "searchItemLinkToppage",style: "text-decoration: none;"
       = fa_icon 'fa-angle-right', class: 'fa-angle-right'
     %li.searchItemListKeyword
@@ -20,7 +20,7 @@
       - @items.each do |item|
         .searchItemMainBodyItemBox
           .searchItemMainBodyItemBoxImage
-            = image_tag item.item_images.first.image, size: '160x160'
+            = image_tag item.item_images.first.item_images, size: '160x160'
           .searchItemMainBodyItemInfo
             %h3
               = item.name

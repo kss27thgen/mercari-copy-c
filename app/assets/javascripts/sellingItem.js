@@ -13,6 +13,7 @@ $(function(){
     let cancel = document.getElementById('cancel');
     let modal = document.getElementById('modal');
     let mask = document.getElementById('mask');
+  document.addEventListener("DOMContentLoaded", function() {
     open.addEventListener('click', function(){
       mask.className = '';
       modal.className = '';
@@ -24,4 +25,5 @@ $(function(){
     cancel.addEventListener('click', function(){
       mask.click();
     })
+  });
 });
