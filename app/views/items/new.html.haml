@@ -1,12 +1,12 @@
 .itemEntryWrapper
-  =form_for @item do |f|
+  =form_for @item  do |f|
     .itemEntryBodyWrapper
       .itemEntryHeader
         %h3.itemEntryHeaderTitle
           商品の情報を入力
       .itemEntryMain
         .itemEntryMainUpper
-          .itemEntryMainUpperImage
+          #item-dropzone.itemEntryMainUpperImage
             .itemEntryMainUpperImageTitle
               出品画像
               %span.itemEntryMainUpperImageTitleRequire 必須
@@ -14,12 +14,11 @@
               最大4枚までアップロードできます
             %label.itemEntryMainUpperImageForm
               = f.fields_for :item_images do|i|
-                = i.file_field :item_images, class: "itemEntryMainUpperImageFormFile"
-              .itemEntryMainUpperImageFormArea
-                %p.itemEntryMainUpperImageFormAreaText
-                  ドラッグアンドドロップ
-                %p
-                  またはクリックしてファイルをアップロード
+                .fallback
+                  = i.file_field :item_images, class: "fallback"
+              / .itemEntryMainUpperImageFormArea.dropzone
+              .dz-message.needsclick ドラッグアンドドロップ
+              .dz-message.needsclick またはクリックしてファイルをアップロード
           .itemEntryMainUpperItem
             .itemEntryMainUpperItemTitle
               商品名
