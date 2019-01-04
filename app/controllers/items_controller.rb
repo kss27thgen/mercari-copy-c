@@ -1,8 +1,6 @@
 class ItemsController < ApplicationController
 
   def new
-    # render :layout => 'simpleLayout'
-
     @item = Item.new
     4.times { @item.item_images.build }
   end
@@ -17,9 +15,9 @@ class ItemsController < ApplicationController
   end
 
   def purchase
-    render :layout => 'simpleLayout'
+    @item = Item.find(params[:id])
+    @images = @item.item_images
   end
-
 
   private
   def create_params

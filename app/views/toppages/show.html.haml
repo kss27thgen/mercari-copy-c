@@ -70,7 +70,8 @@
       .wrapperShowItemFare 送料込み
     .wrapperShowItemPoint 売上金4,300円をお持ちです
     .wrapperShowItemBuy
-      .wrapperShowItemBuyText 購入画面に進む
+      .wrapperShowItemBuyText
+      / # = link_to "購入画面に進む",items_purchase_path(@item.id)
     .wrapperShowItemDescription
       =@item.explaination
     .wrapperShowItemLinks

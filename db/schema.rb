@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181221115550) do
+ActiveRecord::Schema.define(version: 20181227012849) do
 
   create_table "item_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "top_category", null: false
@@ -40,21 +40,17 @@ ActiveRecord::Schema.define(version: 20181221115550) do
     t.string "size"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "seller_id"
-    t.bigint "buyer_id"
-    t.index ["buyer_id"], name: "index_items_on_buyer_id"
-    t.index ["seller_id"], name: "index_items_on_seller_id"
+    t.integer "seller_id"
+    t.integer "buyer_id"
   end
 
-  create_table "sns_credentials", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "uid"
-    t.string "provider"
-    t.bigint "user_id"
-    t.string "access_token"
-    t.string "access_secret"
+  create_table "settlements", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "user_id", null: false
+    t.bigint "item_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_sns_credentials_on_user_id"
+    t.index ["item_id"], name: "index_settlements_on_item_id"
+    t.index ["user_id"], name: "index_settlements_on_user_id"
   end
 
   create_table "sns_credentials", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

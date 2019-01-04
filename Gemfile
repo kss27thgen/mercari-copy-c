@@ -40,6 +40,7 @@ gem 'omniauth-twitter'
 gem 'omniauth-google-oauth2'
 gem 'dotenv-rails'
 gem 'carrierwave'
+gem 'payjp'
 
 group :production do
   gem 'unicorn'
