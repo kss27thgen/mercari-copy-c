@@ -24,7 +24,7 @@
           = form_tag settlement_create_path(@item.id), method: :post do
             / = hidden_field_tag :item_id, :name "item_id", :value @item.id
             :plain
-              <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key="pk_test_a034c49a35a3098f0129e74b" data-text="購入する" data-payjp="" ></script>
+              <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key=ENV['PAYJP_APP_TEST'] data-text="購入する" data-payjp="" ></script>
     .itemPurchaseFooter
       .itemPurchaseFooterWrapper
         .itemPurchaseFooterWrapperTitle
