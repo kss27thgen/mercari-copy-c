@@ -9,5 +9,4 @@ class ToppagesController < ApplicationController
     @images = @item.item_images
     @anotheritems = Item.where('seller_id = ? and id != ?', @item.seller,@item.id)
   end
-
 end

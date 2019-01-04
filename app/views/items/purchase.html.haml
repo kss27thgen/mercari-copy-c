@@ -22,7 +22,6 @@
           配送先と支払い方法の入力を完了してください。
         .itemPurchaseMainPurchaseBtn
           = form_tag settlement_create_path(@item.id), method: :post do
-            / = hidden_field_tag :item_id, :name "item_id", :value @item.id
             :plain
               <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key=ENV['PAYJP_APP_TEST'] data-text="購入する" data-payjp="" ></script>
     .itemPurchaseFooter

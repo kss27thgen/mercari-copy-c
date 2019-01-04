@@ -71,7 +71,7 @@
     .wrapperShowItemPoint 売上金4,300円をお持ちです
     .wrapperShowItemBuy
       .wrapperShowItemBuyText
-      / # = link_to "購入画面に進む",items_purchase_path(@item.id)
+        = link_to "購入画面に進む", "/items/purchase/#{@item.id}"
     .wrapperShowItemDescription
       =@item.explaination
     .wrapperShowItemLinks
