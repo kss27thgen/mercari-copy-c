@@ -1,15 +1,3 @@
-.breadCrumbShowBorder
-.breadCrumbShow
-  %ul.breadcrumb
-  %li.list1{:itemscope => "itemscope", :itemtype => "http://data-vocabulary.org/Breadcrumb"}
-    %a{:href => "http://localhost:3000", :itemprop => "url"}
-      %span{:itemprop => "title"} メルカリ
-  %p >
-  %li.list2{:itemscope => "itemscope", :itemtype => "http://data-vocabulary.org/Breadcrumb"}
-    %a{:href => "http://localhost:3000/toppages/#{@item.id}", :itemprop => "url"}
-      %span{:itemprop => "title"}
-        = "#{ @item.name}"
-
 .wrapperShow
   .wrapperShowItem
     %h1.wrapperShowItemName
