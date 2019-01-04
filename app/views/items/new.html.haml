@@ -6,7 +6,7 @@
           商品の情報を入力
       .itemEntryMain
         .itemEntryMainUpper
-          #item-dropzone.itemEntryMainUpperImage
+          .itemEntryMainUpperImage
             .itemEntryMainUpperImageTitle
               出品画像
               %span.itemEntryMainUpperImageTitleRequire 必須
@@ -14,10 +14,12 @@
               最大4枚までアップロードできます
             %label.itemEntryMainUpperImageForm
               = f.fields_for :item_images do|i|
-                .fallback
-                  = i.file_field :item_images, class: "fallback"
-              .dz-message.needsclick ドラッグアンドドロップ
-              .dz-message.needsclick またはクリックしてファイルをアップロード
+                = i.file_field :item_images, class: "itemEntryMainUpperImageFormFile"
+              .itemEntryMainUpperImageFormArea
+                %p.itemEntryMainUpperImageFormAreaText
+                  ドラッグアンドドロップ
+                %p
+                  またはクリックしてファイルをアップロード
           .itemEntryMainUpperItem
             .itemEntryMainUpperItemTitle
               商品名
