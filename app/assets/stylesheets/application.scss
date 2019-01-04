@@ -1,4 +1,6 @@
 @import "reset";
+// *= require dropzone/basic;
+// *= require dropzone/dropzone;
 @import "colors";
 @import "deliver_address";
 @import "signin";
@@ -37,3 +39,5 @@
 @import 'exhibitionItemTransaction';
 @import 'exhibitionItemSold';
 @import 'profile';
+@import 'search';
+@import 'searchNav'
