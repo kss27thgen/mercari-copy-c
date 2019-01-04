@@ -86,8 +86,10 @@
   }
   .wrapperSellingItemInfoDescription {
     margin: 25px;
+    width: 500px;
     font-size: 15px;
     color: 424242;
     text-align: left;
+    word-wrap: break-word;
   }
 }
