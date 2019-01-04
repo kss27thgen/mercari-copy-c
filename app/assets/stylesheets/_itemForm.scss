@@ -61,7 +61,7 @@
       }
     }
   }
-
+  }
 
   .wrapperSellingItemInfoPriceBox{
     display:flex;
@@ -90,6 +90,10 @@
     font-size: 15px;
     color: 424242;
     text-align: left;
-    word-wrap: break-word;
   }
-}
+
+  pre {
+      overflow: auto;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+  }

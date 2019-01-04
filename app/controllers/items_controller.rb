@@ -24,6 +24,18 @@ class ItemsController < ApplicationController
     end
   end
 
+  def update
+    @item = Item.find(params[:id])
+    if  @item.seller_id != current_user.id
+      flash[:notice] = "権限がありません"
+    elsif @item.update(create_params)
+      flash[:notice] = "商品を編集しました"
+    else
+      alert:"商品が編集できませんでした。"
+    end
+    redirect_to mypages_exhibitionItemSelling_path
+  end
+
   def purchase
     render :layout => 'simpleLayout'
   end
