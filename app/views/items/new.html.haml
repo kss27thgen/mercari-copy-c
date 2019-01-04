@@ -1,12 +1,12 @@
 .itemEntryWrapper
-  =form_for @item do |f|
+  =form_for @item  do |f|
     .itemEntryBodyWrapper
       .itemEntryHeader
         %h3.itemEntryHeaderTitle
           商品の情報を入力
       .itemEntryMain
         .itemEntryMainUpper
-          .itemEntryMainUpperImage
+          #item-dropzone.itemEntryMainUpperImage
             .itemEntryMainUpperImageTitle
               出品画像
               %span.itemEntryMainUpperImageTitleRequire 必須
@@ -14,12 +14,10 @@
               最大4枚までアップロードできます
             %label.itemEntryMainUpperImageForm
               = f.fields_for :item_images do|i|
-                = i.file_field :item_images, class: "itemEntryMainUpperImageFormFile"
-              .itemEntryMainUpperImageFormArea
-                %p.itemEntryMainUpperImageFormAreaText
-                  ドラッグアンドドロップ
-                %p
-                  またはクリックしてファイルをアップロード
+                .fallback
+                  = i.file_field :item_images, class: "fallback"
+              .dz-message.needsclick ドラッグアンドドロップ
+              .dz-message.needsclick またはクリックしてファイルをアップロード
           .itemEntryMainUpperItem
             .itemEntryMainUpperItemTitle
               商品名
@@ -38,8 +36,10 @@
                 カテゴリー
                 %span.itemEntryMainUpperDescriptionRightTitleRequire 必須
               .itemEntryMainUpperDescriptionRightSelect
+
                 %select.itemEntryMainUpperDescriptionRightSelect#lc
                   = render partial: 'layouts/category', collection: @lc, as: "lc"
+
               .itemEntryMainUpperDescriptionRightTitle
                 商品の状態
                 %span.itemEntryMainUpperDescriptionRightTitleRequire 必須
@@ -114,5 +114,5 @@
                 加盟店規約
             に同意したことになります。
         .itemEntryFooterBtn
-          = f.submit "出品する", class: "itemEntryFooterBtnEntry"
-          = link_to "もどる", :back, class: "itemEntryFooterBtnBack"
+        = f.submit "出品する", class: "itemEntryFooterBtnEntry"
+        = link_to "もどる", :back, class: "itemEntryFooterBtnBack"

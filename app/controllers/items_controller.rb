@@ -16,11 +16,11 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(create_params)
     if @item.save
-      redirect_to root_path, notice:"商品を出品しました"
-      # render json: {message: 'success', itemId: @item.id}, status: 200
+      # redirect_to root_path, notice:"商品を出品しました"
+      render json: {message: 'success', itemId: @item.id}, status: 200
     else
-      # render json: { error: @item.errors.full_messages.join(", ")}, status: 400
-      render :purchase, alert:"商品が出品できませんでした。"
+      render json: { error: @item.errors.full_messages.join(", ")}, status: 400
+      # render :purchase, alert:"商品が出品できませんでした。"
     end
   end
 
