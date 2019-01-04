@@ -3,6 +3,7 @@
   root 'toppages#index'
   resources :items , only: [:new , :create, :destroy, :update]
   get 'items/purchase'
+  get 'toppages/category_index'
   resources :toppages , only: [:index, :show]
   get 'mypages/main' => 'mypages#main'
   get 'mypages/logout' => 'mypages#logout'
