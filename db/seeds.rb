@@ -7,3 +7,4 @@
   LargeCategory.create!(
     { name: name }
   )
+end
