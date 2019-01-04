@@ -58,7 +58,7 @@ class ItemsController < ApplicationController
     else
       flash[:notice] = "削除できませんでした"
     end
-    redirect_to root_path
+    redirect_to mypages_exhibitionItemSelling_path
   end
 
   private
