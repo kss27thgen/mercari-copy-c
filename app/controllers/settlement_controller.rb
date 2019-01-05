@@ -3,7 +3,6 @@ class SettlementController < ApplicationController
     @item = Item.find(params[:id])
     @images = @item.item_images.first
     settlement = Item.find(params[:id])
-    # binding.pry
 
     settlement.with_lock do
       Payjp.api_key = ENV['PAYJP_APP_SECRET']
