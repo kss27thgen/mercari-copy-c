@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181227012849) do
+ActiveRecord::Schema.define(version: 20181223034221) do
 
   create_table "item_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "top_category", null: false
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20181227012849) do
   end
 
   create_table "item_images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.text "image"
+    t.text "item_images"
     t.bigint "item_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 20181227012849) do
     t.datetime "updated_at", null: false
     t.integer "seller_id"
     t.integer "buyer_id"
-  end
+
 
   create_table "settlements", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.bigint "user_id", null: false
@@ -51,6 +51,30 @@ ActiveRecord::Schema.define(version: 20181227012849) do
     t.datetime "updated_at", null: false
     t.index ["item_id"], name: "index_settlements_on_item_id"
     t.index ["user_id"], name: "index_settlements_on_user_id"
+    t.bigint "small_category_id"
+    t.index ["small_category_id"], name: "index_items_on_small_category_id"
+  end
+
+  create_table "large_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "middle_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name"
+    t.bigint "large_category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["large_category_id"], name: "index_middle_categories_on_large_category_id"
+  end
+
+  create_table "small_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name"
+    t.bigint "middle_category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["middle_category_id"], name: "index_small_categories_on_middle_category_id"
   end
 
   create_table "sns_credentials", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -79,5 +103,8 @@ ActiveRecord::Schema.define(version: 20181227012849) do
   end
 
   add_foreign_key "item_images", "items"
+  add_foreign_key "items", "small_categories"
+  add_foreign_key "middle_categories", "large_categories"
+  add_foreign_key "small_categories", "middle_categories"
   add_foreign_key "sns_credentials", "users"
 end
