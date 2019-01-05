@@ -20,4 +20,3 @@
 /.env
 public/uploads/*
 config/secrets.yml
-
