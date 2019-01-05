@@ -65,7 +65,7 @@ end
   'キングダムハーツ',
   'ドラクエ',
 ].each do |name|
-  LargeCategory.create!(
+  SmallCategory.create!(
     { name: name }
   )
 end
