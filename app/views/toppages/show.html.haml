@@ -83,6 +83,9 @@
     .wrapperShowItemPoint 売上金4,300円をお持ちです
     .wrapperShowItemBuy
       .wrapperShowItemBuyText 購入画面に進む
+      =form_tag action: :pay, method: :post do
+        :plain
+          <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key="pk_test_a034c49a35a3098f0129e74b"></script>
     .wrapperShowItemDescription
       =@item.explaination
     .wrapperShowItemLinks
