@@ -24,7 +24,7 @@ end
   ['ゲーム',4]
 ].each do |name, id|
   MiddleCategory.create!(
-    { name: name ,large_category: id}
+    { name: name ,large_category_id: id}
   )
 end
 
@@ -63,9 +63,9 @@ end
   ['---',12],
   ['FF',12],
   ['キングダムハーツ',12],
-  ['ドラクエ',12],
+  ['ドラクエ',12]
 ].each do |name, id|
   SmallCategory.create!(
-    { name: name, middle_category: id }
+    { name: name, middle_category_id: id }
   )
 end
