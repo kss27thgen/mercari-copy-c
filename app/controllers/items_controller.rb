@@ -16,7 +16,7 @@ class ItemsController < ApplicationController
 
   def purchase
     @item = Item.find(params[:id])
-    @images = @item.item_images
+    @images = @item.item_images.first
   end
 
   private
