@@ -6,7 +6,7 @@ class SettlementController < ApplicationController
     # binding.pry
 
     settlement.with_lock do
-      Payjp.api_key = 'sk_test_90414862343d84d073c615a7'
+      Payjp.api_key = ENV['PAYJP_APP_SECRET']
       Payjp::Charge.create(
         amount: settlement.price,
         card: params['payjp-token'],
