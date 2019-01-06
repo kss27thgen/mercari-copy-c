@@ -73,7 +73,7 @@
 
 
 [
-  ['ポクポク星人','pokupoku@gmail.com','pokupoke','2018-12-12','2018-12-12']
+  ['ポクポク星人','pokupoku@gmail.com','pokupokupoku','2018-12-12','2018-12-12']
 ].each do |nickname,email,pass,create,update|
   User.create!(
     { nickname: nickname, email:email, encrypted_password: pass, created_at: create, updated_at: update}
