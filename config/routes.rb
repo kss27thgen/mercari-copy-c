@@ -24,7 +24,5 @@
   get 'mypages/exhibitionItemTransaction' => 'mypages#exhibitionItemTransaction'
   get 'mypages/exhibitionItemSold' => 'mypages#exhibitionItemSold'
   get 'help_center/index' => 'help_center＃index'
-  get 'items/purchase/:id' => 'items#purchase'
-  post 'settlement/create'
   get 'items/search' => 'items#search'
 end

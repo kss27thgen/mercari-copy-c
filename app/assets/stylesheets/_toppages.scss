@@ -315,14 +315,12 @@
     .wrapperShowItemBuy{
       width:42.5vw;
       background-color: red;
-      text-align: center;
-      a{
+      .wrapperShowItemBuyText{
         text-align: center;
         color: white;
         font-weight: 600;
         font-size: 30px;
         padding:10px 0;
-        text-decoration: none;
       }
     }
     .wrapperShowItemDescription{
