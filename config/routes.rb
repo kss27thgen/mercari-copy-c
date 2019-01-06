@@ -1,8 +1,7 @@
-  Rails.application.routes.draw do
-  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks', registrations: "users/registrations" }
+Rails.application.routes.draw do
+  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   root 'toppages#index'
-  resources :items , only: [:new , :create, :destroy, :update]
-  get 'items/purchase'
+  resources :items , only: [:new , :create]
   resources :toppages , only: [:index, :show]
   get 'mypages/main' => 'mypages#main'
   get 'mypages/logout' => 'mypages#logout'
@@ -15,15 +14,9 @@
   get 'mypages/support'
   get 'mypages/point'
   get 'mypages/sales'
-  get 'mypages/sellingItem/:id' => 'mypages#sellingItem'
-  get 'mypages/sellingItem/:id/edit' => 'mypages#sellingItemEdit'
+  get 'mypages/sellingItem' => 'mypages#sellingItem'
   get 'mypages/sign_up'
-  get 'mypages/profile'
-  get 'mypages/exhibitionItemSelling' => 'mypages#exhibitionItemSelling'
-  get 'mypages/exhibitionItemTransaction' => 'mypages#exhibitionItemTransaction'
-  get 'mypages/exhibitionItemSold' => 'mypages#exhibitionItemSold'
   get 'help_center/index' => 'help_center＃index'
   get 'items/purchase/:id' => 'items#purchase'
   post 'settlement/create'
-  get 'items/search' => 'items#search'
 end
