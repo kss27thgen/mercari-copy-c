@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190106071100) do
+ActiveRecord::Schema.define(version: 20190106105948) do
 
   create_table "item_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "top_category", null: false
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20190106071100) do
   end
 
   create_table "item_images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.text "item_images"
+    t.text "image"
     t.bigint "item_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 20190106071100) do
     t.integer "shipping_region"
     t.string "shipping_shcedule"
     t.string "shipping_method"
-    t.string "size"
+    t.integer "size_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "seller_id"
@@ -101,7 +101,7 @@ ActiveRecord::Schema.define(version: 20190106071100) do
   end
 
   create_table "suits", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "sizec"
+    t.string "size"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
