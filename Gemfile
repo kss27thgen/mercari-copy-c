@@ -42,7 +42,6 @@ gem 'omniauth-twitter'
 gem 'omniauth-google-oauth2'
 gem 'dotenv-rails'
 gem 'carrierwave'
-gem 'payjp'
 gem 'fog-aws'
 
 group :production do
