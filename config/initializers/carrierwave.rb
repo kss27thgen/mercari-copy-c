@@ -13,5 +13,5 @@ CarrierWave.configure do |config|
   }
 
   config.fog_directory  = 'mercari-copy-c'
-  config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/deproy-test'
+  config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/mercari-copy-c'
 end
