@@ -72,17 +72,33 @@
 
 
 
-[
-  ['ポクポク星人','pokupoku@gmail.com','pokupokupoku','2018-12-12','2018-12-12']
-].each do |nickname,email,pass,create,update|
-  User.create!(
-    { nickname: nickname, email:email, password: pass, created_at: create, updated_at: update}
+# [
+#   ['ポクポク星人','pokupoku@gmail.com','pokupokupoku','2018-12-12','2018-12-12']
+# ].each do |nickname,email,pass,create,update|
+#   User.create!(
+#     { nickname: nickname, email:email, password: pass, created_at: create, updated_at: update}
+#   )
+# end
+
+
+require 'csv'
+
+# CSV.read("db/womanbrands.csv", headers: false).each do |row|
+#   WomanBrand.create!(
+#     name: row[0]
+#   )
+# end
+
+# CSV.read("db/kidsbrands.csv", headers: false).each do |row|
+#   KidsBrand.create!(
+#     name: row[0]
+#   )
+
+CSV.read("db/hobbybrands.csv", headers: false).each do |row|
+  HobbyBrand.create!(
+    name: row[0]
   )
 end
-
-
-
-
 
 
 
