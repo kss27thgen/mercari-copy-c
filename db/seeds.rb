@@ -72,16 +72,79 @@
 
 
 
+# [
+#   ['ポクポク星人','pokupoku@gmail.com','pokupokupoku','2018-12-12','2018-12-12']
+# ].each do |nickname,email,pass,create,update|
+#   User.create!(
+#     { nickname: nickname, email:email, password: pass, created_at: create, updated_at: update}
+#   )
+# end
+
+# 洋服のサイズ
+# [
+#   'XXS以下',
+#   'XS(SS)',
+#   'S',
+#   'M',
+#   'L',
+#   'XL(LL)',
+#   '2XL(3L)',
+#   '3XL(4L)',
+#   '4XL(5L)以上',
+#   'FREE SIZE'
+#   ].each do |size|
+#     Suit.create!(
+#       { size: size }
+#       )
+#   end
+
+# メンズシューズのサイズ
 [
-  ['ポクポク星人','pokupoku@gmail.com','pokupokupoku','2018-12-12','2018-12-12']
-].each do |nickname,email,pass,create,update|
-  User.create!(
-    { nickname: nickname, email:email, password: pass, created_at: create, updated_at: update}
-  )
-end
+  '23.5cm以下',
+  '24cm',
+  '24.5cm',
+  '25cm',
+  '25.5cm',
+  '26cm',
+  '26.5cm',
+  '27cm',
+  '27.5cm',
+  '28cm',
+  '28.5cm',
+  '29cm',
+  '29.5cm',
+  '30cm',
+  '30.5cm',
+  '31cm以上'
+  ].each do |size|
+    MenShoe.create!(
+      { size: size }
+      )
+  end
 
-
-
+# レディースシューズのサイズ
+[
+  '20cm以下',
+  '20.5cm',
+  '21cm',
+  '21.5cm',
+  '22cm',
+  '22.5cm',
+  '23cm',
+  '23.5cm',
+  '24cm',
+  '24.5cm',
+  '25cm',
+  '25.5cm',
+  '26cm',
+  '26.5cm',
+  '27cm',
+  '27.5cm以上'
+  ].each do |size|
+    LadyShoe.create!(
+      { size: size }
+      )
+  end
 
 
 
