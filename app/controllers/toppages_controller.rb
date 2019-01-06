@@ -7,7 +7,7 @@ class ToppagesController < ApplicationController
   def show
     @item = Item.find(params[:id])
     @images = @item.item_images
-    @anotheritems = Item.where('seller_id = ? and id != ?', @item.seller, @item.id)
+    @anotheritems = Item.where(seller: @item.seller).where.not(id: @item)
   end
 
   def category_index

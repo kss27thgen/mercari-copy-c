@@ -37,8 +37,7 @@ class ItemsController < ApplicationController
   end
 
   def purchase
-    @item = Item.find(params[:id])
-    @images = @item.item_images.first
+    render :layout => 'simpleLayout'
   end
 
   def search
@@ -61,7 +60,7 @@ class ItemsController < ApplicationController
     end
     redirect_to mypages_exhibitionItemSelling_path
   end
-  
+
   private
   def create_params
     params.require(:item).permit(:name, :explaination, :price, :status, :shipping_fare, :shipping_region, :shipping_schedule, :shipping_method, :size, :small_category_id, item_images_attributes: [:item_images]).merge(seller_id: current_user.id, buyer_id: 1)

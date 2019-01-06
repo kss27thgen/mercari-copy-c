@@ -1,14 +1,15 @@
 .itemPurchaseWrapper
   .itemPurchaseBodyWrapper
     .itemPurchaseHeader
-      %h3.itemPurchaseHeaderTitle 購入を確定しますか？
+      %h3.itemPurchaseHeaderTitle
+        購入を確定しますか？
     .itemPurchaseMain
       .itemPurchaseMainItem
-        = image_tag @images.item_images
+        %img.itemPurchaseMainItemImage{src: "https://static-mercari-jp-imgtr2.akamaized.net/thumb/photos/m26573123145_1.jpg?1545040812", alt: "商品画像"}
         .itemPurchaseMainItemName
-          = @item.name
+          テテ bts スローガン
         .itemPurchaseMainItemPrice
-          = @item.price
+          ¥ 3,777
           %span.itemPurchaseMainItemPriceTaxin 送料込み
       .itemPurchaseMainPurchase
         .itemPurchaseMainPurchasePoint
@@ -16,16 +17,13 @@
         .itemPurchaseMainPurchaseTotal.clearfix
           .itemPurchaseMainPurchaseTotalLeft
             支払い金額
-
-          .itemPurchaseMainPurchaseTotalRight
-            = @item.price
+          .itemPurchaseMainPurchaseTotalRight 
+            ¥ 3,777
         .itemPurchaseMainPurchaseAlert
           配送先と支払い方法の入力を完了してください。
         .itemPurchaseMainPurchaseBtn
-          = form_tag settlement_create_path id: @item.id, method: :post do
-            :plain
-              <script type="text/javascript" src="https://checkout.pay.jp" class="payjp-button" data-key=ENV['PAYJP_APP_TEST'] data-text="購入する" data-payjp="" ></script>
-        //TODO  後でCDNを外した実装に取り組むこと
+          = link_to "#", class: "itemPurchaseMainPurchaseBtn" do
+            購入する
     .itemPurchaseFooter
       .itemPurchaseFooterWrapper
         .itemPurchaseFooterWrapperTitle

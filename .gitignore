@@ -18,8 +18,5 @@
 
 .byebug_history
 /.env
-
-vendor/.env
-
 public/uploads/*
 config/secrets.yml
