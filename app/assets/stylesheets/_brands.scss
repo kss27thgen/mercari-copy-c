@@ -1,5 +1,5 @@
 .brands{
-  background-color: #F5F5F5;
+  background-color: $background-gray;
   padding-bottom: 20px;
   .brandWrapper{
     width:50vw;
@@ -8,44 +8,44 @@
       font-size: 22px;
       font-weight: bold;
     }
-    .brandWrapperContainer{
+    &Container{
       display:flex;
       flex-wrap: wrap;
     }
-    .brandWrapperScroll{
+    &Scroll{
       display: flex;
       flex-wrap: wrap;
       margin-top:40px;
-      .brandWrapperScrollCell{
+      &Cell{
         margin:8px 0 0 5px;
         font-size: 15px;
-        color:#50AFEB;
+        color:$link_blue;
       }
     }
-    .brandWrapperJanre{
+    &Janre{
       color:white;
-      background:#EA3732;
+      background:$focus-red;
       padding:6px 0 6px 30px;
       margin-top: 40px;
       font-size: 22px;
       font-weight:bold ;
     }
-    .brandWrapperInitialsInitial{
+    &InitialsInitial{
       color:black;
-      background:#f2f2f2;
+      background:initial-back-gray;
       padding:6px 0 6px 30px;
       font-size: 16px;
       font-weight:bold ;
     }
-    .brandWrapperInitialsInitialbrands{
+    &InitialsInitialbrands{
       display: flex;
       flex-wrap: wrap;
-      background-color: #FFFFFF;
+      background-color: $background-white;
       padding:6px 0 6px 30px;
-      .brandWrapperInitialsInitialbrandsbrand{
+      &brand{
         width:20vw;
         margin:20px 0 20px 30px;
-        color:#3DA5EC;
+        color:$link_blue;
       }
     }
   }
@@ -72,6 +72,6 @@
   margin:8px 0 0 10px;
   border-radius: 5px;
   color:white;
-  background:#EA3732;
+  background:$focus-red;
 }
 
