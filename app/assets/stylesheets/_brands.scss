@@ -1,0 +1,77 @@
+.brands{
+  background-color: #F5F5F5;
+  padding-bottom: 20px;
+  .brandWrapper{
+    width:50vw;
+    margin:0 auto;
+    .brandTitle{
+      font-size: 22px;
+      font-weight: bold;
+    }
+    .brandWrapperContainer{
+      display:flex;
+      flex-wrap: wrap;
+    }
+    .brandWrapperScroll{
+      display: flex;
+      flex-wrap: wrap;
+      margin-top:40px;
+      .brandWrapperScrollCell{
+        margin:8px 0 0 5px;
+        font-size: 15px;
+        color:#50AFEB;
+      }
+    }
+    .brandWrapperJanre{
+      color:white;
+      background:#EA3732;
+      padding:6px 0 6px 30px;
+      margin-top: 40px;
+      font-size: 22px;
+      font-weight:bold ;
+    }
+    .brandWrapperInitialsInitial{
+      color:black;
+      background:#f2f2f2;
+      padding:6px 0 6px 30px;
+      font-size: 16px;
+      font-weight:bold ;
+    }
+    .brandWrapperInitialsInitialbrands{
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #FFFFFF;
+      padding:6px 0 6px 30px;
+      .brandWrapperInitialsInitialbrandsbrand{
+        width:20vw;
+        margin:20px 0 20px 30px;
+        color:#3DA5EC;
+      }
+    }
+  }
+  #last{
+  margin-bottom: 20px;
+  }
+}
+
+#box{
+  background-color: white;
+  box-shadow: 2px 2px 3px #EBEBEB;
+  padding: 10px 25px;
+  margin:8px 0 0 10px;
+  border-radius: 5px;
+}
+#box:hover {
+  color:white;
+  background:#EA3732;
+}
+#box-main{
+  background-color: white;
+  box-shadow: 2px 2px 3px #EBEBEB;
+  padding: 10px 25px;
+  margin:8px 0 0 10px;
+  border-radius: 5px;
+  color:white;
+  background:#EA3732;
+}
+
