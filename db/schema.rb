@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20190106100951) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+ActiveRecord::Schema.define(version: 20190106105948) do
 
   create_table "item_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "top_category", null: false
@@ -43,7 +44,7 @@ ActiveRecord::Schema.define(version: 20190106100951) do
     t.integer "shipping_region"
     t.string "shipping_shcedule"
     t.string "shipping_method"
-    t.string "size"
+    t.integer "size_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "seller_id"
@@ -54,13 +55,33 @@ ActiveRecord::Schema.define(version: 20190106100951) do
     t.index ["small_category_id"], name: "index_items_on_small_category_id"
   end
 
+
   create_table "kids_brands", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "name"
+
+  create_table "lady_shoes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "size"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "large_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+
+  create_table "large_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+
+  create_table "men_shoes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "size"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "middle_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -91,6 +112,12 @@ ActiveRecord::Schema.define(version: 20190106100951) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_sns_credentials_on_user_id"
+  end
+
+  create_table "suits", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "size"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

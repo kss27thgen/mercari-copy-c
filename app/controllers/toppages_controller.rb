@@ -11,10 +11,6 @@ class ToppagesController < ApplicationController
   end
 
   def category_index
-    @large_categories = LargeCategory.all
-    @middle_categories = MiddleCategory.all
-    @small_categories = SmallCategory.all
   end
 
 end
-
