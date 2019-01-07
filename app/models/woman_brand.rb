@@ -1,2 +1,3 @@
 class WomanBrand < ApplicationRecord
+
 end
