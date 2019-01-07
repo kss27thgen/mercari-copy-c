@@ -36,7 +36,7 @@ class BrandsController < ApplicationController
     @brands_te = WomanBrand.where('name LIKE(?)', "テ%")
     @brands_de = WomanBrand.where('name LIKE(?)', "デ%")
     @brands_to = WomanBrand.where('name LIKE(?)', "ト%")
-    @brands_dou  WomanBrandd.where('name LIKE(?)', "ド%")
+    @brands_dou = WomanBrand.where('name LIKE(?)', "ド%")
     @brands_na = WomanBrand.where('name LIKE(?)', "ナ%")
     @brands_ni = WomanBrand.where('name LIKE(?)', "ニ%")
     @brands_nu = WomanBrand.where('name LIKE(?)', "ヌ%")
