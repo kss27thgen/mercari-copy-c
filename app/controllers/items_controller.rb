@@ -31,9 +31,9 @@ class ItemsController < ApplicationController
     elsif @item.update(create_params)
       flash[:notice] = "商品を編集しました"
     else
-      alert:"商品が編集できませんでした。"
+      flash[:notice] = "編集できませんでした"
     end
-    redirect_to mypages_exhibitionItemSelling_path
+    redirect_to "/mypages/sellingItem/#{@item.id}"
   end
 
   def purchase
