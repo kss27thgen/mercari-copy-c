@@ -10,14 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190106100951) do
+ActiveRecord::Schema.define(version: 20190106105948) do
 
   create_table "hobby_brands", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-ActiveRecord::Schema.define(version: 20190106105948) do
 
   create_table "item_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "top_category", null: false
@@ -47,16 +46,17 @@ ActiveRecord::Schema.define(version: 20190106105948) do
     t.integer "size_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "seller_id"
-    t.bigint "buyer_id"
+    t.integer "seller_id"
+    t.integer "buyer_id"
     t.bigint "small_category_id"
-    t.index ["buyer_id"], name: "index_items_on_buyer_id"
-    t.index ["seller_id"], name: "index_items_on_seller_id"
     t.index ["small_category_id"], name: "index_items_on_small_category_id"
   end
 
-
   create_table "kids_brands", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "lady_shoes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "size"
@@ -65,24 +65,13 @@ ActiveRecord::Schema.define(version: 20190106105948) do
   end
 
   create_table "large_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
-
-  create_table "large_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
 
   create_table "men_shoes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "size"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "middle_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-
-    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -93,6 +82,15 @@ ActiveRecord::Schema.define(version: 20190106105948) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["large_category_id"], name: "index_middle_categories_on_large_category_id"
+  end
+
+  create_table "settlements", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "user_id", null: false
+    t.bigint "item_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["item_id"], name: "index_settlements_on_item_id"
+    t.index ["user_id"], name: "index_settlements_on_user_id"
   end
 
   create_table "small_categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -115,7 +113,7 @@ ActiveRecord::Schema.define(version: 20190106105948) do
   end
 
   create_table "suits", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "size"
+    t.string "sizec"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
