@@ -15,7 +15,7 @@ class ToppagesController < ApplicationController
     # 選ばれたScateの1つのインスタンス
     @selected_Scate = SmallCategory.find(params[:id])
     # 選ばれたScate全アイテムのインスタンス配列
-    @selected_cate_items = Item.where(small_category_id: params[:id])
+    @selected_cate_items = @selected_Scate.items
   end
 
   def middle_category_show
@@ -23,11 +23,11 @@ class ToppagesController < ApplicationController
     # 選ばれたMcateの1つのインスタンス
     @selected_Mcate = MiddleCategory.find(params[:id])
     # 選ばれたMcateに紐づくScateのインスタンス配列
-    @related_Scates = SmallCategory.where(middle_category_id: params[:id])
+    @related_Scates = @selected_Mcate.small_categories
       # 上配列に紐づく(選ばれたMcateの全)アイテムのインスタンス配列(多次元配列)
       @selected_cate_items = []
       @related_Scates.each do |related_Scate|
-        @selected_cate_items << Item.where(small_category_id: related_Scate.id)
+        @selected_cate_items << related_Scate.items
       end
       # 上配列を平坦化
       @selected_cate_items.flatten!
@@ -38,18 +38,18 @@ class ToppagesController < ApplicationController
     # 選ばれたLcateの1つのインスタンス
     @selected_Lcate = LargeCategory.find(params[:id])
     # 選ばれたLcateに紐づくMcateのインスタンス配列
-    @related_Mcates = MiddleCategory.where(large_category_id: params[:id])
+    @related_Mcates = @selected_Lcate.middle_categories
       # 上配列に紐づくScateのインスタンス配列(多次元配列)
       @related_Scates = []
       @related_Mcates.each do |related_Mcate|
-        @related_Scates << SmallCategory.where(middle_category_id: related_Mcate.id)
+        @related_Scates << related_Mcate.small_categories
       end
       # 上配列を平坦化
       @related_Scates.flatten!
         # 上配列に紐づく(選ばれたLcateの全)アイテムのインスタンス配列(多次元配列)
         @selected_cate_items = []
-        @related_Scates.each do |related_Scate_L|
-          @selected_cate_items << Item.where(small_category_id: related_Scate_L.id)
+        @related_Scates.each do |related_Scate|
+          @selected_cate_items << related_Scate.items
         end
         # 上配列を平坦化
         @selected_cate_items.flatten!
