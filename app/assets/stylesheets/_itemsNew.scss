@@ -1,8 +1,9 @@
 .itemEntryWrapper {
   background: $back-gray;
+  overflow: hidden;
   .itemEntryBodyWrapper {
     width: 700px;
-    margin: 0 auto;
+    margin: 40px auto;
     background: white;
     .itemEntryHeader {
       height: 100px;
@@ -131,6 +132,7 @@
             .fa-question-circle {
               color: $button-blue;
               font-size: 15px;
+              margin: 0;
             }
           }
         }
@@ -171,6 +173,7 @@
             .fa-question-circle {
               color: $button-blue;
               font-size: 15px;
+              margin: 0;
             }
           }
         }
@@ -270,4 +273,27 @@
       }
     }
   }
+}
+
+
+// アペンドされるサイズとブランドのcss
+
+.itemEntryMainUpperDescriptionRightTitle4{
+  padding-top: 30px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.itemEntryMainUpperDescriptionRightTitleRequire2{
+  background-color: #CCCCCC;
+  color: white;
+  font-size: 12px;
+  padding: 3px;
+}
+
+.itemBrand{
+  width: 370px;
+  height: 50px;
+  border: 1px solid $gray;
+  border-radius: 5px;
 }
