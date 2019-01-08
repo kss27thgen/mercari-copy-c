@@ -6,4 +6,4 @@
         = "#{@selected_Scate.name}の商品一覧"
       .categoryShowMainInner
         .categoryShowMainInnerItems
-          = render partial: "categoryShow", locals: { item: @selected_cate_items }
+          = render partial: "categoryShow", collection: @selected_Mcate_items, as: :item
