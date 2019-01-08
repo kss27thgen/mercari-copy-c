@@ -4,13 +4,16 @@ Rails.application.routes.draw do
   resources :items , only: [:new , :create, :destroy, :update]
   get 'items/purchase'
   get 'toppages/category_index'
+  get 'toppages/small_category_show/:id' => 'toppages#small_category_show'
+  get 'toppages/middle_category_show/:id' => 'toppages#middle_category_show'
+  get 'toppages/large_category_show/:id' => 'toppages#large_category_show'
   resources :toppages , only: [:index, :show]
   get 'mypages/main' => 'mypages#main'
   get 'mypages/logout' => 'mypages#logout'
   get 'mypages/card' => 'mypages#card'
   get 'mypages/info' => 'mypages#info'
   get 'mypages/deliver_address'
-  get 'mypages/identification'
+  get 'mypages/identification' 
   get 'mypages/email_password'
   get 'mypages/notification'
   get 'mypages/support'
