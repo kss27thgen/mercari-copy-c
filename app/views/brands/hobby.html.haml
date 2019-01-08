@@ -14,9 +14,12 @@
   .brandWrapper
     %h2.brandTitle ブランド一覧
     .brandWrapperContainer
-      .brandWrapperContainerBoxWemens#box レディース
-      .brandWrapperContainerBoxKids#box ベビー・キッズ
-      .brandWrapperContainerBoxHobby#box-main テレビゲーム
+      = link_to brands_wemens_path, class: "brands_links" do
+        .brandWrapperContainerBoxWemens#box レディース
+      = link_to brands_kids_path, class: "brands_links" do
+        .brandWrapperContainerBoxKids#box ベビー・キッズ
+      = link_to brands_hobby_path, class: "brands_links" do
+        .brandWrapperContainerBoxHobby#box-main テレビゲーム
       .brandWrapperContainerBoxWemens#box インテリア・住まい・雑貨
       .brandWrapperContainerBoxKids#box スポーツ・レジャー
       .brandWrapperContainerBoxHobby#box スマートフォン・携帯電話
