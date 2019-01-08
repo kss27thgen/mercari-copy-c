@@ -33,7 +33,7 @@ class ItemsController < ApplicationController
     else
       flash[:notice] = "編集できませんでした"
     end
-    redirect_to mypages_exhibitionItemSelling_path
+    redirect_to "/mypages/sellingItem/#{@item.id}"
   end
 
   def purchase
