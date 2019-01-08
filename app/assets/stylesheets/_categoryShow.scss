@@ -26,6 +26,10 @@
         margin: 10px 0;
       }
       &Inner {
+        .categoryShowLink {
+          text-decoration: none;
+          color: black;
+        }
         &Items {
           display: flex;
           flex-wrap: wrap;
