@@ -13,9 +13,10 @@ class ItemsController < ApplicationController
 
   end
 
+# SIZEを外部キーにしたため、save時にエラる
   def create
     @item = Item.new(create_params)
-    if @item.save
+    if @item.save!
       redirect_to root_path, notice:"商品を出品しました"
       # render json: {message: 'success', itemId: @item.id}, status: 200
     else
@@ -38,6 +39,8 @@ class ItemsController < ApplicationController
 
   def purchase
     render :layout => 'simpleLayout'
+    @item = Item.find(params[:id])
+    @images = @item.item_images.first
   end
 
   def search
@@ -63,6 +66,6 @@ class ItemsController < ApplicationController
 
   private
   def create_params
-    params.require(:item).permit(:name, :explaination, :price, :status, :shipping_fare, :shipping_region, :shipping_schedule, :shipping_method, :size, :small_category_id, item_images_attributes: [:item_images]).merge(seller_id: current_user.id, buyer_id: 1)
+    params.require(:item).permit(:name, :explaination, :price, :status, :shipping_fare, :shipping_region, :shipping_shcedule, :shipping_method, :size, :small_category_id, item_images_attributes: [:item_images, :item_id, :id]).merge(seller_id: current_user.id, buyer_id: 1)
   end
 end
