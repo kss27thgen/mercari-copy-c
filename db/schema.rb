@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20190108112240) do
   end
 
   create_table "item_images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.text "image"
+    t.text "item_images"
     t.bigint "item_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -43,12 +43,12 @@ ActiveRecord::Schema.define(version: 20190108112240) do
     t.integer "shipping_region"
     t.string "shipping_shcedule"
     t.string "shipping_method"
+    t.string "size"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "seller_id"
     t.integer "buyer_id"
     t.bigint "small_category_id"
-    t.string "size"
     t.index ["small_category_id"], name: "index_items_on_small_category_id"
   end
 
