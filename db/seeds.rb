@@ -81,25 +81,25 @@
 # end
 
 
-require 'csv'
+# require 'csv'
 
-CSV.read("db/womanbrands.csv", headers: false).each do |row|
-  WomanBrand.create!(
-    name: row[0]
-  )
-end
+# CSV.read("db/womanbrands.csv", headers: false).each do |row|
+#   WomanBrand.create!(
+#     name: row[0]
+#   )
+# end
 
-CSV.read("db/kidsbrands.csv", headers: false).each do |row|
-  KidsBrand.create!(
-    name: row[0]
-  )
-end
+# CSV.read("db/kidsbrands.csv", headers: false).each do |row|
+#   KidsBrand.create!(
+#     name: row[0]
+#   )
+# end
 
-CSV.read("db/hobbybrands.csv", headers: false).each do |row|
-  HobbyBrand.create!(
-    name: row[0]
-  )
-end
+# CSV.read("db/hobbybrands.csv", headers: false).each do |row|
+#   HobbyBrand.create!(
+#     name: row[0]
+#   )
+# end
 
 
 #サイズ
