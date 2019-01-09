@@ -16,7 +16,7 @@
           %tr
             %th.tableLeft 出品者
             %th.tableRight
-              = link_to "#{@item.seller.nickname}","#",class: "tableLinks"
+              = link_to "#{@item.seller.nickname}","/mypages/users/#{@item.seller.id}",class: "tableLinks"
           %tr
             %td.tableLeft カテゴリー
             %td.tableRight
