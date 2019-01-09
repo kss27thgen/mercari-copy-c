@@ -21,7 +21,7 @@
               .usersShowWrapperUserBottomItemBottom
                 .usersShowWrapperUserBottomItemBottomRight
                   .usersShowWrapperUserBottomItemBottomRightPrice
-                    = "¥#{item.price}"
+                    = "¥#{item.price.to_s(:delimited)}"
                   .usersShowWrapperUserBottomItemBottomRightTax
                     (税込)
                 .usersShowWrapperUserBottomItemBottomLike
