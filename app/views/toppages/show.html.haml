@@ -146,15 +146,16 @@
     .wrapperShowUsersItemscontainer
       - @anotheritems.each do |item|
         .wrapperShowUsersItem
-          .wrapperShowUsersItemImage
-            = image_tag item.item_images.first.item_images
-          .wrapperShowUsersItemBody
-            .wrapperShowUsersItemBodyTitle
-              = item.name
-            .wrapperShowUsersItemBodyDetails
-              .wrapperShowUsersItemBodyDetailsPrice
-                = item.price
-              .wrapperShowUsersItemBodyDetailsLikes
-                .wrapperShowUsersItemLikesIcon.far.fa-heart
-                .wrapperShowUsersItemLikesCount 100
-              .wrapperShowUsersItemBodyDetailsTax (税込)
+          = link_to toppage_path(item), class: "wrapperShowUsersItemLink" do
+            .wrapperShowUsersItemImage
+              = image_tag item.item_images.first.item_images
+            .wrapperShowUsersItemBody
+              .wrapperShowUsersItemBodyTitle
+                = item.name
+              .wrapperShowUsersItemBodyDetails
+                .wrapperShowUsersItemBodyDetailsPrice
+                  = item.price
+                .wrapperShowUsersItemBodyDetailsLikes
+                  .wrapperShowUsersItemLikesIcon.far.fa-heart
+                  .wrapperShowUsersItemLikesCount 100
+                .wrapperShowUsersItemBodyDetailsTax (税込)
