@@ -80,7 +80,7 @@ $(document).on("change","#sc", function(){
 
   var brand_beginning = `<div class="itemEntryMainUpperDescriptionRightTitle4">ブランド
                     <span class="itemEntryMainUpperDescriptionRightTitleRequire2">任意</span></div>
-                   <input class="itemBrand" id="brands" placeholder=" 例) シャネル" name="item[brand]">`;
+                   <input class="itemBrand" id="brands" type="text" placeholder=" 例) シャネル" name="item[brand]">`;
   var brand_str = "";
   var brand_end = "</select>";
 
