@@ -30,7 +30,7 @@
             %tr
               %th.tableLeft 出品者
               %th.tableRight
-                = link_to root_path,class: "tableLinks" do
+                = link_to "/mypages/users/#{@item.seller.id}",class: "tableLinks" do
                   = @item.seller.nickname
                 %br
                 = fa_icon "fa-smile-o ",class: "fa-smile-o"
