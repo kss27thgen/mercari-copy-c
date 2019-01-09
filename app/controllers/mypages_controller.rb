@@ -25,5 +25,10 @@ class MypagesController < ApplicationController
     @items = Item.where(seller_id: current_user.id)
   end
 
+  def users
+    @user = User.find(params[:id])
+    @items = Item.where(seller_id: @user.id)
+  end
+
 
 end
