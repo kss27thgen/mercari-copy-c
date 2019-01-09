@@ -93,6 +93,7 @@ CSV.read("db/kidsbrands.csv", headers: false).each do |row|
   KidsBrand.create!(
     name: row[0]
   )
+end
 
 CSV.read("db/hobbybrands.csv", headers: false).each do |row|
   HobbyBrand.create!(
