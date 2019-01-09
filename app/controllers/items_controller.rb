@@ -10,6 +10,8 @@ class ItemsController < ApplicationController
     gon.l_cate = LargeCategory.all
     gon.m_cate = MiddleCategory.all
     gon.s_cate = SmallCategory.all
+    gon.shipping_method_arrive = ["---","未定","クロネコヤマト","ゆうパック","ゆうメール"]
+    gon.shipping_method_pre = ["---","未定","らくらくメルカリ便","らくらくメルカリ便","ゆうメール","レターパック","普通郵便（定型・定形外）","クロネコヤマト","ゆうパック","ゆうパケット","クリックポスト","らくらくメルカリ便"]
 
   end
 
