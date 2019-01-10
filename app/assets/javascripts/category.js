@@ -78,11 +78,11 @@ $(document).on("change","#sc", function(){
   var str = "";
   var end = "</select>";
 
-  var brand_beginning = `<div class="itemEntryMainUpperDescriptionRightTitle4">ブランド
-                    <span class="itemEntryMainUpperDescriptionRightTitleRequire2">任意</span></div>
-                   <input class="itemBrand" id="brands" type="text" placeholder=" 例) シャネル" name="item[brand]">`;
+  var brand_beginning = `<div class ="brandbox"><div class="itemEntryMainUpperDescriptionRightTitle4">ブランド
+                          <span class="itemEntryMainUpperDescriptionRightTitleRequire2">任意</span></div>
+                         <input class="itemBrand" id="brands" type="text" placeholder=" 例) シャネル" name="item[brand]">`;
   var brand_str = "";
-  var brand_end = "</select>";
+  var brand_end = "</select></div>";
 
   $(".itemEntryMainUpperDescriptionRightSelect4").remove();
   $(".itemEntryMainUpperDescriptionRightTitle4").remove()
@@ -113,6 +113,115 @@ $(document).on("change","#sc", function(){
     // }
   // })
 })
+
+
+// ブランドのインクリメンタルサーチ
+
+$(document).on("keyup","#brands", function(e){
+  e.preventDefault();
+  var input = $(this).val();
+  console.log(input)
+
+  $(".brandSearchBoxResults").remove();
+  $(".brandSearchBox").remove();
+
+  function appendBrandList(brand,index) {
+      console.log(brand);
+      console.log(index);
+       var beggining = `<div class= brandSearchBox id=${index}>`
+       $(".brandbox").append(beggining);
+       var string = `<ul><li class=brandSearchBoxResults >${brand.name}<li></ul>`
+       var end = `</div>`
+       var html = string + end
+       $(".brandSearchBox").append(html);
+
+       if ( index > 1  ){
+        $(".brandSearchBox").not('#1').remove();
+       }
+      }
+
+  function appendNoBrandList(brand) {
+       var beggining = `<div class= brandSearchBox >`
+       var string = `<ul><li class=brandSearchBoxResults>${brand}"<li></ul>`
+       var end = `</div>`
+       var html = beggining + string + end
+       $(".brandbox").append(beggining);
+       $(".brandSearchBox").append(html);
+      }
+
+
+
+    // if (lc_val == "ベビー・キッズ")
+    //   console.log("ベビー！")
+      if (input.length !== 0){
+        $.ajax({
+          type: 'GET',
+          url: '/items/new',
+          data: { keyword: input },
+          dataType: 'json'
+         })
+          .done(function(brands) {
+            $(".brandSearchBoxResults").empty();
+             if (brands.length !== 0) {
+              // $.each(brands, function(brand,index) {
+               brands.forEach(function(brand,index){
+                // console.log(brand);
+                // console.log(index);
+                appendBrandList(brand,index);
+               });
+             }
+             else{
+             appendNoBrandList("検索結果にはありません");
+            }
+          })
+          .fail(function() {
+            // $('.brandSearchBoxResults').empty();
+          })
+      } else{
+       // $('.brandSearchBoxResults').empty();
+    }
+
+    // if (lc_val == "レディース")
+    //   console.log("レディース")
+    //   if (input.length !== 0){
+    //     $.each(gon.woman_brands, function(i,brand) {
+    //       string += `<div class="brandSearchBoxResults">${brand.name}</div>`
+    //     })
+    //   }
+    // if (lc_val == "本・音楽・ゲーム")
+    //   console.log("ホビー！")
+    //   if (input.length !== 0){
+    //     $.each(gon.hobby_brands, function(i,brand) {
+    //       string += `<div class="brandSearchBoxResults">${brand.name}</div>`
+    //     })
+    //   }
+  // console.log(string)
+  // var html = beginning + string + end;
+  // if( input.length !== 0){
+  //   $(".itemBrand").append(html);
+  // } else{
+  //   $(html).remove();
+  // }
+       // if (users.length !== 0) {
+       //   users.forEach(function(user){
+       //    console.log(user);
+       //     appendUser(user);
+       //   });
+       // }
+       // else {
+       //   appendNoUser("一致するアカウントはありません");
+       // }
+  // } else{
+  //      $('.brandSearchBoxResults').empty();
+  //   }
+})
+
+
+
+
+
+
+
 
 
 // 商品のシッピング方法のappend
