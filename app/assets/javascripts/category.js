@@ -82,7 +82,7 @@ $(document).on("change","#sc", function(){
                           <span class="itemEntryMainUpperDescriptionRightTitleRequire2">任意</span></div>
                          <input class="itemBrand" id="brands" type="text" placeholder=" 例) シャネル" name="item[brand]">`;
   var brand_str = "";
-  var brand_end = "</select></div>";
+  var brand_end = "</input></div>";
 
   $(".itemEntryMainUpperDescriptionRightSelect4").remove();
   $(".itemEntryMainUpperDescriptionRightTitle4").remove()
@@ -118,27 +118,29 @@ $(document).on("change","#sc", function(){
 // ブランドのインクリメンタルサーチ
 
 $(document).on("keyup","#brands", function(e){
-  e.preventDefault();
   var input = $(this).val();
-  console.log(input)
-
-  $(".brandSearchBoxResults").remove();
-  $(".brandSearchBox").remove();
 
   function appendBrandList(brand,index) {
-      console.log(brand);
-      console.log(index);
+      console.log(index)
        var beggining = `<div class= brandSearchBox id=${index}>`
-       $(".brandbox").append(beggining);
-       var string = `<ul><li class=brandSearchBoxResults >${brand.name}<li></ul>`
+       var string = `<ul><li class="brandSearchBoxResults" data-brand-id="${ brand.id }" data-brand-name="${ brand.name }">${brand.name}<li></ul>`
+
        var end = `</div>`
        var html = string + end
+       if ($("#1").length < 1) {
+       $(".brandbox").append(beggining);
        $(".brandSearchBox").append(html);
+       }
+       else{
+        console.log("guaaa")
+        $(".brandSearchBox").append(html);
+       }
 
-       if ( index > 1  ){
+       if ( index => 1  ){
         $(".brandSearchBox").not('#1').remove();
        }
-      }
+  }
+
 
   function appendNoBrandList(brand) {
        var beggining = `<div class= brandSearchBox >`
@@ -149,10 +151,6 @@ $(document).on("keyup","#brands", function(e){
        $(".brandSearchBox").append(html);
       }
 
-
-
-    // if (lc_val == "ベビー・キッズ")
-    //   console.log("ベビー！")
       if (input.length !== 0){
         $.ajax({
           type: 'GET',
@@ -163,62 +161,42 @@ $(document).on("keyup","#brands", function(e){
           .done(function(brands) {
             $(".brandSearchBoxResults").empty();
              if (brands.length !== 0) {
-              // $.each(brands, function(brand,index) {
                brands.forEach(function(brand,index){
-                // console.log(brand);
-                // console.log(index);
                 appendBrandList(brand,index);
                });
              }
              else{
              appendNoBrandList("検索結果にはありません");
-            }
+             }
           })
-          .fail(function() {
-            // $('.brandSearchBoxResults').empty();
+          .fail(function(brands) {
+            $(".brandbox").remove()
+            $(".brandSearchBox").remove()
           })
-      } else{
-       // $('.brandSearchBoxResults').empty();
-    }
+      } else {
+        // $(".brandbox").empty()
+        $(".brandSearchBox").empty()
+      }
 
-    // if (lc_val == "レディース")
-    //   console.log("レディース")
-    //   if (input.length !== 0){
-    //     $.each(gon.woman_brands, function(i,brand) {
-    //       string += `<div class="brandSearchBoxResults">${brand.name}</div>`
-    //     })
-    //   }
-    // if (lc_val == "本・音楽・ゲーム")
-    //   console.log("ホビー！")
-    //   if (input.length !== 0){
-    //     $.each(gon.hobby_brands, function(i,brand) {
-    //       string += `<div class="brandSearchBoxResults">${brand.name}</div>`
-    //     })
-    //   }
-  // console.log(string)
-  // var html = beginning + string + end;
-  // if( input.length !== 0){
-  //   $(".itemBrand").append(html);
-  // } else{
-  //   $(html).remove();
-  // }
-       // if (users.length !== 0) {
-       //   users.forEach(function(user){
-       //    console.log(user);
-       //     appendUser(user);
-       //   });
-       // }
-       // else {
-       //   appendNoUser("一致するアカウントはありません");
-       // }
-  // } else{
-  //      $('.brandSearchBoxResults').empty();
-  //   }
+    $(".itemEntryMainUpperDescriptionRightSelect").on("click",".brandSearchBoxResults",function(){
+      let brand_id = $(this).attr('data-brand-id');
+      let brand_name = $(this).attr('data-brand-name');
+      console.log(brand_id)
+      console.log(brand_name)
+      $(".brandbox").html(`<div class ="brandbox"><div class="itemEntryMainUpperDescriptionRightTitle4">ブランド
+                          <span class="itemEntryMainUpperDescriptionRightTitleRequire2">任意</span></div><input class="itemBrand" id="brands" type="text" placeholder=" 例) シャネル" name="item[brand]" value=${brand_name}></input></div>`)
+
+      $(".brandSearchBox").remove();
+    });
 })
 
-
-
-
+// インクリメンタルサーチのマウスエンターでの色変更
+$(function(){
+  $(".itemEntryMainUpperDescriptionRightSelect").on("mouseenter",".brandSearchBoxResults",function(){
+    $(this).css({'background-color':'#75BAFF' , 'color':'white' })})
+  $(".itemEntryMainUpperDescriptionRightSelect").on("mouseleave",".brandSearchBoxResults",function(){
+    $(this).css({'background-color':'white' , 'color':'black'})})
+})
 
 
 
