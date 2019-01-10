@@ -304,3 +304,14 @@
   font-weight: bold;
 }
 
+// ブランドインクリメンタルサーチ
+.brandSearchBox{
+  width: 370px;
+  height:200px;
+  overflow: scroll;
+  border: 1px solid $gray;
+  // display: none;
+  .brandSearchBoxResults{
+  padding:10px 0 10px 10px;
+  }
+}
