@@ -46,6 +46,9 @@
         &Items {
           display: flex;
           flex-wrap: wrap;
+          overflow: scroll;
+          height: 600px;
+
         }
         &Item {
           width: 230px;
