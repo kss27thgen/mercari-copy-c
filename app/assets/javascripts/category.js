@@ -124,8 +124,8 @@ $(document).on("keyup","#brands", function(e){
       console.log(index)
        var beggining = `<div class= brandSearchBox id=${index}>`
        var string = `<ul><li class="brandSearchBoxResults" data-brand-id="${ brand.id }" data-brand-name="${ brand.name }">${brand.name}<li></ul>`
-
        var end = `</div>`
+
        var html = string + end
        if ($("#1").length < 1) {
        $(".brandbox").append(beggining);
@@ -135,6 +135,11 @@ $(document).on("keyup","#brands", function(e){
         console.log("guaaa")
         $(".brandSearchBox").append(html);
        }
+
+       if ($(".brandSearchBoxResults") == null) {
+       $(this).remove();
+       }
+
 
        if ( index => 1  ){
         $(".brandSearchBox").not('#1').remove();
@@ -159,7 +164,7 @@ $(document).on("keyup","#brands", function(e){
           dataType: 'json'
          })
           .done(function(brands) {
-            $(".brandSearchBoxResults").empty();
+            $(".brandSearchBoxResults").remove();
              if (brands.length !== 0) {
                brands.forEach(function(brand,index){
                 appendBrandList(brand,index);
@@ -184,11 +189,14 @@ $(document).on("keyup","#brands", function(e){
       console.log(brand_id)
       console.log(brand_name)
       $(".brandbox").html(`<div class ="brandbox"><div class="itemEntryMainUpperDescriptionRightTitle4">ブランド
-                          <span class="itemEntryMainUpperDescriptionRightTitleRequire2">任意</span></div><input class="itemBrand" id="brands" type="text" placeholder=" 例) シャネル" name="item[brand]" value=${brand_name}></input></div>`)
+                          <span class="itemEntryMainUpperDescriptionRightTitleRequire2">任意</span></div><input class="itemBrand" id="brands" type="text" placeholder=" 例) シャネル" name="item[brand]" value=${brand_name}></input></div>
+                          <div class= brandSearchBox id=1></div>`)
 
-      $(".brandSearchBox").remove();
+      // $(".brandSearchBox").remove();
     });
 })
+
+
 
 // インクリメンタルサーチのマウスエンターでの色変更
 $(function(){
