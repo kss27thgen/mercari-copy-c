@@ -19,10 +19,10 @@
               .usersShowWrapperUserBottomItemName
                 = item.name
               .usersShowWrapperUserBottomItemBottom
-                .usersShowWrapperUserBottomItemBottomRight
-                  .usersShowWrapperUserBottomItemBottomRightPrice
+                .usersShowWrapperUserBottomItemBottomLeft
+                  .usersShowWrapperUserBottomItemBottomLeftPrice
                     = "¥#{item.price.to_s(:delimited)}"
-                  .usersShowWrapperUserBottomItemBottomRightTax
+                  .usersShowWrapperUserBottomItemBottomLeftTax
                     (税込)
                 .usersShowWrapperUserBottomItemBottomLike
                   =fa_icon 'fa-heart', class: 'fa-heart-o'
